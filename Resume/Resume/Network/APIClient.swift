@@ -8,18 +8,12 @@
 
 import UIKit
 
-//MARK: Status possible cases
-public enum Status {
-    case success
-    case failure
-}
-
-class Service {
+class APIClient {
     
     /**
      Singletone of Service class useful for interact with the API
      */
-    public static let shared = Service()
+    public static let shared = APIClient()
     
     //MARK: URL base
     private let URLBase: URL?
@@ -29,9 +23,10 @@ class Service {
     private var dataTask: URLSessionDataTask?
     
     //MARK: Init Service()
-    init?() {
+    init() {
         guard let urlStr = Bundle.main.object(forInfoDictionaryKey: "InfoURL") as? String else {
-            return nil
+            self.URLBase = URL(string: "")
+            return
         }
         self.URLBase = URL(string: urlStr)
     }
@@ -57,8 +52,7 @@ class Service {
             }
             dataTask?.resume()
         }else {
-            //MARK: DO SOMETHING
-            debugPrint("Not URL")
+            debugPrint("Not valid URL")
         }
     }
     
@@ -101,7 +95,6 @@ class Service {
             let json = try jsonDecoder.decode(Model.self, from: data)
             return json
         } catch {
-            //MARK: DO SOMETHING
             debugPrint(error)
             return nil
         }

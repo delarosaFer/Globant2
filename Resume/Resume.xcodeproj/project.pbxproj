@@ -190,6 +190,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		36EB78BA22C41A70006AE8A8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				36EB78BD22C41AA7006AE8A8 /* TryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		36EB78BF22C41AAF006AE8A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
