@@ -511,6 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64K4NG6BTN;
 				INFOPLIST_FILE = Resume/Info.plist;
+				InfoURL = "https://gist.githubusercontent.com/DaveCC94/cc43fd32072915ad1d15660b5f0eef91/raw";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,6 +530,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64K4NG6BTN;
 				INFOPLIST_FILE = Resume/Info.plist;
+				InfoURL = "https://gist.githubusercontent.com/DaveCC94/cc43fd32072915ad1d15660b5f0eef91/raw";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

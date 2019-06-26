@@ -1,0 +1,109 @@
+//
+//  APIClient.swift
+//  Resume
+//
+//  Created by Fernando De La Rosa Salas on 6/26/19.
+//  Copyright © 2019 Fernando De La Rosa Salas. All rights reserved.
+//
+
+import UIKit
+
+//MARK: Status possible cases
+public enum Status {
+    case success
+    case failure
+}
+
+class Service {
+    
+    /**
+     Singletone of Service class useful for interact with the API
+     */
+    public static let shared = Service()
+    
+    //MARK: URL base
+    private let URLBase: URL?
+    
+    //MARK: URL Session
+    private let defaultSession = URLSession(configuration: .default)
+    private var dataTask: URLSessionDataTask?
+    
+    //MARK: Init Service()
+    init?() {
+        guard let urlStr = Bundle.main.object(forInfoDictionaryKey: "InfoURL") as? String else {
+            return nil
+        }
+        self.URLBase = URL(string: urlStr)
+    }
+    
+    //MARK: Get data method from a base url
+    /**
+     Get the data from gist.github
+     
+     - parameters:
+     - handler: A closure that need be defined by the caller to manipulate the data
+     */
+    public func getData(handler: @escaping (Data?, Status) -> Void) {
+        if let url = URLBase {
+            dataTask = defaultSession.dataTask(with: url) { data, response, error in
+                if let data = data, let response = response as? HTTPURLResponse, 200...209 ~= response.statusCode  {
+                    handler(data, .success)
+                } else if let error = error {
+                    debugPrint(error.localizedDescription)
+                    handler(nil, .failure)
+                } else {
+                    handler(nil, .failure)
+                }
+            }
+            dataTask?.resume()
+        }else {
+            //MARK: DO SOMETHING
+            debugPrint("Not URL")
+        }
+    }
+    
+    //MARK: Get data
+    /**
+     Get the data from a specific url
+     
+     - parameters:
+     - url: A url that contains the data
+     - handler: A closure that need be defined by the caller to manipulate the data
+     */
+    public func getData(url: URL, handler: @escaping (Data?, Status) -> Void) {
+        dataTask = defaultSession.dataTask(with: url) { data, response, error in
+            if let data = data, let response = response as? HTTPURLResponse, 200...209 ~= response.statusCode {
+                handler(data, .success)
+            } else if let error = error {
+                debugPrint(error.localizedDescription)
+                handler(nil, .failure)
+            } else {
+                handler(nil, .failure)
+            }
+        }
+        dataTask?.resume()
+    }
+    
+    //MARK: Parse JSON to Model method
+    /**
+     Make the parse from the data to an any model
+     
+     - returns:
+     - Model: A struct that implents Codable protocol
+     
+     - parameters:
+     - data: A date that was got by the API
+     - model: A struct that implents Codable protocol
+     */
+    public func parseJSON<Model: Codable>(data: Data, model: Model) -> Model? {
+        let jsonDecoder = JSONDecoder()
+        do {
+            let json = try jsonDecoder.decode(Model.self, from: data)
+            return json
+        } catch {
+            //MARK: DO SOMETHING
+            debugPrint(error)
+            return nil
+        }
+    }
+}
