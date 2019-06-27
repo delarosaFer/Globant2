@@ -24,13 +24,13 @@
                         <rect key="frame" x="16" y="11" width="288" height="135"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVh-v4-44z">
-                                <rect key="frame" x="8" y="10" width="184.5" height="31.5"/>
+                                <rect key="frame" x="8" y="10" width="261" height="31.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Degree" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuM-i4-dnf">
-                                <rect key="frame" x="8" y="49.5" width="58" height="20.5"/>
+                                <rect key="frame" x="8" y="49.5" width="261" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whA-b1-9YM">
-                                <rect key="frame" x="238.5" y="78" width="30.5" height="20.5"/>
+                                <rect key="frame" x="56.5" y="78" width="30.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLO-pV-PYp">
-                                <rect key="frame" x="199" y="106.5" width="70" height="20.5"/>
+                                <rect key="frame" x="94" y="106.5" width="70" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -63,20 +63,22 @@
                         <color key="backgroundColor" name="background-color"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="RLO-pV-PYp" secondAttribute="bottom" constant="8" id="2jM-hB-Hmq"/>
-                            <constraint firstItem="RLO-pV-PYp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="mql-X3-HRo" secondAttribute="trailing" constant="113" id="Ao4-PX-hNP"/>
                             <constraint firstItem="mql-X3-HRo" firstAttribute="leading" secondItem="SnM-PE-1hV" secondAttribute="leading" constant="8" id="BMQ-k1-02e"/>
                             <constraint firstItem="RLO-pV-PYp" firstAttribute="top" secondItem="whA-b1-9YM" secondAttribute="bottom" constant="8" id="COH-xB-Aeb"/>
                             <constraint firstItem="whA-b1-9YM" firstAttribute="top" secondItem="kuM-i4-dnf" secondAttribute="bottom" constant="8" id="G2C-21-M90"/>
                             <constraint firstItem="kuM-i4-dnf" firstAttribute="leading" secondItem="SnM-PE-1hV" secondAttribute="leading" constant="8" id="Gsn-Ba-AXS"/>
-                            <constraint firstAttribute="trailing" secondItem="whA-b1-9YM" secondAttribute="trailing" constant="19" id="LCF-IY-2ar"/>
+                            <constraint firstAttribute="trailing" secondItem="vVh-v4-44z" secondAttribute="trailing" constant="19" id="RtY-Qw-bOR"/>
+                            <constraint firstItem="whA-b1-9YM" firstAttribute="leading" secondItem="YJj-Fs-L04" secondAttribute="trailing" constant="8" id="Sc3-6Z-rdF"/>
+                            <constraint firstAttribute="trailing" secondItem="kuM-i4-dnf" secondAttribute="trailing" constant="19" id="ZAz-v8-W3N"/>
                             <constraint firstItem="YJj-Fs-L04" firstAttribute="top" secondItem="kuM-i4-dnf" secondAttribute="bottom" constant="8" id="agD-4N-YoM"/>
+                            <constraint firstItem="RLO-pV-PYp" firstAttribute="leading" secondItem="mql-X3-HRo" secondAttribute="trailing" constant="8" id="ah0-lE-iUH"/>
                             <constraint firstAttribute="bottom" secondItem="mql-X3-HRo" secondAttribute="bottom" constant="8" id="axu-0Q-hRS"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="whA-b1-9YM" secondAttribute="trailing" constant="201" id="bnT-gh-Rhy"/>
                             <constraint firstItem="mql-X3-HRo" firstAttribute="top" secondItem="YJj-Fs-L04" secondAttribute="bottom" constant="8" id="gHb-uX-hlM"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="RLO-pV-PYp" secondAttribute="trailing" constant="124" id="jnB-aM-kyg"/>
                             <constraint firstItem="vVh-v4-44z" firstAttribute="top" secondItem="SnM-PE-1hV" secondAttribute="top" constant="10" id="ldR-8i-6b1"/>
                             <constraint firstItem="vVh-v4-44z" firstAttribute="leading" secondItem="SnM-PE-1hV" secondAttribute="leading" constant="8" id="mRJ-UC-vfq"/>
-                            <constraint firstAttribute="trailing" secondItem="RLO-pV-PYp" secondAttribute="trailing" constant="19" id="niL-ZH-Dlt"/>
                             <constraint firstItem="YJj-Fs-L04" firstAttribute="leading" secondItem="SnM-PE-1hV" secondAttribute="leading" constant="8" id="qnq-bV-aEg"/>
-                            <constraint firstItem="whA-b1-9YM" firstAttribute="leading" relation="lessThanOrEqual" secondItem="YJj-Fs-L04" secondAttribute="trailing" constant="190" id="sop-oz-ZJA"/>
                             <constraint firstItem="kuM-i4-dnf" firstAttribute="top" secondItem="vVh-v4-44z" secondAttribute="bottom" constant="8" id="ttP-XJ-aQA"/>
                         </constraints>
                     </view>

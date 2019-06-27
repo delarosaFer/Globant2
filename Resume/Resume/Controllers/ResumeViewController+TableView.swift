@@ -47,11 +47,26 @@ extension ResumeViewController: UITableViewDataSource, UITableViewDelegate {
                 return UITableViewCell()
             }
             
+            cell.universityName?.text = resume?.education.universityName
+            cell.degree?.text = resume?.education.degree
+            cell.city?.text = resume?.education.city
+            cell.state?.text = resume?.education.state
+            cell.startDate?.text = resume?.education.startDate
+            cell.endDate?.text = resume?.education.endDate
+            
             return cell
         case "Carreer":
             guard let cell = infoTableView?.dequeueReusableCell(withIdentifier: "ExperienceCell", for: indexPath) as? ExperienceCell else {
                 return UITableViewCell()
             }
+            let experience = resume?.experience[indexPath.row]
+            cell.workplace?.text = experience?.workplace
+            cell.position?.text = experience?.position
+            cell.descriptionWork?.text = experience?.description
+            cell.city?.text = experience?.city
+            cell.state?.text = experience?.state
+            cell.startDate?.text = experience?.startDate
+            cell.endDate?.text = experience?.endDate
             
             return cell
         default:
