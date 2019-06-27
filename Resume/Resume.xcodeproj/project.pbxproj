@@ -13,6 +13,21 @@
 		36EB789122C3F90F006AE8A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EB788F22C3F90F006AE8A8 /* LaunchScreen.storyboard */; };
 		36EB789C22C3F90F006AE8A8 /* ResumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB789B22C3F90F006AE8A8 /* ResumeTests.swift */; };
 		36EB78A722C3F90F006AE8A8 /* ResumeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB78A622C3F90F006AE8A8 /* ResumeUITests.swift */; };
+		36EB78C722C43922006AE8A8 /* EducationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB78C522C43922006AE8A8 /* EducationCell.swift */; };
+		36EB78C822C43922006AE8A8 /* EducationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36EB78C622C43922006AE8A8 /* EducationCell.xib */; };
+		36EB78CB22C43C8A006AE8A8 /* ExperienceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB78C922C43C8A006AE8A8 /* ExperienceCell.swift */; };
+		36EB78CC22C43C8A006AE8A8 /* ExperienceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36EB78CA22C43C8A006AE8A8 /* ExperienceCell.xib */; };
+		36EB78CE22C446A2006AE8A8 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB78CD22C446A2006AE8A8 /* ErrorViewController.swift */; };
+		36EB78D022C447A6006AE8A8 /* ResumeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB78CF22C447A6006AE8A8 /* ResumeViewController+TableView.swift */; };
+		36EB78D422C453D1006AE8A8 /* APIStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB78D222C453D0006AE8A8 /* APIStatus.swift */; };
+		36EB78D522C453D1006AE8A8 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB78D322C453D0006AE8A8 /* APIClient.swift */; };
+		36EB78D822C453DF006AE8A8 /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB78D722C453DF006AE8A8 /* Resume.swift */; };
+		DB03AF7322C41BCB002F99F1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB03AF7222C41BCB002F99F1 /* Colors.xcassets */; };
+		DB03AF7522C41C57002F99F1 /* UIColors+appColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF7422C41C57002F99F1 /* UIColors+appColors.swift */; };
+		DB03AF7822C422DF002F99F1 /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF7722C422DF002F99F1 /* UIImageView+Utils.swift */; };
+		DB03AF7B22C4253A002F99F1 /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF7A22C4253A002F99F1 /* ResumeViewController.swift */; };
+		DB03AF7F22C427DE002F99F1 /* SkillsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF7D22C427DE002F99F1 /* SkillsTableViewCell.swift */; };
+		DB03AF8022C427DE002F99F1 /* SkillsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB03AF7E22C427DE002F99F1 /* SkillsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +60,21 @@
 		36EB78A222C3F90F006AE8A8 /* ResumeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResumeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EB78A622C3F90F006AE8A8 /* ResumeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeUITests.swift; sourceTree = "<group>"; };
 		36EB78A822C3F90F006AE8A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36EB78C522C43922006AE8A8 /* EducationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCell.swift; sourceTree = "<group>"; };
+		36EB78C622C43922006AE8A8 /* EducationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EducationCell.xib; sourceTree = "<group>"; };
+		36EB78C922C43C8A006AE8A8 /* ExperienceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceCell.swift; sourceTree = "<group>"; };
+		36EB78CA22C43C8A006AE8A8 /* ExperienceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExperienceCell.xib; sourceTree = "<group>"; };
+		36EB78CD22C446A2006AE8A8 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		36EB78CF22C447A6006AE8A8 /* ResumeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResumeViewController+TableView.swift"; sourceTree = "<group>"; };
+		36EB78D222C453D0006AE8A8 /* APIStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIStatus.swift; sourceTree = "<group>"; };
+		36EB78D322C453D0006AE8A8 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		36EB78D722C453DF006AE8A8 /* Resume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resume.swift; sourceTree = "<group>"; };
+		DB03AF7222C41BCB002F99F1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		DB03AF7422C41C57002F99F1 /* UIColors+appColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+appColors.swift"; sourceTree = "<group>"; };
+		DB03AF7722C422DF002F99F1 /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
+		DB03AF7A22C4253A002F99F1 /* ResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeViewController.swift; sourceTree = "<group>"; };
+		DB03AF7D22C427DE002F99F1 /* SkillsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsTableViewCell.swift; sourceTree = "<group>"; };
+		DB03AF7E22C427DE002F99F1 /* SkillsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SkillsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +125,15 @@
 		36EB788522C3F90E006AE8A8 /* Resume */ = {
 			isa = PBXGroup;
 			children = (
+				36EB788D22C3F90F006AE8A8 /* Assets.xcassets */,
+				DB03AF7222C41BCB002F99F1 /* Colors.xcassets */,
+				36EB78D122C453D0006AE8A8 /* Network */,
+				36EB78D622C453DF006AE8A8 /* Model */,
+				DB03AF7C22C427BF002F99F1 /* Views */,
+				DB03AF7922C424C8002F99F1 /* Controllers */,
+				DB03AF7622C422C9002F99F1 /* Extensions */,
 				36EB788622C3F90E006AE8A8 /* AppDelegate.swift */,
 				36EB788A22C3F90E006AE8A8 /* Main.storyboard */,
-				36EB788D22C3F90F006AE8A8 /* Assets.xcassets */,
 				36EB788F22C3F90F006AE8A8 /* LaunchScreen.storyboard */,
 				36EB789222C3F90F006AE8A8 /* Info.plist */,
 			);
@@ -120,6 +156,63 @@
 				36EB78A822C3F90F006AE8A8 /* Info.plist */,
 			);
 			path = ResumeUITests;
+			sourceTree = "<group>";
+		};
+		36EB78C222C438C9006AE8A8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DB03AF7D22C427DE002F99F1 /* SkillsTableViewCell.swift */,
+				DB03AF7E22C427DE002F99F1 /* SkillsTableViewCell.xib */,
+				36EB78C522C43922006AE8A8 /* EducationCell.swift */,
+				36EB78C622C43922006AE8A8 /* EducationCell.xib */,
+				36EB78C922C43C8A006AE8A8 /* ExperienceCell.swift */,
+				36EB78CA22C43C8A006AE8A8 /* ExperienceCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		36EB78D122C453D0006AE8A8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				36EB78D222C453D0006AE8A8 /* APIStatus.swift */,
+				36EB78D322C453D0006AE8A8 /* APIClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		36EB78D622C453DF006AE8A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36EB78D722C453DF006AE8A8 /* Resume.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DB03AF7622C422C9002F99F1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DB03AF7722C422DF002F99F1 /* UIImageView+Utils.swift */,
+				DB03AF7422C41C57002F99F1 /* UIColors+appColors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DB03AF7922C424C8002F99F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB03AF7A22C4253A002F99F1 /* ResumeViewController.swift */,
+				36EB78CF22C447A6006AE8A8 /* ResumeViewController+TableView.swift */,
+				36EB78CD22C446A2006AE8A8 /* ErrorViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DB03AF7C22C427BF002F99F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				36EB78C222C438C9006AE8A8 /* Cells */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,8 +320,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				36EB789122C3F90F006AE8A8 /* LaunchScreen.storyboard in Resources */,
+				DB03AF7322C41BCB002F99F1 /* Colors.xcassets in Resources */,
+				DB03AF8022C427DE002F99F1 /* SkillsTableViewCell.xib in Resources */,
 				36EB788E22C3F90F006AE8A8 /* Assets.xcassets in Resources */,
+				36EB78C822C43922006AE8A8 /* EducationCell.xib in Resources */,
 				36EB788C22C3F90E006AE8A8 /* Main.storyboard in Resources */,
+				36EB78CC22C43C8A006AE8A8 /* ExperienceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +350,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36EB78D822C453DF006AE8A8 /* Resume.swift in Sources */,
+				36EB78CB22C43C8A006AE8A8 /* ExperienceCell.swift in Sources */,
+				36EB78C722C43922006AE8A8 /* EducationCell.swift in Sources */,
 				36EB788722C3F90E006AE8A8 /* AppDelegate.swift in Sources */,
+				DB03AF7B22C4253A002F99F1 /* ResumeViewController.swift in Sources */,
+				36EB78D422C453D1006AE8A8 /* APIStatus.swift in Sources */,
+				36EB78D522C453D1006AE8A8 /* APIClient.swift in Sources */,
+				DB03AF7822C422DF002F99F1 /* UIImageView+Utils.swift in Sources */,
+				36EB78CE22C446A2006AE8A8 /* ErrorViewController.swift in Sources */,
+				36EB78D022C447A6006AE8A8 /* ResumeViewController+TableView.swift in Sources */,
+				DB03AF7F22C427DE002F99F1 /* SkillsTableViewCell.swift in Sources */,
+				DB03AF7522C41C57002F99F1 /* UIColors+appColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +539,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64K4NG6BTN;
 				INFOPLIST_FILE = Resume/Info.plist;
+				InfoURL = "https://gist.githubusercontent.com/DaveCC94/cc43fd32072915ad1d15660b5f0eef91/raw";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,6 +558,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64K4NG6BTN;
 				INFOPLIST_FILE = Resume/Info.plist;
+				InfoURL = "https://gist.githubusercontent.com/DaveCC94/cc43fd32072915ad1d15660b5f0eef91/raw";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
