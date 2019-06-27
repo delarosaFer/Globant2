@@ -176,9 +176,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcP-er-vLn">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcP-er-vLn">
                                         <rect key="frame" x="8" y="122" width="197" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" name="dark-color"/>
                                         <state key="normal" title="Refresh">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -189,6 +188,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fcV-eN-bN8" secondAttribute="height" multiplier="213:160" id="3qM-wi-61i"/>
                                     <constraint firstAttribute="trailing" secondItem="vF7-t4-ldE" secondAttribute="trailing" constant="8" id="AdF-0k-bcn"/>
+                                    <constraint firstAttribute="trailing" secondItem="wcP-er-vLn" secondAttribute="trailing" constant="8" id="D9G-Zr-Ner"/>
+                                    <constraint firstAttribute="bottom" secondItem="wcP-er-vLn" secondAttribute="bottom" constant="8" id="FLg-UM-bnU"/>
+                                    <constraint firstItem="wcP-er-vLn" firstAttribute="leading" secondItem="fcV-eN-bN8" secondAttribute="leading" constant="8" id="HCD-Kn-9y0"/>
                                     <constraint firstItem="vF7-t4-ldE" firstAttribute="top" secondItem="fcV-eN-bN8" secondAttribute="top" constant="8" id="gvc-Uy-OBj"/>
                                     <constraint firstItem="vF7-t4-ldE" firstAttribute="leading" secondItem="fcV-eN-bN8" secondAttribute="leading" constant="8" id="jhF-AQ-2Ad"/>
                                 </constraints>

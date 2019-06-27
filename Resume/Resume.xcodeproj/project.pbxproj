@@ -19,6 +19,9 @@
 		36EB78CC22C43C8A006AE8A8 /* ExperienceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36EB78CA22C43C8A006AE8A8 /* ExperienceCell.xib */; };
 		36EB78CE22C446A2006AE8A8 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB78CD22C446A2006AE8A8 /* ErrorViewController.swift */; };
 		36EB78D022C447A6006AE8A8 /* ResumeViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB78CF22C447A6006AE8A8 /* ResumeViewController+TableView.swift */; };
+		36EB78D422C453D1006AE8A8 /* APIStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB78D222C453D0006AE8A8 /* APIStatus.swift */; };
+		36EB78D522C453D1006AE8A8 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB78D322C453D0006AE8A8 /* APIClient.swift */; };
+		36EB78D822C453DF006AE8A8 /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB78D722C453DF006AE8A8 /* Resume.swift */; };
 		DB03AF7322C41BCB002F99F1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB03AF7222C41BCB002F99F1 /* Colors.xcassets */; };
 		DB03AF7522C41C57002F99F1 /* UIColors+appColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF7422C41C57002F99F1 /* UIColors+appColors.swift */; };
 		DB03AF7822C422DF002F99F1 /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF7722C422DF002F99F1 /* UIImageView+Utils.swift */; };
@@ -63,6 +66,9 @@
 		36EB78CA22C43C8A006AE8A8 /* ExperienceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExperienceCell.xib; sourceTree = "<group>"; };
 		36EB78CD22C446A2006AE8A8 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		36EB78CF22C447A6006AE8A8 /* ResumeViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResumeViewController+TableView.swift"; sourceTree = "<group>"; };
+		36EB78D222C453D0006AE8A8 /* APIStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIStatus.swift; sourceTree = "<group>"; };
+		36EB78D322C453D0006AE8A8 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		36EB78D722C453DF006AE8A8 /* Resume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resume.swift; sourceTree = "<group>"; };
 		DB03AF7222C41BCB002F99F1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		DB03AF7422C41C57002F99F1 /* UIColors+appColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+appColors.swift"; sourceTree = "<group>"; };
 		DB03AF7722C422DF002F99F1 /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
@@ -121,6 +127,8 @@
 			children = (
 				36EB788D22C3F90F006AE8A8 /* Assets.xcassets */,
 				DB03AF7222C41BCB002F99F1 /* Colors.xcassets */,
+				36EB78D122C453D0006AE8A8 /* Network */,
+				36EB78D622C453DF006AE8A8 /* Model */,
 				DB03AF7C22C427BF002F99F1 /* Views */,
 				DB03AF7922C424C8002F99F1 /* Controllers */,
 				DB03AF7622C422C9002F99F1 /* Extensions */,
@@ -163,6 +171,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		36EB78D122C453D0006AE8A8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				36EB78D222C453D0006AE8A8 /* APIStatus.swift */,
+				36EB78D322C453D0006AE8A8 /* APIClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		36EB78D622C453DF006AE8A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36EB78D722C453DF006AE8A8 /* Resume.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DB03AF7622C422C9002F99F1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,21 +213,6 @@
 				36EB78C222C438C9006AE8A8 /* Cells */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		36EB78BA22C41A70006AE8A8 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				36EB78BD22C41AA7006AE8A8 /* TryViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		36EB78BF22C41AAF006AE8A8 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,10 +350,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36EB78D822C453DF006AE8A8 /* Resume.swift in Sources */,
 				36EB78CB22C43C8A006AE8A8 /* ExperienceCell.swift in Sources */,
 				36EB78C722C43922006AE8A8 /* EducationCell.swift in Sources */,
 				36EB788722C3F90E006AE8A8 /* AppDelegate.swift in Sources */,
 				DB03AF7B22C4253A002F99F1 /* ResumeViewController.swift in Sources */,
+				36EB78D422C453D1006AE8A8 /* APIStatus.swift in Sources */,
+				36EB78D522C453D1006AE8A8 /* APIClient.swift in Sources */,
 				DB03AF7822C422DF002F99F1 /* UIImageView+Utils.swift in Sources */,
 				36EB78CE22C446A2006AE8A8 /* ErrorViewController.swift in Sources */,
 				36EB78D022C447A6006AE8A8 /* ResumeViewController+TableView.swift in Sources */,
