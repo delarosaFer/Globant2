@@ -42,31 +42,20 @@ extension ResumeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch sections[indexPath.section] {
-        case "Education":
-            guard let cell = infoTableView?.dequeueReusableCell(withIdentifier: "EducationCell", for: indexPath) as? EducationCell else {
+        case educationSection:
+            guard let cell = infoTableView?.dequeueReusableCell(withIdentifier: "EducationCell", for: indexPath) as? EducationCell, let education = resume?.education else {
                 return UITableViewCell()
             }
             
-            cell.universityName?.text = resume?.education.universityName
-            cell.degree?.text = resume?.education.degree
-            cell.city?.text = resume?.education.city
-            cell.state?.text = resume?.education.state
-            cell.startDate?.text = resume?.education.startDate
-            cell.endDate?.text = resume?.education.endDate
+            cell.configureWith(education: education)
             
             return cell
-        case "Carreer":
-            guard let cell = infoTableView?.dequeueReusableCell(withIdentifier: "ExperienceCell", for: indexPath) as? ExperienceCell else {
+        case experienceSection:
+            guard let cell = infoTableView?.dequeueReusableCell(withIdentifier: "ExperienceCell", for: indexPath) as? ExperienceCell, let experience = resume?.experience[indexPath.row] else {
                 return UITableViewCell()
             }
-            let experience = resume?.experience[indexPath.row]
-            cell.workplace?.text = experience?.workplace
-            cell.position?.text = experience?.position
-            cell.descriptionWork?.text = experience?.description
-            cell.city?.text = experience?.city
-            cell.state?.text = experience?.state
-            cell.startDate?.text = experience?.startDate
-            cell.endDate?.text = experience?.endDate
+            
+            cell.configureWith(experience: experience)
             
             return cell
         default:

@@ -107,7 +107,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="celPhone" destination="xeR-Ex-sbn" id="9hL-BS-0uv"/>
+                <outlet property="cellPhone" destination="xeR-Ex-sbn" id="9hL-BS-0uv"/>
                 <outlet property="email" destination="nPg-Jg-MfY" id="tUe-Xd-Ag5"/>
                 <outlet property="name" destination="ImR-sO-47N" id="Zfh-Tr-TzW"/>
                 <outlet property="phone" destination="OFz-eA-EYn" id="6os-8e-0sX"/>

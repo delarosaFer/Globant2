@@ -10,8 +10,10 @@ import UIKit
 
 class ResumeViewController: UIViewController {
     
-    var sections = ["Education", "Carreer"]
-    var rowsPerSection = [1,2]
+    var educationSection = String()
+    var experienceSection = String()
+    var sections = [String]()
+    var rowsPerSection = [0, 0]
     
     var resume: Resume? {
         didSet {
@@ -29,18 +31,12 @@ class ResumeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        request { (resume) in
-            if let resume = resume {
-                DispatchQueue.main.async {
-                    self.resume = resume
-                }
-            }else {
-                print("RESUME ERROR")
-            }
-        }
+        resume = (self.parent as? TabBarViewController)?.resume
 
         registerCells()
         setupView()
+        
+        infoTableView?.reloadData()
     }
     
     func reloadInfo() {
@@ -70,27 +66,18 @@ class ResumeViewController: UIViewController {
     }
     
     func setupView() {
+        educationSection = NSLocalizedString("educationTitle", comment: "Education title")
+        experienceSection = NSLocalizedString("experienceTitle", comment: "Experience title")
+        
+        sections = [educationSection, experienceSection]
+        
         contactButton?.layer.cornerRadius = 9
         profilePhoto?.rounded()
     }
     
-    func request(completition: @escaping ((Resume?) -> Void)) {
-        var response: Resume?
-        
-        APIClient.shared.getData(handler: { (data, status) in
-            if status == .success {
-                guard let data = data else { return }
-                response = APIClient.shared.parseJSON(data: data, model: response) ?? response
-                completition(response)
-            } else {
-                debugPrint("DATA ERROR")
-            }
-        })
-    }
-    
     func requestImage(urlStr: String, completition: @escaping ((Data) -> Void)) {
         guard let url = URL(string: urlStr) else { return }
-        
+
         APIClient.shared.getData(url: url) { (data, status) in
             if status == .success {
                 guard let data = data else { return }

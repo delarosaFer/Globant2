@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		368E711E22C51E99004A5B98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 368E711C22C51E98004A5B98 /* Localizable.strings */; };
+		368E712022C5250E004A5B98 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E711F22C5250E004A5B98 /* MainViewController.swift */; };
 		36EB788722C3F90E006AE8A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB788622C3F90E006AE8A8 /* AppDelegate.swift */; };
 		36EB788C22C3F90E006AE8A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EB788A22C3F90E006AE8A8 /* Main.storyboard */; };
 		36EB788E22C3F90F006AE8A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36EB788D22C3F90F006AE8A8 /* Assets.xcassets */; };
@@ -54,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		368E711D22C51E98004A5B98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		368E711F22C5250E004A5B98 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		36EB788322C3F90E006AE8A8 /* Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EB788622C3F90E006AE8A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36EB788B22C3F90E006AE8A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 				36EB788A22C3F90E006AE8A8 /* Main.storyboard */,
 				36EB788F22C3F90F006AE8A8 /* LaunchScreen.storyboard */,
 				36EB789222C3F90F006AE8A8 /* Info.plist */,
+				368E711C22C51E98004A5B98 /* Localizable.strings */,
 			);
 			path = Resume;
 			sourceTree = "<group>";
@@ -179,6 +184,8 @@
 				36EB78C622C43922006AE8A8 /* EducationCell.xib */,
 				36EB78C922C43C8A006AE8A8 /* ExperienceCell.swift */,
 				36EB78CA22C43C8A006AE8A8 /* ExperienceCell.xib */,
+				DB03AF8222C43DBD002F99F1 /* ReferencesTableViewCell.swift */,
+				DB03AF8322C43DBD002F99F1 /* ReferencesTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -213,12 +220,13 @@
 		DB03AF7922C424C8002F99F1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DB03AF8E22C50CD6002F99F1 /* ReferencesViewController.swift */,
+				368E711F22C5250E004A5B98 /* MainViewController.swift */,
+				DB03AF8C22C50B0E002F99F1 /* TabBarViewController.swift */,
 				DB03AF7A22C4253A002F99F1 /* ResumeViewController.swift */,
 				36EB78CF22C447A6006AE8A8 /* ResumeViewController+TableView.swift */,
-				36EB78CD22C446A2006AE8A8 /* ErrorViewController.swift */,
-				DB03AF8C22C50B0E002F99F1 /* TabBarViewController.swift */,
+				DB03AF8E22C50CD6002F99F1 /* ReferencesViewController.swift */,
 				DB03AF9022C51403002F99F1 /* SkillsViewController.swift */,
+				36EB78CD22C446A2006AE8A8 /* ErrorViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -227,18 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				36EB78C222C438C9006AE8A8 /* Cells */,
-				DB03AF8122C43D9B002F99F1 /* ReferencesViewCell */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		DB03AF8122C43D9B002F99F1 /* ReferencesViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				DB03AF8222C43DBD002F99F1 /* ReferencesTableViewCell.swift */,
-				DB03AF8322C43DBD002F99F1 /* ReferencesTableViewCell.xib */,
-			);
-			path = ReferencesViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +347,7 @@
 				DB03AF8522C43DBD002F99F1 /* ReferencesTableViewCell.xib in Resources */,
 				DB03AF7322C41BCB002F99F1 /* Colors.xcassets in Resources */,
 				36EB788E22C3F90F006AE8A8 /* Assets.xcassets in Resources */,
+				368E711E22C51E99004A5B98 /* Localizable.strings in Resources */,
 				36EB78C822C43922006AE8A8 /* EducationCell.xib in Resources */,
 				DB03AF8822C50377002F99F1 /* SkillsTableViewCell.xib in Resources */,
 				36EB788C22C3F90E006AE8A8 /* Main.storyboard in Resources */,
@@ -392,6 +391,7 @@
 				36EB78D022C447A6006AE8A8 /* ResumeViewController+TableView.swift in Sources */,
 				DB03AF8422C43DBD002F99F1 /* ReferencesTableViewCell.swift in Sources */,
 				DB03AF8D22C50B0E002F99F1 /* TabBarViewController.swift in Sources */,
+				368E712022C5250E004A5B98 /* MainViewController.swift in Sources */,
 				DB03AF9122C51403002F99F1 /* SkillsViewController.swift in Sources */,
 				DB03AF7522C41C57002F99F1 /* UIColors+appColors.swift in Sources */,
 			);
@@ -429,6 +429,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		368E711C22C51E98004A5B98 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				368E711D22C51E98004A5B98 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		36EB788A22C3F90E006AE8A8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

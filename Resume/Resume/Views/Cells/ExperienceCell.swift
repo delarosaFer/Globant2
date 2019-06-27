@@ -21,6 +21,26 @@ class ExperienceCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    }
+    
+    func configureWith(experience: Experience) {
+        guard let workplace = workplace,
+            let position = position,
+            let descriptionWork = descriptionWork,
+            let state = state,
+            let city = city,
+            let startDate = startDate,
+            let endDate = endDate else {
+                return
+        }
+        
+        workplace.text = experience.workplace
+        position.text = experience.position
+        descriptionWork.text = experience.description
+        state.text = experience.state
+        city.text = experience.city
+        startDate.text = experience.startDate
+        endDate.text = experience.endDate ?? NSLocalizedString("currentDate", comment: "Current job")
+        
     }
 }
