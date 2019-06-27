@@ -216,14 +216,26 @@
                     <view key="view" contentMode="scaleToFill" id="wmz-h6-hvF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="137" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EY9-xX-6Ul">
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EY9-xX-6Ul" firstAttribute="leading" secondItem="a5E-3w-Xa7" secondAttribute="leading" id="5Qe-Kl-R40"/>
+                            <constraint firstItem="EY9-xX-6Ul" firstAttribute="top" secondItem="a5E-3w-Xa7" secondAttribute="top" id="V0W-MO-qYE"/>
+                            <constraint firstItem="a5E-3w-Xa7" firstAttribute="bottom" secondItem="EY9-xX-6Ul" secondAttribute="bottom" id="cxv-hn-gjf"/>
+                            <constraint firstItem="a5E-3w-Xa7" firstAttribute="trailing" secondItem="EY9-xX-6Ul" secondAttribute="trailing" id="wYW-GY-P9K"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="a5E-3w-Xa7"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="rgP-90-STG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fg9-TE-hJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-771" y="-149"/>
+            <point key="canvasLocation" x="-772.5" y="-150"/>
         </scene>
     </scenes>
     <resources>
