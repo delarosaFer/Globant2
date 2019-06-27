@@ -42,7 +42,7 @@ extension ResumeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch sections[indexPath.section] {
-        case "Education":
+        case educationSection:
             guard let cell = infoTableView?.dequeueReusableCell(withIdentifier: "EducationCell", for: indexPath) as? EducationCell else {
                 return UITableViewCell()
             }
@@ -52,10 +52,10 @@ extension ResumeViewController: UITableViewDataSource, UITableViewDelegate {
             cell.city?.text = resume?.education.city
             cell.state?.text = resume?.education.state
             cell.startDate?.text = resume?.education.startDate
-            cell.endDate?.text = resume?.education.endDate
+            cell.endDate?.text = resume?.education.endDate ?? NSLocalizedString("currentDate", comment: "Unfinished education")
             
             return cell
-        case "Carreer":
+        case experienceSection:
             guard let cell = infoTableView?.dequeueReusableCell(withIdentifier: "ExperienceCell", for: indexPath) as? ExperienceCell else {
                 return UITableViewCell()
             }
@@ -66,7 +66,7 @@ extension ResumeViewController: UITableViewDataSource, UITableViewDelegate {
             cell.city?.text = experience?.city
             cell.state?.text = experience?.state
             cell.startDate?.text = experience?.startDate
-            cell.endDate?.text = experience?.endDate
+            cell.endDate?.text = experience?.endDate ?? NSLocalizedString("currentDate", comment: "Current job")
             
             return cell
         default:

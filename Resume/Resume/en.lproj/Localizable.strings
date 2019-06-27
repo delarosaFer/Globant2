@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  Resume
+
+  Created by Fernando De La Rosa Salas on 6/27/19.
+  Copyright © 2019 Fernando De La Rosa Salas. All rights reserved.
+*/
+
+
+// MARK: String titles
+"resumeTitle" = "Resume";
+"referencesTitle" = "References";
+"skillsTitle" = "Skills";
+"educationTitle" = "Education";
+"experienceTitle" = "Experience";
+
+
+//MARK: String buttons
+"contactButton" = "Contact Information";
+
+//MARK: Error messages
+"errorConnection" = "Please, check your internet connnection and try it again";
+"errorURL" = "Error!, URL not found, please try again later";
+"errorRequest" = "Something was wrong, please try again later";
+"errorParse" = "There was a problem parsing the data, please try again later";
+
+//MARK: Nill values
+"currentDate" = "-  Current";

@@ -10,8 +10,10 @@ import UIKit
 
 class ResumeViewController: UIViewController {
     
-    var sections = ["Education", "Carreer"]
-    var rowsPerSection = [1,2]
+    var educationSection = String()
+    var experienceSection = String()
+    var sections = [String]()
+    var rowsPerSection = [0, 0]
     
     var resume: Resume? {
         didSet {
@@ -35,7 +37,7 @@ class ResumeViewController: UIViewController {
                     self.resume = resume
                 }
             }else {
-                print("RESUME ERROR")
+                debugPrint(NSLocalizedString("errorParse", comment: "Parsing was wrong"))
             }
         }
 
@@ -70,6 +72,11 @@ class ResumeViewController: UIViewController {
     }
     
     func setupView() {
+        educationSection = NSLocalizedString("educationTitle", comment: "Education title")
+        experienceSection = NSLocalizedString("experienceTitle", comment: "Experience title")
+        
+        sections = [educationSection, experienceSection]
+        
         contactButton?.layer.cornerRadius = 9
         profilePhoto?.rounded()
     }
@@ -83,7 +90,7 @@ class ResumeViewController: UIViewController {
                 response = APIClient.shared.parseJSON(data: data, model: response) ?? response
                 completition(response)
             } else {
-                debugPrint("DATA ERROR")
+                debugPrint(NSLocalizedString("errorRequest", comment: "Something was wrong with the request"))
             }
         })
     }
