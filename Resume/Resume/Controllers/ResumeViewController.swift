@@ -14,7 +14,7 @@ class ResumeViewController: UIViewController {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var employment: UILabel!
     @IBOutlet weak var summary: UILabel!
-    @IBOutlet weak var skillsTableView: UITableView!
+    @IBOutlet weak var infoTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

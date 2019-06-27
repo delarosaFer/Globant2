@@ -29,4 +29,11 @@ extension UIColor {
     public static var backgroundColor: UIColor {
         return UIColor.init(named: "background-color") ?? UIColor.lightGray
     }
+    
+    /**
+     Creates UIColor instances with the values given in `Colors.xcassets`
+     */
+    public static var darkColor: UIColor {
+        return UIColor.init(named: "dark-color") ?? UIColor.lightGray
+    }
 }
