@@ -74,7 +74,8 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="XaR-Tu-4uw" kind="presentation" modalPresentationStyle="overCurrentContext" id="gJS-Qv-sEt"/>
+                                            <action selector="tapContactButton:" destination="6Mv-yV-uVo" eventType="touchUpInside" id="CGE-B2-gzP"/>
+                                            <segue destination="XaR-Tu-4uw" kind="presentation" identifier="ContactSegue" modalPresentationStyle="overCurrentContext" id="gJS-Qv-sEt"/>
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vpL-7E-AZ6">
@@ -164,19 +165,19 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oJY-7K-T6s">
                                                             <rect key="frame" x="128" y="0.0" width="128" height="95.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEb-Gq-6T1">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEb-Gq-6T1">
                                                                     <rect key="frame" x="0.0" y="0.0" width="37" height="21"/>
                                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebg-ez-i4t">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebg-ez-i4t">
                                                                     <rect key="frame" x="0.0" y="37" width="37" height="21.5"/>
                                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDO-u1-z0G">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDO-u1-z0G">
                                                                     <rect key="frame" x="0.0" y="74.5" width="37" height="21"/>
                                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -212,6 +213,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="UGb-QO-2Pc" secondAttribute="bottom" constant="16" id="TCw-4X-pTr"/>
                                                 <constraint firstItem="UGb-QO-2Pc" firstAttribute="width" secondItem="q4K-C9-itF" secondAttribute="width" multiplier="0.5" id="cjh-Yh-oqA"/>
                                                 <constraint firstAttribute="trailing" secondItem="KFc-ty-pyk" secondAttribute="trailing" constant="16" id="dUe-A0-SLU"/>
+                                                <constraint firstItem="UGb-QO-2Pc" firstAttribute="top" secondItem="UDO-u1-z0G" secondAttribute="bottom" constant="24.5" id="j2h-03-fWQ"/>
                                                 <constraint firstItem="KFc-ty-pyk" firstAttribute="top" secondItem="gxi-ti-muX" secondAttribute="bottom" constant="32" id="kwM-95-q8I"/>
                                                 <constraint firstItem="KFc-ty-pyk" firstAttribute="leading" secondItem="q4K-C9-itF" secondAttribute="leading" constant="16" id="vMG-6P-yLm"/>
                                             </constraints>
@@ -242,8 +244,11 @@
                     </view>
                     <connections>
                         <outlet property="cellPhone" destination="CfR-Zs-fAO" id="qda-5R-aik"/>
+                        <outlet property="cellPhoneLabel" destination="Ebg-ez-i4t" id="nev-v7-Gto"/>
                         <outlet property="email" destination="CLg-vO-69X" id="uMP-zl-Hmn"/>
+                        <outlet property="emailLable" destination="UDO-u1-z0G" id="Qzw-Nd-xVZ"/>
                         <outlet property="phone" destination="Ku9-hb-EZc" id="Sd7-9K-XeL"/>
+                        <outlet property="phoneLabel" destination="FEb-Gq-6T1" id="PfR-nq-qcg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pl-Pq-VhS" userLabel="First Responder" sceneMemberID="firstResponder"/>

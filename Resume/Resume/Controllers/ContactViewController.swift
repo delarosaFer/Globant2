@@ -1,10 +1,3 @@
-//
-//  ContactViewController.swift
-//  Resume
-//
-//  Created by David Castro Cisneros on 6/27/19.
-//  Copyright © 2019 Fernando De La Rosa Salas. All rights reserved.
-//
 
 import UIKit
 
@@ -13,10 +6,16 @@ class ContactViewController: UIViewController {
     @IBOutlet weak var phone: UILabel?
     @IBOutlet weak var email: UILabel?
     @IBOutlet weak var cellPhone: UILabel?
+    @IBOutlet weak var phoneLabel: UILabel?
+    @IBOutlet weak var cellPhoneLabel: UILabel?
+    @IBOutlet weak var emailLable: UILabel?
+    
     var contact: Contact?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        displayContact()
     }
     
     func displayContact() {
@@ -27,9 +26,13 @@ class ContactViewController: UIViewController {
                 return
         }
         
-        phone.text = contact.celphone
-        email.text = contact.email
-        cellPhone.text = contact.celphone
+        phone.text = NSLocalizedString("phoneLabel", comment: "Phone label")
+        cellPhone.text = NSLocalizedString("cellPhoneLabel", comment: "Cell phone label")
+        email.text = NSLocalizedString("emailLabel", comment: "Email label")
+        
+        phoneLabel?.text = contact.celphone
+        emailLable?.text = contact.email
+        cellPhoneLabel?.text = contact.celphone
     }
     
     @IBAction func didTapReturn(_ sender: Any) {
