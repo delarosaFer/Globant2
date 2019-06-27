@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Resume View Controller-->
+        <!--Resume-->
         <scene sceneID="WRU-90-Byl">
             <objects>
                 <viewController id="6Mv-yV-uVo" customClass="ResumeViewController" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
@@ -64,16 +64,20 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4b-77-5w8">
-                                        <rect key="frame" x="0.0" y="128" width="304" height="30"/>
+                                        <rect key="frame" x="0.0" y="128" width="304" height="37"/>
                                         <color key="backgroundColor" name="secondary-color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="ADD-8F-jM2"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Contact Information">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vpL-7E-AZ6">
-                                        <rect key="frame" x="0.0" y="166" width="304" height="309"/>
+                                        <rect key="frame" x="0.0" y="173" width="304" height="302"/>
                                         <color key="backgroundColor" name="background-color"/>
+                                        <color key="separatorColor" name="dark-color"/>
                                         <connections>
                                             <outlet property="dataSource" destination="6Mv-yV-uVo" id="DU4-wK-I69"/>
                                             <outlet property="delegate" destination="6Mv-yV-uVo" id="jgC-wA-pwF"/>
@@ -91,7 +95,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gfE-LY-VVq"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="VO7-hw-fU9"/>
+                    <tabBarItem key="tabBarItem" title="Resume" image="resume" selectedImage="resume" id="VO7-hw-fU9"/>
                     <connections>
                         <outlet property="contactButton" destination="K4b-77-5w8" id="iD2-fs-vNa"/>
                         <outlet property="employment" destination="eFc-1B-Gsm" id="ppk-yM-NZt"/>
@@ -121,26 +125,57 @@
             </objects>
             <point key="canvasLocation" x="92" y="642"/>
         </scene>
-        <!--View Controller-->
+        <!--Skills-->
         <scene sceneID="ycX-HQ-1MM">
             <objects>
-                <viewController id="jgd-yu-vm1" sceneMemberID="viewController">
+                <viewController id="jgd-yu-vm1" customClass="SkillsViewController" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YMl-gA-N69">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rd5-wD-MEf">
+                                <rect key="frame" x="0.0" y="36" width="320" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" name="dark-color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aEg-mf-TKx">
+                                <rect key="frame" x="8" y="88" width="304" height="423"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" name="dark-color"/>
+                                <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="7ut-BZ-aDw">
+                                    <rect key="frame" x="0.0" y="0.0" width="304" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aEg-mf-TKx" firstAttribute="leading" secondItem="ije-eH-W6i" secondAttribute="leading" constant="8" id="0lk-ze-pyv"/>
+                            <constraint firstItem="Rd5-wD-MEf" firstAttribute="leading" secondItem="ije-eH-W6i" secondAttribute="leading" id="33T-OP-rLq"/>
+                            <constraint firstItem="aEg-mf-TKx" firstAttribute="top" secondItem="Rd5-wD-MEf" secondAttribute="bottom" constant="16" id="ez5-v7-QUY"/>
+                            <constraint firstItem="ije-eH-W6i" firstAttribute="bottom" secondItem="aEg-mf-TKx" secondAttribute="bottom" constant="8" id="lP6-Ba-xrv"/>
+                            <constraint firstItem="ije-eH-W6i" firstAttribute="trailing" secondItem="Rd5-wD-MEf" secondAttribute="trailing" id="pb0-sj-RRU"/>
+                            <constraint firstItem="ije-eH-W6i" firstAttribute="trailing" secondItem="aEg-mf-TKx" secondAttribute="trailing" constant="8" id="r8F-GL-rzu"/>
+                            <constraint firstItem="Rd5-wD-MEf" firstAttribute="top" secondItem="ije-eH-W6i" secondAttribute="top" constant="16" id="tPg-Ed-xws"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ije-eH-W6i"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="x4n-Iv-5C3"/>
+                    <tabBarItem key="tabBarItem" title="Skills" image="skills" id="x4n-Iv-5C3"/>
+                    <connections>
+                        <outlet property="skillsTableView" destination="aEg-mf-TKx" id="CDl-Xo-7QZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vU-fF-WRP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="926" y="-150"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="yuY-uV-7oK">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="6rn-bG-cDg" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="6rn-bG-cDg" customClass="TabBarViewController" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zBD-RA-vZO">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -209,29 +244,48 @@
             </objects>
             <point key="canvasLocation" x="1755" y="-963.38028169014081"/>
         </scene>
-        <!--View Controller-->
+        <!--References-->
         <scene sceneID="ci3-tx-9W6">
             <objects>
-                <viewController id="I0m-DB-Rzp" sceneMemberID="viewController">
+                <viewController id="I0m-DB-Rzp" customClass="ReferencesViewController" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wmz-h6-hvF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="137" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EY9-xX-6Ul">
-                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EY9-xX-6Ul">
+                                <rect key="frame" x="0.0" y="88" width="320" height="431"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" name="dark-color"/>
+                                <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="FNf-iX-lng">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="References" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ht-bf-7iS">
+                                <rect key="frame" x="0.0" y="36" width="320" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" name="dark-color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EY9-xX-6Ul" firstAttribute="leading" secondItem="a5E-3w-Xa7" secondAttribute="leading" id="5Qe-Kl-R40"/>
-                            <constraint firstItem="EY9-xX-6Ul" firstAttribute="top" secondItem="a5E-3w-Xa7" secondAttribute="top" id="V0W-MO-qYE"/>
+                            <constraint firstItem="3ht-bf-7iS" firstAttribute="leading" secondItem="a5E-3w-Xa7" secondAttribute="leading" id="F66-hK-aWh"/>
                             <constraint firstItem="a5E-3w-Xa7" firstAttribute="bottom" secondItem="EY9-xX-6Ul" secondAttribute="bottom" id="cxv-hn-gjf"/>
+                            <constraint firstItem="3ht-bf-7iS" firstAttribute="top" secondItem="a5E-3w-Xa7" secondAttribute="top" constant="16" id="dcf-Tr-GjD"/>
+                            <constraint firstItem="a5E-3w-Xa7" firstAttribute="trailing" secondItem="3ht-bf-7iS" secondAttribute="trailing" id="lE6-jG-81N"/>
+                            <constraint firstItem="EY9-xX-6Ul" firstAttribute="top" secondItem="3ht-bf-7iS" secondAttribute="bottom" constant="16" id="r4c-W9-eht"/>
                             <constraint firstItem="a5E-3w-Xa7" firstAttribute="trailing" secondItem="EY9-xX-6Ul" secondAttribute="trailing" id="wYW-GY-P9K"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a5E-3w-Xa7"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="rgP-90-STG"/>
+                    <tabBarItem key="tabBarItem" title="References" image="references" id="rgP-90-STG"/>
+                    <connections>
+                        <outlet property="referencesTableView" destination="EY9-xX-6Ul" id="fXk-ZE-Hg2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fg9-TE-hJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -239,8 +293,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="references" width="138.46153259277344" height="138.46153259277344"/>
+        <image name="resume" width="138.46153259277344" height="138.46153259277344"/>
+        <image name="skills" width="138.46153259277344" height="138.46153259277344"/>
         <namedColor name="background-color">
-            <color red="0.99215686274509807" green="0.94509803921568625" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="dark-color">
             <color red="0.51764705882352946" green="0.14509803921568629" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

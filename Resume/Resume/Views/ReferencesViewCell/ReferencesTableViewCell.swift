@@ -8,11 +8,10 @@
 
 import UIKit
 
-class ReferencesTableViewCell: UITableViewCell {
+final class ReferencesTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel?
-    @IBOutlet weak var correo: UILabel?
     @IBOutlet weak var phone: UILabel?
-    @IBOutlet weak var cellPhone: UILabel?
+    @IBOutlet weak var celPhone: UILabel?
     @IBOutlet weak var email: UILabel?
     @IBOutlet weak var workplace: UILabel?
     
@@ -24,5 +23,19 @@ class ReferencesTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    
+    func configureWith(reference: Reference) {
+        guard let name = name,
+            let email = email,
+            let celPhone = celPhone,
+            let workplace = workplace,
+            let phone = phone else {
+            return
+        }
+
+        name.text = reference.name
+        workplace.text = reference.workplace
+        email.text = reference.contact.email
+        celPhone.text = reference.contact.celphone
+        phone.text = reference.contact.phone
+    }
 }

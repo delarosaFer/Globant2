@@ -20,25 +20,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="sAl-Gg-3nR">
-                        <rect key="frame" x="16" y="11" width="288" height="150"/>
+                        <rect key="frame" x="16" y="11" width="288" height="159"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImR-sO-47N">
-                                <rect key="frame" x="0.0" y="0.0" width="288" height="20"/>
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="miJ-1I-gdt"/>
+                                    <constraint firstAttribute="height" constant="29" id="miJ-1I-gdt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workplace" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eK6-A9-Y4D">
-                                <rect key="frame" x="0.0" y="36" width="288" height="20.5"/>
+                                <rect key="frame" x="0.0" y="45" width="288" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IFi-zm-EeB">
-                                <rect key="frame" x="0.0" y="72.5" width="288" height="77.5"/>
+                                <rect key="frame" x="0.0" y="81.5" width="288" height="77.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1mG-7h-pIp">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="77.5"/>
@@ -107,9 +107,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="cellPhone" destination="xeR-Ex-sbn" id="pya-t1-GNm"/>
-                <outlet property="correo" destination="nPg-Jg-MfY" id="Z2X-HL-azn"/>
-                <outlet property="email" destination="aO0-en-llr" id="2EX-0e-r58"/>
+                <outlet property="celPhone" destination="xeR-Ex-sbn" id="9hL-BS-0uv"/>
+                <outlet property="email" destination="nPg-Jg-MfY" id="tUe-Xd-Ag5"/>
                 <outlet property="name" destination="ImR-sO-47N" id="Zfh-Tr-TzW"/>
                 <outlet property="phone" destination="OFz-eA-EYn" id="6os-8e-0sX"/>
                 <outlet property="workplace" destination="eK6-A9-Y4D" id="5r8-6H-I05"/>
@@ -119,7 +118,7 @@
     </objects>
     <resources>
         <namedColor name="background-color">
-            <color red="0.89803921568627454" green="0.90980392156862744" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

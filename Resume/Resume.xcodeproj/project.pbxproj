@@ -30,6 +30,10 @@
 		DB03AF8522C43DBD002F99F1 /* ReferencesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB03AF8322C43DBD002F99F1 /* ReferencesTableViewCell.xib */; };
 		DB03AF8822C50377002F99F1 /* SkillsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB03AF8622C50377002F99F1 /* SkillsTableViewCell.xib */; };
 		DB03AF8922C50377002F99F1 /* SkillsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF8722C50377002F99F1 /* SkillsTableViewCell.swift */; };
+		DB03AF8B22C50620002F99F1 /* UIStackView+RemoveViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF8A22C50620002F99F1 /* UIStackView+RemoveViews.swift */; };
+		DB03AF8D22C50B0E002F99F1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF8C22C50B0E002F99F1 /* TabBarViewController.swift */; };
+		DB03AF8F22C50CD6002F99F1 /* ReferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF8E22C50CD6002F99F1 /* ReferencesViewController.swift */; };
+		DB03AF9122C51403002F99F1 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF9022C51403002F99F1 /* SkillsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		DB03AF8322C43DBD002F99F1 /* ReferencesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReferencesTableViewCell.xib; sourceTree = "<group>"; };
 		DB03AF8622C50377002F99F1 /* SkillsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SkillsTableViewCell.xib; sourceTree = "<group>"; };
 		DB03AF8722C50377002F99F1 /* SkillsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsTableViewCell.swift; sourceTree = "<group>"; };
+		DB03AF8A22C50620002F99F1 /* UIStackView+RemoveViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+RemoveViews.swift"; sourceTree = "<group>"; };
+		DB03AF8C22C50B0E002F99F1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		DB03AF8E22C50CD6002F99F1 /* ReferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesViewController.swift; sourceTree = "<group>"; };
+		DB03AF9022C51403002F99F1 /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +205,7 @@
 			children = (
 				DB03AF7722C422DF002F99F1 /* UIImageView+Utils.swift */,
 				DB03AF7422C41C57002F99F1 /* UIColors+appColors.swift */,
+				DB03AF8A22C50620002F99F1 /* UIStackView+RemoveViews.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -204,9 +213,12 @@
 		DB03AF7922C424C8002F99F1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DB03AF8E22C50CD6002F99F1 /* ReferencesViewController.swift */,
 				DB03AF7A22C4253A002F99F1 /* ResumeViewController.swift */,
 				36EB78CF22C447A6006AE8A8 /* ResumeViewController+TableView.swift */,
 				36EB78CD22C446A2006AE8A8 /* ErrorViewController.swift */,
+				DB03AF8C22C50B0E002F99F1 /* TabBarViewController.swift */,
+				DB03AF9022C51403002F99F1 /* SkillsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -371,12 +383,16 @@
 				36EB788722C3F90E006AE8A8 /* AppDelegate.swift in Sources */,
 				DB03AF7B22C4253A002F99F1 /* ResumeViewController.swift in Sources */,
 				36EB78D422C453D1006AE8A8 /* APIStatus.swift in Sources */,
+				DB03AF8B22C50620002F99F1 /* UIStackView+RemoveViews.swift in Sources */,
 				36EB78D522C453D1006AE8A8 /* APIClient.swift in Sources */,
 				DB03AF8922C50377002F99F1 /* SkillsTableViewCell.swift in Sources */,
 				DB03AF7822C422DF002F99F1 /* UIImageView+Utils.swift in Sources */,
+				DB03AF8F22C50CD6002F99F1 /* ReferencesViewController.swift in Sources */,
 				36EB78CE22C446A2006AE8A8 /* ErrorViewController.swift in Sources */,
 				36EB78D022C447A6006AE8A8 /* ResumeViewController+TableView.swift in Sources */,
 				DB03AF8422C43DBD002F99F1 /* ReferencesTableViewCell.swift in Sources */,
+				DB03AF8D22C50B0E002F99F1 /* TabBarViewController.swift in Sources */,
+				DB03AF9122C51403002F99F1 /* SkillsViewController.swift in Sources */,
 				DB03AF7522C41C57002F99F1 /* UIColors+appColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
