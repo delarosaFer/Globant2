@@ -36,8 +36,9 @@
 		DB03AF8D22C50B0E002F99F1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF8C22C50B0E002F99F1 /* TabBarViewController.swift */; };
 		DB03AF8F22C50CD6002F99F1 /* ReferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF8E22C50CD6002F99F1 /* ReferencesViewController.swift */; };
 		DB03AF9122C51403002F99F1 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF9022C51403002F99F1 /* SkillsViewController.swift */; };
+		DB242F1A22C5322D005E596C /* ReferencesViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F1922C5322D005E596C /* ReferencesViewController+TableView.swift */; };
+		DB242F1D22C5328E005E596C /* ReferencesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F1C22C5328E005E596C /* ReferencesPresenter.swift */; };
 		DBF0F81722C524BF006086D3 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0F81622C524BF006086D3 /* ContactViewController.swift */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +94,9 @@
 		DB03AF8C22C50B0E002F99F1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		DB03AF8E22C50CD6002F99F1 /* ReferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesViewController.swift; sourceTree = "<group>"; };
 		DB03AF9022C51403002F99F1 /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
+		DB242F1922C5322D005E596C /* ReferencesViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReferencesViewController+TableView.swift"; sourceTree = "<group>"; };
+		DB242F1C22C5328E005E596C /* ReferencesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesPresenter.swift; sourceTree = "<group>"; };
 		DBF0F81622C524BF006086D3 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				36EB78D122C453D0006AE8A8 /* Network */,
 				36EB78D622C453DF006AE8A8 /* Model */,
 				DB03AF7C22C427BF002F99F1 /* Views */,
+				DB242F1B22C5326B005E596C /* Presenters */,
 				DB03AF7922C424C8002F99F1 /* Controllers */,
 				DB03AF7622C422C9002F99F1 /* Extensions */,
 				36EB788622C3F90E006AE8A8 /* AppDelegate.swift */,
@@ -226,6 +229,7 @@
 			children = (
 				368E711F22C5250E004A5B98 /* MainViewController.swift */,
 				DB03AF8C22C50B0E002F99F1 /* TabBarViewController.swift */,
+				DB242F1822C5320B005E596C /* References */,
 				DB03AF7A22C4253A002F99F1 /* ResumeViewController.swift */,
 				36EB78CF22C447A6006AE8A8 /* ResumeViewController+TableView.swift */,
 				DB03AF8E22C50CD6002F99F1 /* ReferencesViewController.swift */,
@@ -242,6 +246,32 @@
 				36EB78C222C438C9006AE8A8 /* Cells */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DB03AF8122C43D9B002F99F1 /* ReferencesViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DB03AF8222C43DBD002F99F1 /* ReferencesTableViewCell.swift */,
+				DB03AF8322C43DBD002F99F1 /* ReferencesTableViewCell.xib */,
+			);
+			path = ReferencesViewCell;
+			sourceTree = "<group>";
+		};
+		DB242F1822C5320B005E596C /* References */ = {
+			isa = PBXGroup;
+			children = (
+				DB03AF8E22C50CD6002F99F1 /* ReferencesViewController.swift */,
+				DB242F1922C5322D005E596C /* ReferencesViewController+TableView.swift */,
+			);
+			path = References;
+			sourceTree = "<group>";
+		};
+		DB242F1B22C5326B005E596C /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				DB242F1C22C5328E005E596C /* ReferencesPresenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,7 +423,9 @@
 				DB03AF8922C50377002F99F1 /* SkillsTableViewCell.swift in Sources */,
 				DB03AF7822C422DF002F99F1 /* UIImageView+Utils.swift in Sources */,
 				DB03AF8F22C50CD6002F99F1 /* ReferencesViewController.swift in Sources */,
+				DB242F1A22C5322D005E596C /* ReferencesViewController+TableView.swift in Sources */,
 				36EB78CE22C446A2006AE8A8 /* ErrorViewController.swift in Sources */,
+				DB242F1D22C5328E005E596C /* ReferencesPresenter.swift in Sources */,
 				36EB78D022C447A6006AE8A8 /* ResumeViewController+TableView.swift in Sources */,
 				DB03AF8422C43DBD002F99F1 /* ReferencesTableViewCell.swift in Sources */,
 				DB03AF8D22C50B0E002F99F1 /* TabBarViewController.swift in Sources */,

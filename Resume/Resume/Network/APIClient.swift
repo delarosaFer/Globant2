@@ -11,7 +11,7 @@ import UIKit
 class APIClient {
     
     /**
-     Singletone of Service class useful for interact with the API
+     Singleton of Service class useful for interact with the API
      */
     public static let shared = APIClient()
     

@@ -192,6 +192,11 @@
                                                     <state key="normal" title="Return">
                                                         <color key="titleColor" name="background-color"/>
                                                     </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="9"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="didTapReturn:" destination="XaR-Tu-4uw" eventType="touchUpInside" id="bRf-pg-O7o"/>
                                                     </connections>
@@ -210,6 +215,11 @@
                                                 <constraint firstItem="KFc-ty-pyk" firstAttribute="top" secondItem="gxi-ti-muX" secondAttribute="bottom" constant="32" id="kwM-95-q8I"/>
                                                 <constraint firstItem="KFc-ty-pyk" firstAttribute="leading" secondItem="q4K-C9-itF" secondAttribute="leading" constant="16" id="vMG-6P-yLm"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
                                     <constraints>
