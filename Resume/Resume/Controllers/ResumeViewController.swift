@@ -9,16 +9,33 @@
 import UIKit
 
 class ResumeViewController: UIViewController {
-    @IBOutlet weak var profilePhoto: UIImageView!
     
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var employment: UILabel!
-    @IBOutlet weak var summary: UILabel!
-    @IBOutlet weak var infoTableView: UITableView!
+    var sections = ["Education", "Carreer"]
+    var rowsPerSection = [1,2]
+    
+    @IBOutlet weak var profilePhoto: UIImageView?
+    @IBOutlet weak var name: UILabel?
+    @IBOutlet weak var employment: UILabel?
+    @IBOutlet weak var summary: UILabel?
+    @IBOutlet weak var infoTableView: UITableView?
+    @IBOutlet weak var contactButton: UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        registerCells()
+        setupView()
+    }
+    
+    func registerCells() {
+        //MARK: Register cells
+        let EducationNib = UINib.init(nibName: "EducationCell", bundle: nil)
+        infoTableView?.register(EducationNib, forCellReuseIdentifier: "EducationCell")
+        let ExperienceNib = UINib.init(nibName: "ExperienceCell", bundle: nil)
+        infoTableView?.register(ExperienceNib, forCellReuseIdentifier: "ExperienceCell")
+    }
+    
+    func setupView() {
+        contactButton?.layer.cornerRadius = 9
     }
 }
