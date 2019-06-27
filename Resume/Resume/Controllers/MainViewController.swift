@@ -9,7 +9,8 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
+    let client = APIClient()
     var resume: Resume?
     var errorMessage = String()
     
@@ -18,7 +19,6 @@ class MainViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(anixmated)
         setupData()
     }
     
@@ -42,7 +42,7 @@ class MainViewController: UIViewController {
     func request(completition: @escaping ((Resume?) -> Void)) {
         var response: Resume?
         
-        APIClient.shared.getData(handler: { (data, status) in
+        client.getData(handler: { (data, status) in
             if status == .success {
                 guard let data = data else { return }
                 response = APIClient.shared.parseJSON(data: data, model: response) ?? response

@@ -10,6 +10,7 @@ import UIKit
 
 class ResumeViewController: UIViewController {
     
+    var client = APIClient()
     var educationSection = String()
     var experienceSection = String()
     var sections = [String]()
@@ -78,7 +79,7 @@ class ResumeViewController: UIViewController {
     func requestImage(urlStr: String, completition: @escaping ((Data) -> Void)) {
         guard let url = URL(string: urlStr) else { return }
 
-        APIClient.shared.getData(url: url) { (data, status) in
+        client.getData(url: url) { (data, status) in
             if status == .success {
                 guard let data = data else { return }
                 completition(data)
