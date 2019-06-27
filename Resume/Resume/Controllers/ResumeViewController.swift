@@ -1,10 +1,3 @@
-//
-//  ResumeViewController.swift
-//  Resume
-//
-//  Created by David Castro Cisneros on 6/26/19.
-//  Copyright © 2019 Fernando De La Rosa Salas. All rights reserved.
-//
 
 import UIKit
 
@@ -84,6 +77,17 @@ class ResumeViewController: UIViewController {
                 guard let data = data else { return }
                 completition(data)
             }
+        }
+    }
+    
+    
+    @IBAction func tapContactButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "ContactSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ContactViewController {
+            destination.contact = resume?.contact
         }
     }
 }

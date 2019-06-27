@@ -1,12 +1,3 @@
-/* 
-  Localizable.strings
-  Resume
-
-  Created by Fernando De La Rosa Salas on 6/27/19.
-  Copyright © 2019 Fernando De La Rosa Salas. All rights reserved.
-*/
-
-
 // MARK: String titles
 "resumeTitle" = "Resume";
 "referencesTitle" = "References";
@@ -26,3 +17,8 @@
 
 //MARK: Nill values
 "currentDate" = "-  Current";
+
+//MARK: String labels
+"phoneLabel" = "Phone:";
+"cellPhoneLabel" = "Cell phone:";
+"emailLabel" = "Email:";
