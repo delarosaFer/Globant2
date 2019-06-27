@@ -19,11 +19,16 @@ class APIClient {
     private let URLBase: URL?
     
     //MARK: URL Session
-    private let defaultSession = URLSession(configuration: .default)
+    private let defaultSession: URLSession
     private var dataTask: URLSessionDataTask?
     
     //MARK: Init Service()
     init() {
+        let configuration = URLSessionConfiguration.default
+        configuration.requestCachePolicy = .reloadIgnoringCacheData
+        configuration.urlCache = nil
+        defaultSession = URLSession(configuration: configuration)
+        
         guard let urlStr = Bundle.main.object(forInfoDictionaryKey: "InfoURL") as? String else {
             self.URLBase = URL(string: "")
             return
@@ -52,7 +57,7 @@ class APIClient {
             }
             dataTask?.resume()
         }else {
-            debugPrint("Not valid URL")
+            debugPrint(NSLocalizedString("errorURL", comment: "URL corrupt"))
         }
     }
     

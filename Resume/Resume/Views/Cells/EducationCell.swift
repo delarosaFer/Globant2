@@ -20,6 +20,23 @@ class EducationCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    }
+    
+    func configureWith(education: Education) {
+        guard let universityName = universityName,
+            let degree = degree,
+            let state = state,
+            let city = city,
+            let startDate = startDate,
+            let endDate = endDate else {
+                return
+        }
+        
+        universityName.text = education.universityName
+        degree.text = education.degree
+        state.text = education.state
+        city.text = education.city
+        startDate.text = education.startDate
+        endDate.text = education.endDate ?? NSLocalizedString("currentDate", comment: "Unfinished education")
     }
 }

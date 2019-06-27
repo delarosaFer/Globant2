@@ -31,18 +31,12 @@ class ResumeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        request { (resume) in
-            if let resume = resume {
-                DispatchQueue.main.async {
-                    self.resume = resume
-                }
-            }else {
-                debugPrint(NSLocalizedString("errorParse", comment: "Parsing was wrong"))
-            }
-        }
+        resume = (self.parent as? TabBarViewController)?.resume
 
         registerCells()
         setupView()
+        
+        infoTableView?.reloadData()
     }
     
     func reloadInfo() {
@@ -81,23 +75,9 @@ class ResumeViewController: UIViewController {
         profilePhoto?.rounded()
     }
     
-    func request(completition: @escaping ((Resume?) -> Void)) {
-        var response: Resume?
-        
-        APIClient.shared.getData(handler: { (data, status) in
-            if status == .success {
-                guard let data = data else { return }
-                response = APIClient.shared.parseJSON(data: data, model: response) ?? response
-                completition(response)
-            } else {
-                debugPrint(NSLocalizedString("errorRequest", comment: "Something was wrong with the request"))
-            }
-        })
-    }
-    
     func requestImage(urlStr: String, completition: @escaping ((Data) -> Void)) {
         guard let url = URL(string: urlStr) else { return }
-        
+
         APIClient.shared.getData(url: url) { (data, status) in
             if status == .success {
                 guard let data = data else { return }
