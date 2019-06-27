@@ -36,6 +36,8 @@
 		DB03AF8D22C50B0E002F99F1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF8C22C50B0E002F99F1 /* TabBarViewController.swift */; };
 		DB03AF8F22C50CD6002F99F1 /* ReferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF8E22C50CD6002F99F1 /* ReferencesViewController.swift */; };
 		DB03AF9122C51403002F99F1 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF9022C51403002F99F1 /* SkillsViewController.swift */; };
+		DBF0F81722C524BF006086D3 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0F81622C524BF006086D3 /* ContactViewController.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		DB03AF8C22C50B0E002F99F1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		DB03AF8E22C50CD6002F99F1 /* ReferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesViewController.swift; sourceTree = "<group>"; };
 		DB03AF9022C51403002F99F1 /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
+		DBF0F81622C524BF006086D3 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +231,7 @@
 				DB03AF8E22C50CD6002F99F1 /* ReferencesViewController.swift */,
 				DB03AF9022C51403002F99F1 /* SkillsViewController.swift */,
 				36EB78CD22C446A2006AE8A8 /* ErrorViewController.swift */,
+				DBF0F81622C524BF006086D3 /* ContactViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -381,6 +386,7 @@
 				36EB78C722C43922006AE8A8 /* EducationCell.swift in Sources */,
 				36EB788722C3F90E006AE8A8 /* AppDelegate.swift in Sources */,
 				DB03AF7B22C4253A002F99F1 /* ResumeViewController.swift in Sources */,
+				DBF0F81722C524BF006086D3 /* ContactViewController.swift in Sources */,
 				36EB78D422C453D1006AE8A8 /* APIStatus.swift in Sources */,
 				DB03AF8B22C50620002F99F1 /* UIStackView+RemoveViews.swift in Sources */,
 				36EB78D522C453D1006AE8A8 /* APIClient.swift in Sources */,
