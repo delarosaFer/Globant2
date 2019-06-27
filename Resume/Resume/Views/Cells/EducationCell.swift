@@ -1,9 +1,6 @@
-
 import UIKit
 
-class EducationCell: UITableViewCell {
-    
-    
+final class EducationCell: UITableViewCell {
     @IBOutlet weak var universityName: UILabel?
     @IBOutlet weak var degree: UILabel?
     @IBOutlet weak var state: UILabel?

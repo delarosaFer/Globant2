@@ -1,7 +1,6 @@
-
 import UIKit
 
-class SkillsTableViewCell: UITableViewCell {
+final class SkillsTableViewCell: UITableViewCell {
     @IBOutlet weak var skillName: UILabel?
     @IBOutlet weak var imageContainer: UIStackView?
     
