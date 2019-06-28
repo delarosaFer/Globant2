@@ -52,6 +52,29 @@ class ResumeUITests: XCTestCase {
         XCTAssert(endDate.exists)
     }
     
+    func testExperienceSectionElements() {
+        let app = XCUIApplication()
+        
+        let experienceSection = app.staticTexts["Experience"]
+        let cell = app.tables.children(matching: .cell).element(boundBy: 1)
+        let workplaceLabel = cell.staticTexts["workplaceLabel"]
+        let positionLabel = cell.staticTexts["positionLabel"]
+        let descriptionLabel = cell.staticTexts["descriptionLabel"]
+        let cityLabel = cell.staticTexts["cityLabel"]
+        let stateLabel = cell.staticTexts["stateLabel"]
+        let startDate = cell.staticTexts["startDateLabel"]
+        let endDate = cell.staticTexts["endDateLabel"]
+        
+        XCTAssert(experienceSection.exists)
+        XCTAssert(workplaceLabel.exists)
+        XCTAssert(positionLabel.exists)
+        XCTAssert(descriptionLabel.exists)
+        XCTAssert(cityLabel.exists)
+        XCTAssert(stateLabel.exists)
+        XCTAssert(startDate.exists)
+        XCTAssert(endDate.exists)
+    }
+    
     func testReferenceElementsExists() {
         let app = XCUIApplication()
         let tabBarsQuery = app.tabBars
