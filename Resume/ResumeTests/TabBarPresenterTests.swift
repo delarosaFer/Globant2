@@ -1,14 +1,8 @@
 
 import XCTest
-
 @testable import Resume
 
 class TabBarPresenterTests: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
     func testPresenterGenerators() {
         let presenter = TabBarPresenter(withModel: MockTabBarModel())
         
@@ -20,10 +14,6 @@ class TabBarPresenterTests: XCTestCase {
     func testCreateModel() {
         let model = TabBarModel(withResume: MockTabBarModel().resume)
         XCTAssertEqual(model.resume.name, "Heisenberg")
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 }
 
