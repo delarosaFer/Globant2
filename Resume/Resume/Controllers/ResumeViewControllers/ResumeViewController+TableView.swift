@@ -34,7 +34,7 @@ extension ResumeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch presenter?.getSectionTitle(at: indexPath.row) {
+        switch presenter?.getSectionTitle(at: indexPath.section) {
         case presenter?.educationTitle:
             guard let cell = infoTableView?.dequeueReusableCell(withIdentifier: CellIdentifier.education.rawValue, for: indexPath) as? EducationCell,
                 let education = presenter?.education else {

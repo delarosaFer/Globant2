@@ -27,6 +27,9 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x16-Qc-Iml">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="porfileImage">
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="x16-Qc-Iml" secondAttribute="height" multiplier="1:1" id="Amg-6y-oY3"/>
                                                     <constraint firstAttribute="width" constant="120" id="tKj-Cl-haB"/>
@@ -37,6 +40,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEZ-by-Qc6">
                                                         <rect key="frame" x="0.0" y="0.0" width="169" height="20"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="nameLabel"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="l1n-oL-qqj"/>
                                                         </constraints>
@@ -46,6 +50,7 @@
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="employment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFc-1B-Gsm">
                                                         <rect key="frame" x="0.0" y="28" width="169" height="20"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="employmentLabel"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="emU-6c-8dD"/>
                                                         </constraints>
@@ -55,6 +60,7 @@
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description can be multilinear" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="UrI-dg-NfF">
                                                         <rect key="frame" x="0.0" y="56" width="169" height="64"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="summaryLabel"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -66,6 +72,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4b-77-5w8">
                                         <rect key="frame" x="0.0" y="128" width="304" height="37"/>
                                         <color key="backgroundColor" name="secondary-color"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="contactButton"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="ADD-8F-jM2"/>
                                         </constraints>
@@ -268,6 +275,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rd5-wD-MEf">
                                 <rect key="frame" x="0.0" y="36" width="320" height="36"/>
+                                <accessibility key="accessibilityConfiguration" identifier="skillTitle"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" name="dark-color"/>
                                 <nil key="highlightedColor"/>
@@ -425,6 +433,7 @@
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="References" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ht-bf-7iS">
                                 <rect key="frame" x="0.0" y="36" width="320" height="36"/>
+                                <accessibility key="accessibilityConfiguration" identifier="referencesTitle"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <color key="textColor" name="dark-color"/>
                                 <nil key="highlightedColor"/>
