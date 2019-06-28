@@ -17,6 +17,7 @@
 		368E713722C5DAFF004A5B98 /* MockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E713622C5DAFF004A5B98 /* MockSession.swift */; };
 		368E713A22C5DD22004A5B98 /* NetworkingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E713922C5DD22004A5B98 /* NetworkingProtocols.swift */; };
 		368E713C22C5DDF7004A5B98 /* DataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E713B22C5DDF7004A5B98 /* DataTaskMock.swift */; };
+		36980ED322C6B7CB009AC15B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 36980ED222C6B7CB009AC15B /* README.md */; };
 		36EB788722C3F90E006AE8A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB788622C3F90E006AE8A8 /* AppDelegate.swift */; };
 		36EB788C22C3F90E006AE8A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EB788A22C3F90E006AE8A8 /* Main.storyboard */; };
 		36EB788E22C3F90F006AE8A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36EB788D22C3F90F006AE8A8 /* Assets.xcassets */; };
@@ -102,6 +103,7 @@
 		368E713622C5DAFF004A5B98 /* MockSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSession.swift; sourceTree = "<group>"; };
 		368E713922C5DD22004A5B98 /* NetworkingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocols.swift; sourceTree = "<group>"; };
 		368E713B22C5DDF7004A5B98 /* DataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskMock.swift; sourceTree = "<group>"; };
+		36980ED222C6B7CB009AC15B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		36EB788322C3F90E006AE8A8 /* Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EB788622C3F90E006AE8A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36EB788B22C3F90E006AE8A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		36EB787A22C3F90E006AE8A8 = {
 			isa = PBXGroup;
 			children = (
+				36980ED222C6B7CB009AC15B /* README.md */,
 				36EB788522C3F90E006AE8A8 /* Resume */,
 				36EB789A22C3F90F006AE8A8 /* ResumeTests */,
 				36EB78A522C3F90F006AE8A8 /* ResumeUITests */,
@@ -524,6 +527,7 @@
 			files = (
 				36EB789122C3F90F006AE8A8 /* LaunchScreen.storyboard in Resources */,
 				DB03AF8522C43DBD002F99F1 /* ReferencesTableViewCell.xib in Resources */,
+				36980ED322C6B7CB009AC15B /* README.md in Resources */,
 				DB03AF7322C41BCB002F99F1 /* Colors.xcassets in Resources */,
 				36EB788E22C3F90F006AE8A8 /* Assets.xcassets in Resources */,
 				368E711E22C51E99004A5B98 /* Localizable.strings in Resources */,
