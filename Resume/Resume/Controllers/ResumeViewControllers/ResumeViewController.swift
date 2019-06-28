@@ -33,7 +33,7 @@ final class ResumeViewController: UIViewController {
     }
     
     @IBAction func tapContactButton(_ sender: UIButton) {
-        self.performSegue(withIdentifier: StoryBoardSegue.contactSegue.rawValue, sender: nil)
+        self.performSegue(withIdentifier: "ContactSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

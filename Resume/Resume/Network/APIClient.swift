@@ -7,7 +7,7 @@ protocol NetworkProtocol {
     func getDataImage(url: URL, handler: @escaping (Data?, Status) -> Void)
 }
 
-final public class APIClient: NetworkProtocol {
+final class APIClient: NetworkProtocol {
     //MARK: URL base
     private let URLBase: URL?
     
@@ -16,7 +16,7 @@ final public class APIClient: NetworkProtocol {
     internal var dataTask: URLSessionDataTask?
     
     //MARK: Init Service()
-    init(urlStr: String = Configuration.value(for: "INFO_URL")) {
+    init(urlStr: String = Configuration.string(forKey: "INFO_URL") ?? "") {
         guard let url = URL(string: urlStr) else {
             fatalError(NSLocalizedString("errorURL", comment: "Error URL"))
         }
@@ -46,7 +46,7 @@ final public class APIClient: NetworkProtocol {
                 } else {
                     if let error = error {
                         debugPrint(error.localizedDescription)
-                        if error.localizedDescription == NSLocalizedString("notConnectionMessage", comment: "Internet not connection") {
+                        if error.localizedDescription == "The Internet connection appears to be offline." {
                             handler(nil, .notConnection)
                         } else {
                             handler(nil, .failure)

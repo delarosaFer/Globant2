@@ -14,5 +14,4 @@ enum StoryBoardIdentifier: String {
 enum StoryBoardSegue: String {
     case errorSegue = "ErrorSegue"
     case successfulSegue = "StartSegue"
-    case contactSegue = "ContactSegue"
 }

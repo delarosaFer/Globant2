@@ -51,7 +51,7 @@ import Foundation
         })
     }
     
-    public func setResume(_ resume: Resume) {
+    func setResume(_ resume: Resume) {
         self.model?.resume = resume
     }
     

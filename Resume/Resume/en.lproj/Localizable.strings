@@ -17,17 +17,8 @@
 
 //MARK: Nill values
 "currentDate" = "-  Current";
-"nilPhone" = "---";
 
 //MARK: String labels
 "phoneLabel" = "Phone:";
 "cellPhoneLabel" = "Cell phone:";
 "emailLabel" = "Email:";
-
-//MARK: Fatal errors
-"fatalErrorInvvalidKey" = "Invalid or missing Info.plist";
-"fatalErrorData" = "Data could not be loaded";
-"fatalErrorJson" = "Json file could not be loaded";
-
-//MARK: Conection error
-"notConnectionMessage" = "The Internet connection appears to be offline.";

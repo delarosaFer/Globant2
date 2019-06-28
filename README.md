@@ -23,6 +23,8 @@ This project was development to complete a code challenge. Used an gist reposito
 
 ## Screenshots
 
-![Main view](./img/screenshots.png)
++ [Main view](./img/img_1.png)
++ [Tap in education section](./img/img_2.png)
++ [Tap in lenguajes section](./img/img_3.png)
 
 Developed by: Globant user.

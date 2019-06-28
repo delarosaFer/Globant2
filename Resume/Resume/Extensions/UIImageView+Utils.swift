@@ -8,7 +8,7 @@ extension UIImageView {
      - Important:
      - This method update heigth and width of the image to set his corner radius
      */
-    public func rounded() {
+    func rounded() {
         self.clipsToBounds =  true
         layer.cornerRadius = max(bounds.height, bounds.width) / 2
     }
@@ -19,7 +19,7 @@ extension UIImageView {
      - Parameter color: The tint color.
      - Important: The method does nothing if no `UIImage` has been set when called.
      */
-    public func rasterizeWith(color: UIColor) {
+    func rasterizeWith(color: UIColor) {
         guard let templateImage = self.image?.withRenderingMode(.alwaysTemplate) else {
             return
         }

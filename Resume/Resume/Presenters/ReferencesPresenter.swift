@@ -3,7 +3,7 @@ import Foundation
 
 final class ReferencesPresenter {
     private let model: ReferencesModelType
-    public var referenceCount: Int {
+    var referenceCount: Int {
         return model.references.count
     }
     

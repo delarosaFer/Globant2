@@ -2,7 +2,7 @@
 import UIKit
 
 // MARK: Resume
-public struct Resume: Codable {
+struct Resume: Codable {
     let name: String
     let age: Int
     let profilePhoto: String
@@ -18,13 +18,13 @@ public struct Resume: Codable {
 }
 
 // MARK: Accomplishment
-public struct Accomplishment: Codable {
+struct Accomplishment: Codable {
     let title: String
     let description: String
 }
 
 // MARK: Address
-public struct Address: Codable {
+struct Address: Codable {
     let zipCode: Int
     let street: String
     let city: String
@@ -32,14 +32,14 @@ public struct Address: Codable {
 }
 
 // MARK: Contact
-public struct Contact: Codable {
+struct Contact: Codable {
     let phone: String
     let celphone: String?
     let email: String
 }
 
 // MARK: Education
-public struct Education: Codable {
+struct Education: Codable {
     let universityName: String
     let degree: String
     let city: String
@@ -60,14 +60,14 @@ public struct Experience: Codable {
 }
 
 // MARK: Reference
-public struct Reference: Codable {
+struct Reference: Codable {
     let name: String
     let workplace: String
     let contact: Contact
 }
 
 // MARK: Skill
-public struct Skill: Codable {
+struct Skill: Codable {
     let skill: String
     let rating: Int
 }

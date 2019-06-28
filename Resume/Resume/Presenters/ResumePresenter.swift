@@ -7,7 +7,7 @@ protocol ResumeViewType: class {
     func setImageWithData(data: Data)
 }
 
-final public class ResumePresenter {
+final class ResumePresenter {
     private var model: ResumeModelType
     private var client = APIClient()
 

@@ -70,7 +70,6 @@
 		DB242F5C22C5C226005E596C /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F5B22C5C226005E596C /* ErrorViewModel.swift */; };
 		DB242F5E22C5C243005E596C /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F5D22C5C243005E596C /* ContactModel.swift */; };
 		DB242F6022C5C451005E596C /* ResumeViewController+ResumeViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F5F22C5C451005E596C /* ResumeViewController+ResumeViewType.swift */; };
-		DBD816D822C6945C00606567 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DBD816D722C6945C00606567 /* README.md */; };
 		DBF0F81722C524BF006086D3 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0F81622C524BF006086D3 /* ContactViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -162,7 +161,6 @@
 		DB242F5B22C5C226005E596C /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
 		DB242F5D22C5C243005E596C /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		DB242F5F22C5C451005E596C /* ResumeViewController+ResumeViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResumeViewController+ResumeViewType.swift"; sourceTree = "<group>"; };
-		DBD816D722C6945C00606567 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DBF0F81622C524BF006086D3 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,7 +209,6 @@
 		36EB787A22C3F90E006AE8A8 = {
 			isa = PBXGroup;
 			children = (
-				DBD816D722C6945C00606567 /* README.md */,
 				36EB788522C3F90E006AE8A8 /* Resume */,
 				36EB789A22C3F90F006AE8A8 /* ResumeTests */,
 				36EB78A522C3F90F006AE8A8 /* ResumeUITests */,
@@ -527,7 +524,6 @@
 			files = (
 				36EB789122C3F90F006AE8A8 /* LaunchScreen.storyboard in Resources */,
 				DB03AF8522C43DBD002F99F1 /* ReferencesTableViewCell.xib in Resources */,
-				DBD816D822C6945C00606567 /* README.md in Resources */,
 				DB03AF7322C41BCB002F99F1 /* Colors.xcassets in Resources */,
 				36EB788E22C3F90F006AE8A8 /* Assets.xcassets in Resources */,
 				368E711E22C51E99004A5B98 /* Localizable.strings in Resources */,

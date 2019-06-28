@@ -1,9 +1,9 @@
 
 import Foundation
 
-final public class SkillsPresenter {
+final class SkillsPresenter {
     private let model: SkillsModelType
-    public var skillCount: Int {
+    var skillCount: Int {
         return model.skills.count
     }
 
@@ -11,7 +11,7 @@ final public class SkillsPresenter {
         self.model = model
     }
 
-    public func getSkill(for indexPath: IndexPath) -> Skill? {
+    func getSkill(for indexPath: IndexPath) -> Skill? {
         return model.skills.getItem(at: indexPath.row)
     }
 }
