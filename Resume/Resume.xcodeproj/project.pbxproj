@@ -38,6 +38,18 @@
 		DB03AF9122C51403002F99F1 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB03AF9022C51403002F99F1 /* SkillsViewController.swift */; };
 		DB242F1A22C5322D005E596C /* ReferencesViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F1922C5322D005E596C /* ReferencesViewController+TableView.swift */; };
 		DB242F1D22C5328E005E596C /* ReferencesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F1C22C5328E005E596C /* ReferencesPresenter.swift */; };
+		DB242F2622C541DC005E596C /* SkillsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F2522C541DC005E596C /* SkillsPresenter.swift */; };
+		DB242F2922C54220005E596C /* SkillsViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F2822C54220005E596C /* SkillsViewController+UITableView.swift */; };
+		DB242F2B22C54341005E596C /* Array+GetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F2A22C54341005E596C /* Array+GetItem.swift */; };
+		DB242F2D22C545FF005E596C /* ResumePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F2C22C545FF005E596C /* ResumePresenter.swift */; };
+		DB242F3022C5472F005E596C /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F2F22C5472F005E596C /* MainViewPresenter.swift */; };
+		DB242F3222C54B5E005E596C /* ErrorViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F3122C54B5E005E596C /* ErrorViewPresenter.swift */; };
+		DB242F3422C54E4B005E596C /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F3322C54E4B005E596C /* TabBarPresenter.swift */; };
+		DB242F3722C55DC1005E596C /* TabBarController+UITabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F3622C55DC1005E596C /* TabBarController+UITabBarControllerDelegate.swift */; };
+		DB242F3922C55E0A005E596C /* MainViewController+MainViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F3822C55E0A005E596C /* MainViewController+MainViewType.swift */; };
+		DB242F3B22C56003005E596C /* ContactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F3A22C56003005E596C /* ContactPresenter.swift */; };
+		DB242F4122C58ABF005E596C /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F4022C58ABF005E596C /* CellIdentifiers.swift */; };
+		DB242F4322C58E67005E596C /* StoryboardIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F4222C58E67005E596C /* StoryboardIdentifiers.swift */; };
 		DBF0F81722C524BF006086D3 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0F81622C524BF006086D3 /* ContactViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +73,7 @@
 /* Begin PBXFileReference section */
 		368E711D22C51E98004A5B98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		368E711F22C5250E004A5B98 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		368E712122C5407E004A5B98 /* ResumeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResumeViewController.swift; path = Resume/Controllers/ResumeViewController.swift; sourceTree = SOURCE_ROOT; };
+		368E712122C5407E004A5B98 /* ResumeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResumeViewController.swift; path = Resume/Controllers/ResumeViewControllers/ResumeViewController.swift; sourceTree = SOURCE_ROOT; };
 		368E712322C5409F004A5B98 /* ReferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferencesViewController.swift; sourceTree = "<group>"; };
 		36EB788322C3F90E006AE8A8 /* Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EB788622C3F90E006AE8A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +108,18 @@
 		DB03AF9022C51403002F99F1 /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		DB242F1922C5322D005E596C /* ReferencesViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReferencesViewController+TableView.swift"; sourceTree = "<group>"; };
 		DB242F1C22C5328E005E596C /* ReferencesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesPresenter.swift; sourceTree = "<group>"; };
+		DB242F2522C541DC005E596C /* SkillsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsPresenter.swift; sourceTree = "<group>"; };
+		DB242F2822C54220005E596C /* SkillsViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkillsViewController+UITableView.swift"; sourceTree = "<group>"; };
+		DB242F2A22C54341005E596C /* Array+GetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+GetItem.swift"; sourceTree = "<group>"; };
+		DB242F2C22C545FF005E596C /* ResumePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumePresenter.swift; sourceTree = "<group>"; };
+		DB242F2F22C5472F005E596C /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
+		DB242F3122C54B5E005E596C /* ErrorViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewPresenter.swift; sourceTree = "<group>"; };
+		DB242F3322C54E4B005E596C /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		DB242F3622C55DC1005E596C /* TabBarController+UITabBarControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabBarController+UITabBarControllerDelegate.swift"; sourceTree = "<group>"; };
+		DB242F3822C55E0A005E596C /* MainViewController+MainViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+MainViewType.swift"; sourceTree = "<group>"; };
+		DB242F3A22C56003005E596C /* ContactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPresenter.swift; sourceTree = "<group>"; };
+		DB242F4022C58ABF005E596C /* CellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
+		DB242F4222C58E67005E596C /* StoryboardIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiers.swift; sourceTree = "<group>"; };
 		DBF0F81622C524BF006086D3 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +173,7 @@
 			children = (
 				36EB788D22C3F90F006AE8A8 /* Assets.xcassets */,
 				DB03AF7222C41BCB002F99F1 /* Colors.xcassets */,
+				DB242F3F22C58A9F005E596C /* Identifiers */,
 				36EB78D122C453D0006AE8A8 /* Network */,
 				36EB78D622C453DF006AE8A8 /* Model */,
 				DB03AF7C22C427BF002F99F1 /* Views */,
@@ -220,6 +245,7 @@
 				DB03AF7722C422DF002F99F1 /* UIImageView+Utils.swift */,
 				DB03AF7422C41C57002F99F1 /* UIColors+appColors.swift */,
 				DB03AF8A22C50620002F99F1 /* UIStackView+RemoveViews.swift */,
+				DB242F2A22C54341005E596C /* Array+GetItem.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -227,12 +253,11 @@
 		DB03AF7922C424C8002F99F1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				368E711F22C5250E004A5B98 /* MainViewController.swift */,
-				DB03AF8C22C50B0E002F99F1 /* TabBarViewController.swift */,
+				DB242F3C22C56324005E596C /* ResumeViewControllers */,
+				DB242F3522C55D72005E596C /* TabBar */,
+				DB242F2E22C5464F005E596C /* MainView */,
+				DB242F2722C54208005E596C /* Skills */,
 				DB242F1822C5320B005E596C /* References */,
-				36EB78CF22C447A6006AE8A8 /* ResumeViewController+TableView.swift */,
-				368E712122C5407E004A5B98 /* ResumeViewController.swift */,
-				DB03AF9022C51403002F99F1 /* SkillsViewController.swift */,
 				36EB78CD22C446A2006AE8A8 /* ErrorViewController.swift */,
 				DBF0F81622C524BF006086D3 /* ContactViewController.swift */,
 			);
@@ -260,8 +285,59 @@
 			isa = PBXGroup;
 			children = (
 				DB242F1C22C5328E005E596C /* ReferencesPresenter.swift */,
+				DB242F2522C541DC005E596C /* SkillsPresenter.swift */,
+				DB242F2C22C545FF005E596C /* ResumePresenter.swift */,
+				DB242F2F22C5472F005E596C /* MainViewPresenter.swift */,
+				DB242F3122C54B5E005E596C /* ErrorViewPresenter.swift */,
+				DB242F3322C54E4B005E596C /* TabBarPresenter.swift */,
+				DB242F3A22C56003005E596C /* ContactPresenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		DB242F2722C54208005E596C /* Skills */ = {
+			isa = PBXGroup;
+			children = (
+				DB03AF9022C51403002F99F1 /* SkillsViewController.swift */,
+				DB242F2822C54220005E596C /* SkillsViewController+UITableView.swift */,
+			);
+			path = Skills;
+			sourceTree = "<group>";
+		};
+		DB242F2E22C5464F005E596C /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				368E711F22C5250E004A5B98 /* MainViewController.swift */,
+				DB242F3822C55E0A005E596C /* MainViewController+MainViewType.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		DB242F3522C55D72005E596C /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				DB03AF8C22C50B0E002F99F1 /* TabBarViewController.swift */,
+				DB242F3622C55DC1005E596C /* TabBarController+UITabBarControllerDelegate.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		DB242F3C22C56324005E596C /* ResumeViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				368E712122C5407E004A5B98 /* ResumeViewController.swift */,
+				36EB78CF22C447A6006AE8A8 /* ResumeViewController+TableView.swift */,
+			);
+			path = ResumeViewControllers;
+			sourceTree = "<group>";
+		};
+		DB242F3F22C58A9F005E596C /* Identifiers */ = {
+			isa = PBXGroup;
+			children = (
+				DB242F4022C58ABF005E596C /* CellIdentifiers.swift */,
+				DB242F4222C58E67005E596C /* StoryboardIdentifiers.swift */,
+			);
+			path = Identifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,23 +480,35 @@
 				36EB78D822C453DF006AE8A8 /* Resume.swift in Sources */,
 				36EB78CB22C43C8A006AE8A8 /* ExperienceCell.swift in Sources */,
 				368E712422C540A0004A5B98 /* ReferencesViewController.swift in Sources */,
+				DB242F3922C55E0A005E596C /* MainViewController+MainViewType.swift in Sources */,
 				36EB78C722C43922006AE8A8 /* EducationCell.swift in Sources */,
 				36EB788722C3F90E006AE8A8 /* AppDelegate.swift in Sources */,
+				DB242F4122C58ABF005E596C /* CellIdentifiers.swift in Sources */,
 				DBF0F81722C524BF006086D3 /* ContactViewController.swift in Sources */,
 				36EB78D422C453D1006AE8A8 /* APIStatus.swift in Sources */,
 				DB03AF8B22C50620002F99F1 /* UIStackView+RemoveViews.swift in Sources */,
+				DB242F3422C54E4B005E596C /* TabBarPresenter.swift in Sources */,
+				DB242F3222C54B5E005E596C /* ErrorViewPresenter.swift in Sources */,
+				DB242F3022C5472F005E596C /* MainViewPresenter.swift in Sources */,
 				36EB78D522C453D1006AE8A8 /* APIClient.swift in Sources */,
 				DB03AF8922C50377002F99F1 /* SkillsTableViewCell.swift in Sources */,
 				DB03AF7822C422DF002F99F1 /* UIImageView+Utils.swift in Sources */,
 				DB242F1A22C5322D005E596C /* ReferencesViewController+TableView.swift in Sources */,
+				DB242F2922C54220005E596C /* SkillsViewController+UITableView.swift in Sources */,
 				36EB78CE22C446A2006AE8A8 /* ErrorViewController.swift in Sources */,
 				DB242F1D22C5328E005E596C /* ReferencesPresenter.swift in Sources */,
 				368E712222C5407E004A5B98 /* ResumeViewController.swift in Sources */,
+				DB242F3B22C56003005E596C /* ContactPresenter.swift in Sources */,
 				36EB78D022C447A6006AE8A8 /* ResumeViewController+TableView.swift in Sources */,
 				DB03AF8422C43DBD002F99F1 /* ReferencesTableViewCell.swift in Sources */,
+				DB242F2B22C54341005E596C /* Array+GetItem.swift in Sources */,
 				DB03AF8D22C50B0E002F99F1 /* TabBarViewController.swift in Sources */,
 				368E712022C5250E004A5B98 /* MainViewController.swift in Sources */,
 				DB03AF9122C51403002F99F1 /* SkillsViewController.swift in Sources */,
+				DB242F2D22C545FF005E596C /* ResumePresenter.swift in Sources */,
+				DB242F3722C55DC1005E596C /* TabBarController+UITabBarControllerDelegate.swift in Sources */,
+				DB242F2622C541DC005E596C /* SkillsPresenter.swift in Sources */,
+				DB242F4322C58E67005E596C /* StoryboardIdentifiers.swift in Sources */,
 				DB03AF7522C41C57002F99F1 /* UIColors+appColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

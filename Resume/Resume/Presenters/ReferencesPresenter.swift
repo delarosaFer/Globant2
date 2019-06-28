@@ -1,20 +1,29 @@
 import Foundation
 
-class ReferencesPresenter {
-    var references: [Reference]?
+protocol ReferencesModelType {
+    var references: [Reference] { get }
+}
+
+final class ReferencesPresenter {
+    private let model: ReferencesModelType
+    public var referenceCount: Int {
+        return model.references.count
+    }
     
-    var referenceCount: Int {
-        return references?.count ?? 0
+    required init(withModel model: ReferencesModelType) {
+        self.model = model
     }
     
     func getReference(for indexPath: IndexPath) -> Reference? {
-        guard let references = references,
-            indexPath.row < references.endIndex,
-            indexPath.row >= references.startIndex else {
-                return nil
-        }
-        
-        return references[indexPath.row]
+        return model.references.getItem(at: indexPath.row)
     }
-    
 }
+
+final public class ReferencesModel: ReferencesModelType {
+    public let references: [Reference]
+    
+    init(withReferences references: [Reference]) {
+        self.references = references
+    }
+}
+

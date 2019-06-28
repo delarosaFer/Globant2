@@ -1,7 +1,7 @@
 
 import UIKit
 
-class APIClient {
+final public class APIClient {
     
     /**
      Singleton of Service class useful for interact with the API

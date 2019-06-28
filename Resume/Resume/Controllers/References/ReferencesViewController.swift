@@ -6,16 +6,14 @@ final class ReferencesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        presenter = ReferencesPresenter()
-        presenter?.references = (self.parent as? TabBarViewController)?.resume?.references
+        
         configureTableView()
         referencesTableView?.reloadData()
     }
     
     func configureTableView() {
         referencesTableView?.dataSource = self
-        referencesTableView?.register(UINib.init(nibName: "ReferencesTableViewCell", bundle: nil), forCellReuseIdentifier: "references")
+        referencesTableView?.register(UINib.init(nibName: CellNibNames.references.rawValue, bundle: nil), forCellReuseIdentifier: CellIdentifier.references.rawValue)
     }
 }
 

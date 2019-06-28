@@ -1,9 +1,6 @@
-
 import UIKit
 
 class ExperienceCell: UITableViewCell {
-
-    
     @IBOutlet weak var workplace: UILabel?
     @IBOutlet weak var position: UILabel?
     @IBOutlet weak var descriptionWork: UILabel?
@@ -34,6 +31,5 @@ class ExperienceCell: UITableViewCell {
         city.text = experience.city
         startDate.text = experience.startDate
         endDate.text = experience.endDate ?? NSLocalizedString("currentDate", comment: "Current job")
-        
     }
 }

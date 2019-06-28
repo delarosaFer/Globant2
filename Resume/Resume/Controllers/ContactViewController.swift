@@ -1,16 +1,13 @@
-
 import UIKit
 
-class ContactViewController: UIViewController {
-
+final class ContactViewController: UIViewController {
     @IBOutlet weak var phone: UILabel?
     @IBOutlet weak var email: UILabel?
     @IBOutlet weak var cellPhone: UILabel?
     @IBOutlet weak var phoneLabel: UILabel?
     @IBOutlet weak var cellPhoneLabel: UILabel?
-    @IBOutlet weak var emailLable: UILabel?
-    
-    var contact: Contact?
+    @IBOutlet weak var emailLabel: UILabel?
+    var presenter: ContactPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +19,7 @@ class ContactViewController: UIViewController {
         guard let phone = phone,
             let email = email,
             let cellPhone = cellPhone,
-            let contact = contact else {
+            let presenter = presenter else {
                 return
         }
         
@@ -30,9 +27,9 @@ class ContactViewController: UIViewController {
         cellPhone.text = NSLocalizedString("cellPhoneLabel", comment: "Cell phone label")
         email.text = NSLocalizedString("emailLabel", comment: "Email label")
         
-        phoneLabel?.text = contact.celphone
-        emailLable?.text = contact.email
-        cellPhoneLabel?.text = contact.celphone
+        phoneLabel?.text = presenter.phone
+        emailLabel?.text = presenter.email
+        cellPhoneLabel?.text = presenter.cellPhone
     }
     
     @IBAction func didTapReturn(_ sender: Any) {

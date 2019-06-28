@@ -3,11 +3,11 @@ import UIKit
 
 extension ResumeViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+        return self.presenter?.getSections() ?? 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rowsPerSection[section]
+        return self.presenter?.getRowsPerSection(at: section) ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -20,7 +20,7 @@ extension ResumeViewController: UITableViewDataSource, UITableViewDelegate {
         header.layer.cornerRadius = 9
         
         let title = UILabel()
-        title.text = sections[section]
+        title.text =  presenter?.getSectionTitle(at: section)
         title.textColor = .white
         
         header.addSubview(title)
@@ -34,17 +34,19 @@ extension ResumeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch sections[indexPath.section] {
-        case educationSection:
-            guard let cell = infoTableView?.dequeueReusableCell(withIdentifier: "EducationCell", for: indexPath) as? EducationCell, let education = resume?.education else {
+        switch presenter?.getSectionTitle(at: indexPath.row) {
+        case presenter?.educationTitle:
+            guard let cell = infoTableView?.dequeueReusableCell(withIdentifier: CellIdentifier.education.rawValue, for: indexPath) as? EducationCell,
+                let education = presenter?.education else {
                 return UITableViewCell()
             }
             
             cell.configureWith(education: education)
             
             return cell
-        case experienceSection:
-            guard let cell = infoTableView?.dequeueReusableCell(withIdentifier: "ExperienceCell", for: indexPath) as? ExperienceCell, let experience = resume?.experience[indexPath.row] else {
+        case presenter?.experienceTitle:
+            guard let cell = infoTableView?.dequeueReusableCell(withIdentifier: CellIdentifier.experience.rawValue, for: indexPath) as? ExperienceCell,
+                let experience = presenter?.getJob(at: indexPath.row) else {
                 return UITableViewCell()
             }
             
