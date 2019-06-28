@@ -1,4 +1,3 @@
-
 import UIKit
 
 extension UIImageView {
@@ -11,20 +10,5 @@ extension UIImageView {
     func rounded() {
         self.clipsToBounds =  true
         layer.cornerRadius = max(bounds.height, bounds.width) / 2
-    }
-
-    /**
-     Changes image's rendering mode and tint color.
-
-     - Parameter color: The tint color.
-     - Important: The method does nothing if no `UIImage` has been set when called.
-     */
-    func rasterizeWith(color: UIColor) {
-        guard let templateImage = self.image?.withRenderingMode(.alwaysTemplate) else {
-            return
-        }
-
-        self.image = templateImage
-        self.tintColor = color
     }
 }

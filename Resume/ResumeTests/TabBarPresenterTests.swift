@@ -1,4 +1,3 @@
-
 import XCTest
 
 @testable import Resume
@@ -8,15 +7,15 @@ class TabBarPresenterTests: XCTestCase {
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     func testPresenterGenerators() {
         let presenter = TabBarPresenter(withModel: MockTabBarModel())
-        
+
         XCTAssertEqual(presenter.makeReferencesPresenter().referenceCount, 1)
         XCTAssertEqual(presenter.makeResumePresenter().experienceCount, 1)
         XCTAssertEqual(presenter.makeSkillsPresenter().skillCount, 2)
     }
-    
+
     func testCreateModel() {
         let model = TabBarModel(withResume: MockTabBarModel().resume)
         XCTAssertEqual(model.resume.name, "Heisenberg")

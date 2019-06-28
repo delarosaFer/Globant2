@@ -1,4 +1,3 @@
-
 import UIKit
 
 protocol NetworkProtocol {
@@ -7,22 +6,19 @@ protocol NetworkProtocol {
 }
 
 final class APIClient: NetworkProtocol {
-    //MARK: URL of the resume
-//    private let resumeURL: URL?
-    
-    //MARK: URL Session
+    // MARK: URL Session
     private let defaultSession: URLSession
     internal var dataTask: URLSessionDataTask?
-    
-    //MARK: Init Service()
+
+    // MARK: Init Service()
     init() {
         let configuration = URLSessionConfiguration.default
         configuration.requestCachePolicy = .reloadIgnoringCacheData
         configuration.urlCache = nil
         defaultSession = URLSession(configuration: configuration)
     }
-    
-    //MARK: Get data method from url
+
+    // MARK: Get data method from url
     /**
      Get the data from gist.github
      
@@ -32,7 +28,7 @@ final class APIClient: NetworkProtocol {
      */
     func getData(from urlString: String = Configuration.string(forKey: "INFO_URL") ?? "", handler: @escaping (Status) -> Void) {
         guard let url = URL(string: urlString) else { return }
-        
+
         dataTask = defaultSession.dataTask(with: url, completionHandler: { (data, response, error) in
             if let response = response as? HTTPURLResponse, 200...209 ~= response.statusCode, let data = data {
                 handler(.success(data))
@@ -44,8 +40,8 @@ final class APIClient: NetworkProtocol {
         })
         dataTask?.resume()
     }
-    
-    //MARK: Parse JSON to Model method
+
+    // MARK: Parse JSON to Model method
     /**
      Make the parse from the data to an any model
      

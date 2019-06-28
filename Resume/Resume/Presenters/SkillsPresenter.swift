@@ -1,4 +1,3 @@
-
 import Foundation
 
 final class SkillsPresenter {
@@ -15,4 +14,3 @@ final class SkillsPresenter {
         return model.skills.getItem(at: indexPath.row)
     }
 }
-

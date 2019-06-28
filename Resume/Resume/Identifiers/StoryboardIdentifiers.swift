@@ -1,4 +1,3 @@
-
 import Foundation
 
 /// An enum that reflects the name of storyboards
@@ -11,9 +10,9 @@ enum StoryBoardIdentifier: String {
     case mainView = "MainView"
 }
 
+/// An enum that reflects the name of the Segues
 enum StoryBoardSegue: String {
     case errorSegue = "ErrorSegue"
     case successfulSegue = "StartSegue"
     case contactSegue = "ContactSegue"
 }
-

@@ -1,4 +1,3 @@
-
 import Foundation
 
 protocol ResumeModelType {
@@ -15,10 +14,10 @@ final class ResumeModel: ResumeModelType {
     var educationSection = String()
     var experienceSection = String()
     var rowsPerSection = [0, 0]
-    
+
     init(withResume resume: Resume) {
         self.resume = resume
-        
+
         educationSection = NSLocalizedString("educationTitle", comment: "Education title")
         experienceSection = NSLocalizedString("experienceTitle", comment: "Experience title")
         sections = [educationSection, experienceSection]

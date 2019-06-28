@@ -1,4 +1,3 @@
-
 import UIKit
 
 final class ResumeViewController: UIViewController {
@@ -9,33 +8,33 @@ final class ResumeViewController: UIViewController {
     @IBOutlet weak var infoTableView: UITableView?
     @IBOutlet weak var contactButton: UIButton?
     var presenter: ResumePresenter?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+
         self.presenter?.delegate = self
         registerCells()
         setupView()
         presenter?.reloadInfo()
     }
-    
-    //MARK: Register cells
-    func registerCells() {
-        let EducationNib = UINib.init(nibName: CellNibNames.education.rawValue, bundle: nil)
-        infoTableView?.register(EducationNib, forCellReuseIdentifier: CellIdentifier.education.rawValue)
-        let ExperienceNib = UINib.init(nibName: CellNibNames.experience.rawValue, bundle: nil)
-        infoTableView?.register(ExperienceNib, forCellReuseIdentifier: CellIdentifier.experience.rawValue)
+
+    // MARK: Register cells
+    private func registerCells() {
+        let educationNib = UINib.init(nibName: CellNibNames.education.rawValue, bundle: nil)
+        infoTableView?.register(educationNib, forCellReuseIdentifier: CellIdentifier.education.rawValue)
+        let experienceNib = UINib.init(nibName: CellNibNames.experience.rawValue, bundle: nil)
+        infoTableView?.register(experienceNib, forCellReuseIdentifier: CellIdentifier.experience.rawValue)
     }
-    
-    func setupView() {
+
+    private func setupView() {
         contactButton?.layer.cornerRadius = 9
         profilePhoto?.rounded()
     }
-    
+
     @IBAction func tapContactButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: StoryBoardSegue.contactSegue.rawValue, sender: nil)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? ContactViewController {
             destination.presenter = presenter?.makeContactPresenter()

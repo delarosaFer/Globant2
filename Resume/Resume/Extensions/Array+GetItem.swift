@@ -1,4 +1,3 @@
-
 import Foundation
 
 extension Array {
@@ -10,7 +9,7 @@ extension Array {
             else {
                 return nil
         }
-        
+
         return self[index] as? T
     }
 }

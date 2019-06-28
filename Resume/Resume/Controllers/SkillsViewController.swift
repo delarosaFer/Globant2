@@ -1,19 +1,18 @@
-
 import UIKit
 
 class SkillsViewController: UIViewController {
-    
+
     @IBOutlet weak var skillsTableView: UITableView!
     var skills: [Skill]?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         skillsTableView?.dataSource = self
         skillsTableView?.register(UINib.init(nibName: "SkillsTableViewCell", bundle: nil), forCellReuseIdentifier: "skills")
-        
+
         skills = (self.parent as? TabBarViewController)?.resume?.skills
-        
+
         skillsTableView?.reloadData()
     }
 }
@@ -22,7 +21,7 @@ extension SkillsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return skills?.count ?? 0
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let tableView = skillsTableView,
             let skills = skills,
@@ -30,10 +29,9 @@ extension SkillsViewController: UITableViewDataSource {
             else {
                 return UITableViewCell()
         }
-        
+
         cell.configureWith(skill: skills[indexPath.row])
-        
+
         return cell
     }
 }
-

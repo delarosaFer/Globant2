@@ -1,4 +1,3 @@
-
 import UIKit
 
 /// A class representing education information
@@ -15,7 +14,7 @@ final class EducationCell: UITableViewCell {
     @IBOutlet weak var startDate: UILabel?
     /// The carrer end year
     @IBOutlet weak var endDate: UILabel?
-        
+
     /// The university's school information
     func configureWith(education: Education) {
         guard let universityName = universityName,
@@ -26,7 +25,7 @@ final class EducationCell: UITableViewCell {
             let endDate = endDate else {
                 return
         }
-        
+
         universityName.text = education.universityName
         degree.text = education.degree
         state.text = education.state

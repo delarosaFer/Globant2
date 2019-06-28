@@ -1,4 +1,3 @@
-
 import Foundation
 
 final class ErrorViewPresenter {
@@ -6,7 +5,7 @@ final class ErrorViewPresenter {
     var errorMessage: String {
         return model.errorMessage
     }
-    
+
     init(withModel model: ErrorModelType) {
         self.model = model
     }

@@ -1,4 +1,3 @@
-
 import Foundation
 
 @testable import Resume
@@ -8,7 +7,7 @@ class DataTaskMock: URLSessionDataTask {
     init(completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
         self.completionHandler = completionHandler
     }
-    
+
     override func resume() {
         print("Resume called")
     }

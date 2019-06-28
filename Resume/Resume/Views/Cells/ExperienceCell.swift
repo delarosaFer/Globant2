@@ -1,4 +1,3 @@
-
 import UIKit
 
 /// A cell containing the Job Expererience cell
@@ -17,7 +16,7 @@ class ExperienceCell: UITableViewCell {
     @IBOutlet weak var startDate: UILabel?
     /// the end year
     @IBOutlet weak var endDate: UILabel?
-    
+
     /// Configures the cell with a job experience
     /// - Parameter experience: The experience information
     func configureWith(experience: Experience) {
@@ -30,7 +29,7 @@ class ExperienceCell: UITableViewCell {
             let endDate = endDate else {
                 return
         }
-        
+
         workplace.text = experience.workplace
         position.text = experience.position
         descriptionWork.text = experience.description
