@@ -23,6 +23,6 @@ This project was development to complete a code challenge. Used an gist reposito
 
 ## Screenshots
 
-+ ! [Main view](./img/screenshots.png)
+![Main view](./img/screenshots.png)
 
 Developed by: Globant user.
