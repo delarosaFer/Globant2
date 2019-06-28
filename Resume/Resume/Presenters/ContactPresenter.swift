@@ -8,7 +8,7 @@ final class ContactPresenter {
         return model.contact.phone
     }
     var cellPhone: String {
-        return model.contact.celphone ?? "---"
+        return model.contact.celphone ?? NSLocalizedString("nilPhone", comment: "Not cell phone")
     }
     var email: String {
         return model.contact.email
