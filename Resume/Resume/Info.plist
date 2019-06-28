@@ -24,8 +24,8 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>InfoURL</key>
-	<string>$(InfoURL)</string>
+	<key>INFO_URL</key>
+	<string>$(INFO_URL)</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

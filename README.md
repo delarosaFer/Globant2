@@ -7,7 +7,7 @@ Is a simple iOS aplication to show Walter White resume divided into different se
 This project was development to complete a code challenge. Used an gist repository to get my resume in a JSON file, that informations is shown in a table view divided into basic information, address, contact info, education and career history and his skills.
 
 *	Architecture: Model View Present
-* JSON file: [Resume]()
+* JSON file: [Resume](https://gist.githubusercontent.com/globantUser/fb6eef6712f810ce58b0bdffd7f97ffe/raw)
 * Swift version: 4.2
 * Xcode version: 10.1
 

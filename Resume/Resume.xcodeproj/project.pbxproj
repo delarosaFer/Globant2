@@ -13,6 +13,7 @@
 		368E712422C540A0004A5B98 /* ReferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E712322C5409F004A5B98 /* ReferencesViewController.swift */; };
 		368E713022C5981F004A5B98 /* failInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 368E712E22C5981F004A5B98 /* failInfo.json */; };
 		368E713122C5981F004A5B98 /* info.json in Resources */ = {isa = PBXBuildFile; fileRef = 368E712F22C5981F004A5B98 /* info.json */; };
+		368E713522C5C2C9004A5B98 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E713422C5C2C9004A5B98 /* Configuration.swift */; };
 		36EB788722C3F90E006AE8A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB788622C3F90E006AE8A8 /* AppDelegate.swift */; };
 		36EB788C22C3F90E006AE8A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EB788A22C3F90E006AE8A8 /* Main.storyboard */; };
 		36EB788E22C3F90F006AE8A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36EB788D22C3F90F006AE8A8 /* Assets.xcassets */; };
@@ -79,6 +80,8 @@
 		368E712322C5409F004A5B98 /* ReferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferencesViewController.swift; sourceTree = "<group>"; };
 		368E712E22C5981F004A5B98 /* failInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = failInfo.json; sourceTree = "<group>"; };
 		368E712F22C5981F004A5B98 /* info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = info.json; sourceTree = "<group>"; };
+		368E713322C5C20F004A5B98 /* Configuration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration.xcconfig; sourceTree = "<group>"; };
+		368E713422C5C2C9004A5B98 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		36EB788322C3F90E006AE8A8 /* Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EB788622C3F90E006AE8A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36EB788B22C3F90E006AE8A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -152,6 +155,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		368E713222C5C1EF004A5B98 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				368E713322C5C20F004A5B98 /* Configuration.xcconfig */,
+				368E713422C5C2C9004A5B98 /* Configuration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		36EB787A22C3F90E006AE8A8 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +187,7 @@
 		36EB788522C3F90E006AE8A8 /* Resume */ = {
 			isa = PBXGroup;
 			children = (
+				368E713222C5C1EF004A5B98 /* Configuration */,
 				36EB788D22C3F90F006AE8A8 /* Assets.xcassets */,
 				DB03AF7222C41BCB002F99F1 /* Colors.xcassets */,
 				DB242F3F22C58A9F005E596C /* Identifiers */,
@@ -495,6 +508,7 @@
 				DBF0F81722C524BF006086D3 /* ContactViewController.swift in Sources */,
 				36EB78D422C453D1006AE8A8 /* APIStatus.swift in Sources */,
 				DB03AF8B22C50620002F99F1 /* UIStackView+RemoveViews.swift in Sources */,
+				368E713522C5C2C9004A5B98 /* Configuration.swift in Sources */,
 				DB242F3422C54E4B005E596C /* TabBarPresenter.swift in Sources */,
 				DB242F3222C54B5E005E596C /* ErrorViewPresenter.swift in Sources */,
 				DB242F3022C5472F005E596C /* MainViewPresenter.swift in Sources */,
@@ -582,6 +596,7 @@
 /* Begin XCBuildConfiguration section */
 		36EB78A922C3F90F006AE8A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 368E713322C5C20F004A5B98 /* Configuration.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -643,6 +658,7 @@
 		};
 		36EB78AA22C3F90F006AE8A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 368E713322C5C20F004A5B98 /* Configuration.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -698,6 +714,7 @@
 		};
 		36EB78AC22C3F90F006AE8A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 368E713322C5C20F004A5B98 /* Configuration.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -717,6 +734,7 @@
 		};
 		36EB78AD22C3F90F006AE8A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 368E713322C5C20F004A5B98 /* Configuration.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -736,6 +754,7 @@
 		};
 		36EB78AF22C3F90F006AE8A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 368E713322C5C20F004A5B98 /* Configuration.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -757,6 +776,7 @@
 		};
 		36EB78B022C3F90F006AE8A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 368E713322C5C20F004A5B98 /* Configuration.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -778,6 +798,7 @@
 		};
 		36EB78B222C3F90F006AE8A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 368E713322C5C20F004A5B98 /* Configuration.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -798,6 +819,7 @@
 		};
 		36EB78B322C3F90F006AE8A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 368E713322C5C20F004A5B98 /* Configuration.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

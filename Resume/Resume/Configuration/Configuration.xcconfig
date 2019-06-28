@@ -1,0 +1,2 @@
+SINGLE_SLASH=/
+INFO_URL=https:/$(SINGLE_SLASH)gist.githubusercontent.com/globantUser/fb6eef6712f810ce58b0bdffd7f97ffe/raw

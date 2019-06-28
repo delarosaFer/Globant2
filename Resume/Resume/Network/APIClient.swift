@@ -22,11 +22,8 @@ final public class APIClient {
         configuration.urlCache = nil
         defaultSession = URLSession(configuration: configuration)
         
-        guard let urlStr = Bundle.main.object(forInfoDictionaryKey: "InfoURL") as? String else {
-            self.URLBase = URL(string: "")
-            return
-        }
-        self.URLBase = URL(string: urlStr)
+//        let urlStr = Con bfiguration.value(for: "INFO_URL")
+        self.URLBase = URL(string: Configuration.value(for: "INFO_URL"))
     }
     
     //MARK: Get data method from a base url
