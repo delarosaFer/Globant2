@@ -49,7 +49,7 @@ struct Education: Codable {
 }
 
 // MARK: Experience
-public struct Experience: Codable {
+struct Experience: Codable {
     let workplace: String
     let position: String
     let city: String
