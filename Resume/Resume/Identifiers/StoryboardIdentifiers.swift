@@ -1,18 +1,12 @@
-//
-//  StoryboardIdentifiers.swift
-//  Resume
-//
-//  Created by David Castro Cisneros on 6/27/19.
-//
 
 import Foundation
 
-
+/// An enum that reflects the name of storyboards
 enum StoryBoardNameIdentifier: String {
     case main = "Main"
 }
 
+/// An enum that reflects the name of the StoryBoardIDs
 enum StoryBoardIdentifier: String {
     case mainView = "MainView"
 }
-

@@ -1,3 +1,4 @@
+
 import Foundation
 
 final class TabBarPresenter {
@@ -16,17 +17,5 @@ final class TabBarPresenter {
     
     func makeSkillsPresenter() -> SkillsPresenter {
         return SkillsPresenter(withModel: SkillsModel(skills: model.resume.skills))
-    }
-}
-
-protocol TabBarModelType {
-    var resume: Resume { get }
-}
-
-final class TabBarModel: TabBarModelType {
-    let resume: Resume
-    
-    init(withResume resume: Resume) {
-        self.resume = resume
     }
 }

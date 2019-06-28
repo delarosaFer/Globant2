@@ -1,3 +1,4 @@
+
 import UIKit
 
 final class ErrorViewController: UIViewController {
@@ -8,7 +9,7 @@ final class ErrorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupView()
     }
     
@@ -23,3 +24,4 @@ final class ErrorViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 }
+

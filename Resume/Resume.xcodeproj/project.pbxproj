@@ -53,6 +53,20 @@
 		DB242F3B22C56003005E596C /* ContactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F3A22C56003005E596C /* ContactPresenter.swift */; };
 		DB242F4122C58ABF005E596C /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F4022C58ABF005E596C /* CellIdentifiers.swift */; };
 		DB242F4322C58E67005E596C /* StoryboardIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F4222C58E67005E596C /* StoryboardIdentifiers.swift */; };
+		DB242F4522C59B6B005E596C /* ErrorViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F4422C59B6B005E596C /* ErrorViewPresenterTests.swift */; };
+		DB242F4722C5A2B6005E596C /* ContactPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F4622C5A2B6005E596C /* ContactPresenterTests.swift */; };
+		DB242F4922C5A7C3005E596C /* TabBarPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F4822C5A7C3005E596C /* TabBarPresenterTests.swift */; };
+		DB242F4B22C5AE8B005E596C /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F4A22C5AE8B005E596C /* MainViewPresenter.swift */; };
+		DB242F4D22C5B6FD005E596C /* SkillsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F4C22C5B6FD005E596C /* SkillsPresenter.swift */; };
+		DB242F4F22C5BA24005E596C /* ReferencesPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F4E22C5BA24005E596C /* ReferencesPresenterTest.swift */; };
+		DB242F5222C5C174005E596C /* ReferencesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F5122C5C174005E596C /* ReferencesModel.swift */; };
+		DB242F5422C5C1AA005E596C /* SkillsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F5322C5C1AA005E596C /* SkillsModel.swift */; };
+		DB242F5622C5C1D1005E596C /* ResumeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F5522C5C1D1005E596C /* ResumeModel.swift */; };
+		DB242F5822C5C1F2005E596C /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F5722C5C1F2005E596C /* MainModel.swift */; };
+		DB242F5A22C5C20A005E596C /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F5922C5C20A005E596C /* TabBarModel.swift */; };
+		DB242F5C22C5C226005E596C /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F5B22C5C226005E596C /* ErrorViewModel.swift */; };
+		DB242F5E22C5C243005E596C /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F5D22C5C243005E596C /* ContactModel.swift */; };
+		DB242F6022C5C451005E596C /* ResumeViewController+ResumeViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F5F22C5C451005E596C /* ResumeViewController+ResumeViewType.swift */; };
 		DBF0F81722C524BF006086D3 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0F81622C524BF006086D3 /* ContactViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +141,20 @@
 		DB242F3A22C56003005E596C /* ContactPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPresenter.swift; sourceTree = "<group>"; };
 		DB242F4022C58ABF005E596C /* CellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
 		DB242F4222C58E67005E596C /* StoryboardIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiers.swift; sourceTree = "<group>"; };
+		DB242F4422C59B6B005E596C /* ErrorViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewPresenterTests.swift; sourceTree = "<group>"; };
+		DB242F4622C5A2B6005E596C /* ContactPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPresenterTests.swift; sourceTree = "<group>"; };
+		DB242F4822C5A7C3005E596C /* TabBarPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenterTests.swift; sourceTree = "<group>"; };
+		DB242F4A22C5AE8B005E596C /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
+		DB242F4C22C5B6FD005E596C /* SkillsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsPresenter.swift; sourceTree = "<group>"; };
+		DB242F4E22C5BA24005E596C /* ReferencesPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesPresenterTest.swift; sourceTree = "<group>"; };
+		DB242F5122C5C174005E596C /* ReferencesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesModel.swift; sourceTree = "<group>"; };
+		DB242F5322C5C1AA005E596C /* SkillsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsModel.swift; sourceTree = "<group>"; };
+		DB242F5522C5C1D1005E596C /* ResumeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeModel.swift; sourceTree = "<group>"; };
+		DB242F5722C5C1F2005E596C /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		DB242F5922C5C20A005E596C /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
+		DB242F5B22C5C226005E596C /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
+		DB242F5D22C5C243005E596C /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		DB242F5F22C5C451005E596C /* ResumeViewController+ResumeViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResumeViewController+ResumeViewType.swift"; sourceTree = "<group>"; };
 		DBF0F81622C524BF006086D3 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,7 +220,7 @@
 				DB03AF7222C41BCB002F99F1 /* Colors.xcassets */,
 				DB242F3F22C58A9F005E596C /* Identifiers */,
 				36EB78D122C453D0006AE8A8 /* Network */,
-				36EB78D622C453DF006AE8A8 /* Model */,
+				DB242F5022C5C15E005E596C /* Models */,
 				DB03AF7C22C427BF002F99F1 /* Views */,
 				DB242F1B22C5326B005E596C /* Presenters */,
 				DB03AF7922C424C8002F99F1 /* Controllers */,
@@ -209,7 +237,13 @@
 		36EB789A22C3F90F006AE8A8 /* ResumeTests */ = {
 			isa = PBXGroup;
 			children = (
+				DB242F4E22C5BA24005E596C /* ReferencesPresenterTest.swift */,
 				36EB789B22C3F90F006AE8A8 /* ResumeTests.swift */,
+				DB242F4C22C5B6FD005E596C /* SkillsPresenter.swift */,
+				DB242F4A22C5AE8B005E596C /* MainViewPresenter.swift */,
+				DB242F4422C59B6B005E596C /* ErrorViewPresenterTests.swift */,
+				DB242F4622C5A2B6005E596C /* ContactPresenterTests.swift */,
+				DB242F4822C5A7C3005E596C /* TabBarPresenterTests.swift */,
 				368E712E22C5981F004A5B98 /* failInfo.json */,
 				368E712F22C5981F004A5B98 /* info.json */,
 				36EB789D22C3F90F006AE8A8 /* Info.plist */,
@@ -248,14 +282,6 @@
 				36EB78D322C453D0006AE8A8 /* APIClient.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		36EB78D622C453DF006AE8A8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				36EB78D722C453DF006AE8A8 /* Resume.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		DB03AF7622C422C9002F99F1 /* Extensions */ = {
@@ -307,8 +333,8 @@
 				DB242F2522C541DC005E596C /* SkillsPresenter.swift */,
 				DB242F2C22C545FF005E596C /* ResumePresenter.swift */,
 				DB242F2F22C5472F005E596C /* MainViewPresenter.swift */,
-				DB242F3122C54B5E005E596C /* ErrorViewPresenter.swift */,
 				DB242F3322C54E4B005E596C /* TabBarPresenter.swift */,
+				DB242F3122C54B5E005E596C /* ErrorViewPresenter.swift */,
 				DB242F3A22C56003005E596C /* ContactPresenter.swift */,
 			);
 			path = Presenters;
@@ -346,6 +372,7 @@
 			children = (
 				368E712122C5407E004A5B98 /* ResumeViewController.swift */,
 				36EB78CF22C447A6006AE8A8 /* ResumeViewController+TableView.swift */,
+				DB242F5F22C5C451005E596C /* ResumeViewController+ResumeViewType.swift */,
 			);
 			path = ResumeViewControllers;
 			sourceTree = "<group>";
@@ -357,6 +384,21 @@
 				DB242F4222C58E67005E596C /* StoryboardIdentifiers.swift */,
 			);
 			path = Identifiers;
+			sourceTree = "<group>";
+		};
+		DB242F5022C5C15E005E596C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				36EB78D722C453DF006AE8A8 /* Resume.swift */,
+				DB242F5122C5C174005E596C /* ReferencesModel.swift */,
+				DB242F5322C5C1AA005E596C /* SkillsModel.swift */,
+				DB242F5522C5C1D1005E596C /* ResumeModel.swift */,
+				DB242F5722C5C1F2005E596C /* MainModel.swift */,
+				DB242F5922C5C20A005E596C /* TabBarModel.swift */,
+				DB242F5B22C5C226005E596C /* ErrorViewModel.swift */,
+				DB242F5D22C5C243005E596C /* ContactModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -501,7 +543,10 @@
 				36EB78D822C453DF006AE8A8 /* Resume.swift in Sources */,
 				36EB78CB22C43C8A006AE8A8 /* ExperienceCell.swift in Sources */,
 				368E712422C540A0004A5B98 /* ReferencesViewController.swift in Sources */,
+				DB242F5422C5C1AA005E596C /* SkillsModel.swift in Sources */,
 				DB242F3922C55E0A005E596C /* MainViewController+MainViewType.swift in Sources */,
+				DB242F5A22C5C20A005E596C /* TabBarModel.swift in Sources */,
+				DB242F6022C5C451005E596C /* ResumeViewController+ResumeViewType.swift in Sources */,
 				36EB78C722C43922006AE8A8 /* EducationCell.swift in Sources */,
 				36EB788722C3F90E006AE8A8 /* AppDelegate.swift in Sources */,
 				DB242F4122C58ABF005E596C /* CellIdentifiers.swift in Sources */,
@@ -509,11 +554,13 @@
 				36EB78D422C453D1006AE8A8 /* APIStatus.swift in Sources */,
 				DB03AF8B22C50620002F99F1 /* UIStackView+RemoveViews.swift in Sources */,
 				368E713522C5C2C9004A5B98 /* Configuration.swift in Sources */,
+				DB242F5C22C5C226005E596C /* ErrorViewModel.swift in Sources */,
 				DB242F3422C54E4B005E596C /* TabBarPresenter.swift in Sources */,
 				DB242F3222C54B5E005E596C /* ErrorViewPresenter.swift in Sources */,
 				DB242F3022C5472F005E596C /* MainViewPresenter.swift in Sources */,
 				36EB78D522C453D1006AE8A8 /* APIClient.swift in Sources */,
 				DB03AF8922C50377002F99F1 /* SkillsTableViewCell.swift in Sources */,
+				DB242F5E22C5C243005E596C /* ContactModel.swift in Sources */,
 				DB03AF7822C422DF002F99F1 /* UIImageView+Utils.swift in Sources */,
 				DB242F1A22C5322D005E596C /* ReferencesViewController+TableView.swift in Sources */,
 				DB242F2922C54220005E596C /* SkillsViewController+UITableView.swift in Sources */,
@@ -525,12 +572,15 @@
 				DB03AF8422C43DBD002F99F1 /* ReferencesTableViewCell.swift in Sources */,
 				DB242F2B22C54341005E596C /* Array+GetItem.swift in Sources */,
 				DB03AF8D22C50B0E002F99F1 /* TabBarViewController.swift in Sources */,
+				DB242F5822C5C1F2005E596C /* MainModel.swift in Sources */,
 				368E712022C5250E004A5B98 /* MainViewController.swift in Sources */,
+				DB242F5222C5C174005E596C /* ReferencesModel.swift in Sources */,
 				DB03AF9122C51403002F99F1 /* SkillsViewController.swift in Sources */,
 				DB242F2D22C545FF005E596C /* ResumePresenter.swift in Sources */,
 				DB242F3722C55DC1005E596C /* TabBarController+UITabBarControllerDelegate.swift in Sources */,
 				DB242F2622C541DC005E596C /* SkillsPresenter.swift in Sources */,
 				DB242F4322C58E67005E596C /* StoryboardIdentifiers.swift in Sources */,
+				DB242F5622C5C1D1005E596C /* ResumeModel.swift in Sources */,
 				DB03AF7522C41C57002F99F1 /* UIColors+appColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,6 +589,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB242F4922C5A7C3005E596C /* TabBarPresenterTests.swift in Sources */,
+				DB242F4722C5A2B6005E596C /* ContactPresenterTests.swift in Sources */,
+				DB242F4B22C5AE8B005E596C /* MainViewPresenter.swift in Sources */,
+				DB242F4522C59B6B005E596C /* ErrorViewPresenterTests.swift in Sources */,
+				DB242F4F22C5BA24005E596C /* ReferencesPresenterTest.swift in Sources */,
+				DB242F4D22C5B6FD005E596C /* SkillsPresenter.swift in Sources */,
 				36EB789C22C3F90F006AE8A8 /* ResumeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,3 +1,4 @@
+
 import Foundation
  
  protocol MainViewType: class {
@@ -50,31 +51,23 @@ import Foundation
         })
     }
     
+    public func setResume(_ resume: Resume) {
+        self.model?.resume = resume
+    }
+    
     func setupData() {
         request { [weak self] (resume) in
             if let resume = resume {
                 DispatchQueue.main.async { [weak self] in
-                    self?.model?.resume = resume
+                    self?.setResume(resume)
                     self?.delegate?.showSuccessView()
                 }
                 
-            }else {
+            } else {
                 DispatchQueue.main.async { [weak self] in
                     self?.model?.errorMessage = NSLocalizedString("errorParse", comment: "Parsing was wrong")
                 }
             }
         }
     }
- }
-
-protocol MainModelType {
-    var errorMessage: String { get set }
-    var client: APIClient { get }
-    var resume: Resume? { get set }
-}
-
-final class MainViewModel: MainModelType {
-    var errorMessage: String = ""
-    var client = APIClient()
-    var resume: Resume?
  }

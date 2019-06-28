@@ -1,8 +1,5 @@
-import Foundation
 
-protocol SkillsModelType {
-    var skills: [Skill] { get }
-}
+import Foundation
 
 final public class SkillsPresenter {
     private let model: SkillsModelType
@@ -10,7 +7,7 @@ final public class SkillsPresenter {
         return model.skills.count
     }
 
-    required init(withModel model: SkillsModel) {
+    required init(withModel model: SkillsModelType) {
         self.model = model
     }
 
@@ -19,10 +16,3 @@ final public class SkillsPresenter {
     }
 }
 
-final public class SkillsModel: SkillsModelType {
-    public let skills: [Skill]
-    
-    required init(skills: [Skill]) {
-        self.skills = skills
-    }
-}

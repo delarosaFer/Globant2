@@ -1,17 +1,22 @@
+
 import UIKit
 
+/// A class representing education information
 final class EducationCell: UITableViewCell {
+    /// The name of the university
     @IBOutlet weak var universityName: UILabel?
+    /// The degree obtained
     @IBOutlet weak var degree: UILabel?
+    /// The state of the university
     @IBOutlet weak var state: UILabel?
-    @IBOutlet weak var startDate: UILabel?
+    /// the city of the university
     @IBOutlet weak var city: UILabel?
+    /// The carrer start year
+    @IBOutlet weak var startDate: UILabel?
+    /// The carrer end year
     @IBOutlet weak var endDate: UILabel?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
+        
+    /// The university's school information
     func configureWith(education: Education) {
         guard let universityName = universityName,
             let degree = degree,
