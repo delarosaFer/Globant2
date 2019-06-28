@@ -1,4 +1,3 @@
-
 import XCTest
 @testable import Resume
 
@@ -7,12 +6,12 @@ class SkillsPresenterTestable: XCTestCase {
         let presenter = SkillsPresenter.init(withModel: MockSkillModel())
         XCTAssertEqual(presenter.skillCount, 1)
     }
-    
+
     func testGetSuccessfulSkill() {
         let presenter = SkillsPresenter.init(withModel: MockSkillModel())
         XCTAssertEqual(presenter.getSkill(for: IndexPath(row: 0, section: 0))?.rating, 3)
     }
-    
+
     func testGetFailedSkill() {
         let presenter = SkillsPresenter.init(withModel: MockSkillModel())
         XCTAssertNil(presenter.getSkill(for: IndexPath(row: 1, section: 0)))

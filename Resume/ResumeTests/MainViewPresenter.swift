@@ -1,4 +1,3 @@
-
 import XCTest
 @testable import Resume
 
@@ -6,35 +5,35 @@ class MainViewPresenterTest: XCTestCase {
     func testPresenterIntegrity() {
         let presenter = MainViewPresenter()
         presenter.setResume(MockMainModel().resume!)
-        
+
         XCTAssertEqual(presenter.makeErrorPresenter()?.errorMessage, "")
         XCTAssertEqual(presenter.makeTabBarPresenter()?.makeSkillsPresenter().skillCount, 2)
     }
-    
+
     func testErrorViewOnPresenterDelegate() {
         let presenter = MainViewPresenter()
         let mainDelegate = MockMainDelegate()
-        
+
         presenter.delegate = mainDelegate
         presenter.delegate?.showErrorView()
-        
+
         XCTAssertEqual("failure", mainDelegate.response)
     }
-    
+
     func testSuccessViewOnPresenterDelegate() {
         let presenter = MainViewPresenter()
         let mainDelegate = MockMainDelegate()
-        
+
         presenter.delegate = mainDelegate
         presenter.delegate?.showSuccessView()
-        
+
         XCTAssertEqual("success", mainDelegate.response)
     }
-    
+
     func testModelCreation() {
         let modal = MainViewModel()
         modal.resume = MockMainModel().resume
-        
+
         XCTAssertEqual(modal.resume?.name, "Heisenberg")
     }
 }
@@ -47,11 +46,11 @@ struct MockMainModel: MainModelType {
 
 class MockMainDelegate: MainViewType {
     var response = ""
-    
+
     func showErrorView() {
         response = "failure"
     }
-    
+
     func showSuccessView() {
         response = "success"
     }

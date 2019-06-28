@@ -1,4 +1,3 @@
-
 import UIKit
 
 /// A cell containing references
@@ -13,7 +12,7 @@ final class ReferencesTableViewCell: UITableViewCell {
     @IBOutlet weak var email: UILabel?
     /// the workplace information
     @IBOutlet weak var workplace: UILabel?
-    
+
     /// Configures the cell of the reference
     /// - Parameter reference: the referenceer information
     func configureWith(reference: Reference) {

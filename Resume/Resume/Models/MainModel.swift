@@ -1,4 +1,3 @@
-
 protocol MainModelType {
     var errorMessage: String { get set }
     var client: APIClient { get }

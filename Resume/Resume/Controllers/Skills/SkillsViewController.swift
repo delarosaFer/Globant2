@@ -1,4 +1,3 @@
-
 import UIKit
 
 final class SkillsViewController: UIViewController {
@@ -8,15 +7,16 @@ final class SkillsViewController: UIViewController {
             configureTableView()
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         skillsTableView?.reloadData()
     }
-    
-    func configureTableView() {
+
+    private func configureTableView() {
         skillsTableView?.dataSource = self
-        skillsTableView?.register(UINib.init(nibName: CellNibNames.skills.rawValue, bundle: nil), forCellReuseIdentifier: CellIdentifier.skills.rawValue)
+        skillsTableView?.register(UINib.init(nibName: CellNibNames.skills.rawValue, bundle: nil),
+                                  forCellReuseIdentifier: CellIdentifier.skills.rawValue)
     }
 }
