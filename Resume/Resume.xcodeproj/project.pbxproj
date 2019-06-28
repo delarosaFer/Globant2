@@ -15,7 +15,7 @@
 		368E713122C5981F004A5B98 /* info.json in Resources */ = {isa = PBXBuildFile; fileRef = 368E712F22C5981F004A5B98 /* info.json */; };
 		368E713522C5C2C9004A5B98 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E713422C5C2C9004A5B98 /* Configuration.swift */; };
 		368E713722C5DAFF004A5B98 /* MockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E713622C5DAFF004A5B98 /* MockSession.swift */; };
-		368E713A22C5DD22004A5B98 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E713922C5DD22004A5B98 /* Protocols.swift */; };
+		368E713A22C5DD22004A5B98 /* NetworkingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E713922C5DD22004A5B98 /* NetworkingProtocols.swift */; };
 		368E713C22C5DDF7004A5B98 /* DataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E713B22C5DDF7004A5B98 /* DataTaskMock.swift */; };
 		36EB788722C3F90E006AE8A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB788622C3F90E006AE8A8 /* AppDelegate.swift */; };
 		36EB788C22C3F90E006AE8A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EB788A22C3F90E006AE8A8 /* Main.storyboard */; };
@@ -101,7 +101,7 @@
 		368E713322C5C20F004A5B98 /* Configuration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration.xcconfig; sourceTree = "<group>"; };
 		368E713422C5C2C9004A5B98 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		368E713622C5DAFF004A5B98 /* MockSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSession.swift; sourceTree = "<group>"; };
-		368E713922C5DD22004A5B98 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		368E713922C5DD22004A5B98 /* NetworkingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocols.swift; sourceTree = "<group>"; };
 		368E713B22C5DDF7004A5B98 /* DataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskMock.swift; sourceTree = "<group>"; };
 		36EB788322C3F90E006AE8A8 /* Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EB788622C3F90E006AE8A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 		368E713822C5DD0F004A5B98 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				368E713922C5DD22004A5B98 /* Protocols.swift */,
+				368E713922C5DD22004A5B98 /* NetworkingProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -592,7 +592,7 @@
 				36EB78D022C447A6006AE8A8 /* ResumeViewController+TableView.swift in Sources */,
 				DB03AF8422C43DBD002F99F1 /* ReferencesTableViewCell.swift in Sources */,
 				DB242F2B22C54341005E596C /* Array+GetItem.swift in Sources */,
-				368E713A22C5DD22004A5B98 /* Protocols.swift in Sources */,
+				368E713A22C5DD22004A5B98 /* NetworkingProtocols.swift in Sources */,
 				DB03AF8D22C50B0E002F99F1 /* TabBarViewController.swift in Sources */,
 				DB242F5822C5C1F2005E596C /* MainModel.swift in Sources */,
 				368E712022C5250E004A5B98 /* MainViewController.swift in Sources */,
