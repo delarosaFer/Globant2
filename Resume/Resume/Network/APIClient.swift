@@ -3,92 +3,47 @@ import UIKit
 
 protocol NetworkProtocol {
     var dataTask: URLSessionDataTask? {get set}
-    func getData(session: URLSessionProtocol, handler: @escaping (Data?, Status) -> Void)
-    func getDataImage(url: URL, handler: @escaping (Data?, Status) -> Void)
+    func getData(from urlString: String, handler: @escaping (Status) -> Void)
 }
 
 final class APIClient: NetworkProtocol {
     //MARK: URL of the resume
-    private let resumeURL: URL?
+//    private let resumeURL: URL?
     
     //MARK: URL Session
     private let defaultSession: URLSession
     internal var dataTask: URLSessionDataTask?
     
     //MARK: Init Service()
-    init(urlStr: String = Configuration.string(forKey: "INFO_URL") ?? "") {
-        guard let url = URL(string: urlStr) else {
-            fatalError(NSLocalizedString("errorURL", comment: "Error URL"))
-        }
+    init() {
         let configuration = URLSessionConfiguration.default
         configuration.requestCachePolicy = .reloadIgnoringCacheData
         configuration.urlCache = nil
         defaultSession = URLSession(configuration: configuration)
-        self.resumeURL = url
     }
     
-    //MARK: Get data method from a base url
+    //MARK: Get data method from url
     /**
      Get the data from gist.github
-     
-     - parameters:
-     - handler: A closure that need be defined by the caller to manipulate the data
-     */
-    func getData(session: URLSessionProtocol = URLSession.shared, handler: @escaping (Data?, Status) -> Void) {
-        if let url = resumeURL {
-            dataTask = defaultSession.dataTask(with: url) { data, response, error in
-                if let response = response as? HTTPURLResponse, 200...209 ~= response.statusCode  {
-                    if let data = data {
-                        handler(data, .success)
-                    } else {
-                        handler(Data(), .success)
-                    }
-                } else {
-                    if let error = error {
-                        debugPrint(error.localizedDescription)
-                        if error.localizedDescription == NSLocalizedString("notConnectionMessage", comment: "Internet not connection") {
-                            handler(nil, .notConnection)
-                        } else {
-                            handler(nil, .failure)
-                        }
-                    }
-                }
-            }
-            dataTask?.resume()
-        }
-    }
-    
-    //MARK: Get data
-    /**
-     Get the data from a specific url
      
      - parameters:
      - url: A url that contains the data
      - handler: A closure that need be defined by the caller to manipulate the data
      */
-    func getDataImage(url: URL, handler: @escaping (Data?, Status) -> Void) {
-        dataTask = defaultSession.dataTask(with: url) { data, response, error in
-            if let response = response as? HTTPURLResponse, 200...209 ~= response.statusCode  {
-                if let data = data {
-                    handler(data, .success)
-                } else {
-                    handler(Data(), .success)
-                }
+    func getData(from urlString: String = Configuration.string(forKey: "INFO_URL") ?? "", handler: @escaping (Status) -> Void) {
+        guard let url = URL(string: urlString) else { return }
+        
+        dataTask = defaultSession.dataTask(with: url, completionHandler: { (data, response, error) in
+            if let response = response as? HTTPURLResponse, 200...209 ~= response.statusCode, let data = data {
+                handler(.success(data))
             } else {
                 if let error = error {
-                    debugPrint(error.localizedDescription)
-                    if error.localizedDescription == "The Internet connection appears to be offline." {
-                        handler(nil, .notConnection)
-                    } else {
-                        handler(nil, .failure)
-                    }
+                    handler(.failure(error))
                 }
             }
-        }
-        
+        })
         dataTask?.resume()
     }
-    
     
     //MARK: Parse JSON to Model method
     /**

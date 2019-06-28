@@ -66,12 +66,12 @@ final class ResumePresenter {
     }
     
     func requestImage(urlStr: String, completition: @escaping ((Data) -> Void)) {
-        guard let url = URL(string: urlStr) else { return }
-        
-        client.getDataImage(url: url) { (data, status) in
-            if status == .success {
-                guard let data = data else { return }
+        client.getData(from: urlStr) { (status) in
+            switch status {
+            case .success(let data):
                 completition(data)
+            default:
+                return
             }
         }
     }

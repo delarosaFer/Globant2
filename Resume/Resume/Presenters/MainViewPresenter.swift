@@ -37,12 +37,12 @@ import Foundation
         var response: Resume?
         let client = APIClient()
         
-        self.model?.client.getData(handler: { (data, status) in
-            if status == .success {
-                guard let data = data else { return }
+        self.model?.client.getData(handler: { (status) in
+            switch status {
+            case .success(let data):
                 response = client.parseJSON(data: data, model: response) ?? response
                 completition(response)
-            } else {
+            default:
                 DispatchQueue.main.async { [weak self] in
                     self?.model?.errorMessage = NSLocalizedString("errorRequest", comment: "Parsing was wrong")
                     self?.delegate?.showErrorView()
