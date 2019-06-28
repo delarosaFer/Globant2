@@ -8,8 +8,8 @@ protocol NetworkProtocol {
 }
 
 final class APIClient: NetworkProtocol {
-    //MARK: URL base
-    private let URLBase: URL?
+    //MARK: URL of the resume
+    private let resumeURL: URL?
     
     //MARK: URL Session
     private let defaultSession: URLSession
@@ -24,7 +24,7 @@ final class APIClient: NetworkProtocol {
         configuration.requestCachePolicy = .reloadIgnoringCacheData
         configuration.urlCache = nil
         defaultSession = URLSession(configuration: configuration)
-        self.URLBase = url
+        self.resumeURL = url
     }
     
     //MARK: Get data method from a base url
@@ -35,7 +35,7 @@ final class APIClient: NetworkProtocol {
      - handler: A closure that need be defined by the caller to manipulate the data
      */
     func getData(session: URLSessionProtocol = URLSession.shared, handler: @escaping (Data?, Status) -> Void) {
-        if let url = URLBase {
+        if let url = resumeURL {
             dataTask = defaultSession.dataTask(with: url) { data, response, error in
                 if let response = response as? HTTPURLResponse, 200...209 ~= response.statusCode  {
                     if let data = data {
