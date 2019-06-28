@@ -46,7 +46,7 @@ final public class APIClient: NetworkProtocol {
                 } else {
                     if let error = error {
                         debugPrint(error.localizedDescription)
-                        if error.localizedDescription == "The Internet connection appears to be offline." {
+                        if error.localizedDescription == NSLocalizedString("notConnectionMessage", comment: "Internet not connection") {
                             handler(nil, .notConnection)
                         } else {
                             handler(nil, .failure)

@@ -193,10 +193,10 @@ class ResumeTests: XCTestCase {
     
     func loadFromJSONFile(name: String = "info") -> Data {
         guard let url = Bundle(for: type(of: self)).url(forResource: name, withExtension: "json") else {
-            fatalError("\(name).json could not be loaded")
+            fatalError(NSLocalizedString("fatalErrorJson", comment: "\(name).json could not be loaded"))
         }
         guard let data  = try? Data(contentsOf: url) else {
-            fatalError("Data could not be loaded")
+            fatalError(NSLocalizedString("fatalErrorData", comment: "Data could not be loaded"))
         }
         
         return data

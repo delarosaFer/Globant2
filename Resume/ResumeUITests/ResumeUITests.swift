@@ -117,7 +117,7 @@ class ResumeUITests: XCTestCase {
     
     func testContact() {
         let app = XCUIApplication()
-        app.buttons["Contact Information"].tap()
+        app.buttons["contactButton"].tap()
         app.buttons["Return"].tap()
     }
 }
