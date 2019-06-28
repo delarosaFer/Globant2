@@ -1,0 +1,102 @@
+{
+"name": Walter White,
+"age": 55,
+"profilePhoto": "https://pbs.twimg.com/profile_images/934479310911672320/Vtx_Tuns_400x400.jpg",
+"summary": "Remember my name",
+"employment": "Drugdealer",
+"contact": {
+"phone": "551234567890"
+"celphone": "5058842557",
+"email": "theonewhoknocks@gmail.com"
+},
+"address": {
+"zipCode": 87111,
+"street": "308 Negra Arroyo Lane",
+"city": "Alburqueque"
+"country": "USA"
+},
+"education": {
+"univertityName": "California Institute Of Technology",
+"degree": "Bacheloor's",
+"city": "CA",
+"state": Pasadena,
+"startDate": "1980"
+"endDate": "1986"
+},
+"experience": [
+{
+"workplace": "Ala Carwash",
+"position": "Co-Owner and operator",
+"city": "NM",
+"state": "Alburqueque",
+"startDate": "2010",
+"endDate": null,
+"description": Played an active role in drastically increasing sales that included everyday operations and inventory tracking
+},
+{
+employmentName: "Alburqueque Industrial Laundry",
+"position": "Lab Technisian",
+"city": "NM",
+"state": "Alburqueque"
+"startDate": "2010",
+"endDate": "2011"
+"description": "Researched, led, and conducted chemical analisys on a wide range of elements, as well as initialisinga geographic market strategy for distribution"
+}
+],
+"skills": [
+{
+"skill": "Advanced in accounting, sales, and product distribution"
+"rating": 5
+},
+{
+"skill": Proficient in brewing properties and development
+rating: 4
+},
+{
+"skill": "Strong ability to multitask",
+"rating": 3
+}
+],
+"accomplishments": 
+{
+"title": "1986 Nobel Prize",
+"description": "In development of direct method and determination of crystal structuras
+},
+{
+"title": "Gray matter technologies",
+"description": "Co-Founder"
+},
+{
+"title": "2008 teacher of the year,
+"description": "JP Wynne High School"
+}
+],
+"references": [
+{
+"name": "Saul Goodman"
+"workplace": "Saul Goodman & Associated",
+"contact": {
+"phone": "5055034455",
+"celphone": null
+"email": "bettercallsaul@sga.net"
+}
+},
+{
+"name": "Lydia Rodarte Quayle"
+"workplace": "Madrigal Electromotive GmbH",
+"contact": {
+"phone": "7132154455",
+"celphone": null
+"email": "lydiarodarte@gmail.com"
+}
+},
+{
+"name": "Todd Alquist"
+"workplace": "Saul Goodman & Associated",
+"contact": {
+"phone": "5057223446"
+"celphone": null"
+"email": "todd@vamonospest.com"
+}
+}
+}

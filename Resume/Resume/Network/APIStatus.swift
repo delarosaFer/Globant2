@@ -5,4 +5,5 @@ import UIKit
 public enum Status {
     case success
     case failure
+    case notConnection
 }

@@ -11,6 +11,8 @@
 		368E712022C5250E004A5B98 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E711F22C5250E004A5B98 /* MainViewController.swift */; };
 		368E712222C5407E004A5B98 /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E712122C5407E004A5B98 /* ResumeViewController.swift */; };
 		368E712422C540A0004A5B98 /* ReferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E712322C5409F004A5B98 /* ReferencesViewController.swift */; };
+		368E713022C5981F004A5B98 /* failInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 368E712E22C5981F004A5B98 /* failInfo.json */; };
+		368E713122C5981F004A5B98 /* info.json in Resources */ = {isa = PBXBuildFile; fileRef = 368E712F22C5981F004A5B98 /* info.json */; };
 		36EB788722C3F90E006AE8A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB788622C3F90E006AE8A8 /* AppDelegate.swift */; };
 		36EB788C22C3F90E006AE8A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EB788A22C3F90E006AE8A8 /* Main.storyboard */; };
 		36EB788E22C3F90F006AE8A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36EB788D22C3F90F006AE8A8 /* Assets.xcassets */; };
@@ -75,6 +77,8 @@
 		368E711F22C5250E004A5B98 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		368E712122C5407E004A5B98 /* ResumeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResumeViewController.swift; path = Resume/Controllers/ResumeViewControllers/ResumeViewController.swift; sourceTree = SOURCE_ROOT; };
 		368E712322C5409F004A5B98 /* ReferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferencesViewController.swift; sourceTree = "<group>"; };
+		368E712E22C5981F004A5B98 /* failInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = failInfo.json; sourceTree = "<group>"; };
+		368E712F22C5981F004A5B98 /* info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = info.json; sourceTree = "<group>"; };
 		36EB788322C3F90E006AE8A8 /* Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EB788622C3F90E006AE8A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36EB788B22C3F90E006AE8A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				36EB789B22C3F90F006AE8A8 /* ResumeTests.swift */,
+				368E712E22C5981F004A5B98 /* failInfo.json */,
+				368E712F22C5981F004A5B98 /* info.json */,
 				36EB789D22C3F90F006AE8A8 /* Info.plist */,
 			);
 			path = ResumeTests;
@@ -460,6 +466,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				368E713022C5981F004A5B98 /* failInfo.json in Resources */,
+				368E713122C5981F004A5B98 /* info.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

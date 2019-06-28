@@ -34,11 +34,12 @@ import Foundation
     
     func request(completition: @escaping ((Resume?) -> Void)) {
         var response: Resume?
+        let client = APIClient()
         
         self.model?.client.getData(handler: { (data, status) in
             if status == .success {
                 guard let data = data else { return }
-                response = APIClient.shared.parseJSON(data: data, model: response) ?? response
+                response = client.parseJSON(data: data, model: response) ?? response
                 completition(response)
             } else {
                 DispatchQueue.main.async { [weak self] in

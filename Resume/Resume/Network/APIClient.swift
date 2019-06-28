@@ -39,13 +39,21 @@ final public class APIClient {
     public func getData(handler: @escaping (Data?, Status) -> Void) {
         if let url = URLBase {
             dataTask = defaultSession.dataTask(with: url) { data, response, error in
-                if let data = data, let response = response as? HTTPURLResponse, 200...209 ~= response.statusCode  {
-                    handler(data, .success)
-                } else if let error = error {
-                    debugPrint(error.localizedDescription)
-                    handler(nil, .failure)
+                if let response = response as? HTTPURLResponse, 200...209 ~= response.statusCode  {
+                    if let data = data {
+                        handler(data, .success)
+                    }else {
+                        handler(Data(), .success)
+                    }
                 } else {
-                    handler(nil, .failure)
+                    if let error = error {
+                        debugPrint(error.localizedDescription)
+                        if error.localizedDescription == "The Internet connection appears to be offline." {
+                            handler(nil, .notConnection)
+                        }else {
+                            handler(nil, .failure)
+                        }
+                    }
                 }
             }
             dataTask?.resume()
@@ -64,13 +72,21 @@ final public class APIClient {
      */
     public func getData(url: URL, handler: @escaping (Data?, Status) -> Void) {
         dataTask = defaultSession.dataTask(with: url) { data, response, error in
-            if let data = data, let response = response as? HTTPURLResponse, 200...209 ~= response.statusCode {
-                handler(data, .success)
-            } else if let error = error {
-                debugPrint(error.localizedDescription)
-                handler(nil, .failure)
+            if let response = response as? HTTPURLResponse, 200...209 ~= response.statusCode  {
+                if let data = data {
+                    handler(data, .success)
+                }else {
+                    handler(Data(), .success)
+                }
             } else {
-                handler(nil, .failure)
+                if let error = error {
+                    debugPrint(error.localizedDescription)
+                    if error.localizedDescription == "The Internet connection appears to be offline." {
+                        handler(nil, .notConnection)
+                    }else {
+                        handler(nil, .failure)
+                    }
+                }
             }
         }
         dataTask?.resume()
