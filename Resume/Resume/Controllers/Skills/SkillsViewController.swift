@@ -3,12 +3,15 @@ import UIKit
 
 final class SkillsViewController: UIViewController {
     @IBOutlet weak var skillsTableView: UITableView?
-    var presenter: SkillsPresenter?
+    var presenter: SkillsPresenter? {
+        didSet {
+            configureTableView()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureTableView()
         skillsTableView?.reloadData()
     }
     

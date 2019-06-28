@@ -3,12 +3,15 @@ import UIKit
 
 final class ReferencesViewController: UIViewController {
     @IBOutlet weak var referencesTableView: UITableView?
-    var presenter: ReferencesPresenter?
+    var presenter: ReferencesPresenter? {
+        didSet {
+            configureTableView()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureTableView()
         referencesTableView?.reloadData()
     }
     

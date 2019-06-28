@@ -1,29 +1,30 @@
 
 import UIKit
 
-final public class APIClient {
-    
-    /**
-     Singleton of Service class useful for interact with the API
-     */
-    public static let shared = APIClient()
-    
+protocol NetworkProtocol {
+    var dataTask: URLSessionDataTask? {get set}
+    func getData(session: URLSessionProtocol, handler: @escaping (Data?, Status) -> Void)
+    func getDataImage(url: URL, handler: @escaping (Data?, Status) -> Void)
+}
+
+final public class APIClient: NetworkProtocol {
     //MARK: URL base
     private let URLBase: URL?
     
     //MARK: URL Session
     private let defaultSession: URLSession
-    private var dataTask: URLSessionDataTask?
+    internal var dataTask: URLSessionDataTask?
     
     //MARK: Init Service()
-    init() {
+    init(urlStr: String = Configuration.value(for: "INFO_URL")) {
+        guard let url = URL(string: urlStr) else {
+            fatalError(NSLocalizedString("errorURL", comment: "Error URL"))
+        }
         let configuration = URLSessionConfiguration.default
         configuration.requestCachePolicy = .reloadIgnoringCacheData
         configuration.urlCache = nil
         defaultSession = URLSession(configuration: configuration)
-        
-//        let urlStr = Con bfiguration.value(for: "INFO_URL")
-        self.URLBase = URL(string: Configuration.value(for: "INFO_URL"))
+        self.URLBase = url
     }
     
     //MARK: Get data method from a base url
@@ -33,13 +34,13 @@ final public class APIClient {
      - parameters:
      - handler: A closure that need be defined by the caller to manipulate the data
      */
-    public func getData(handler: @escaping (Data?, Status) -> Void) {
+    func getData(session: URLSessionProtocol = URLSession.shared, handler: @escaping (Data?, Status) -> Void) {
         if let url = URLBase {
             dataTask = defaultSession.dataTask(with: url) { data, response, error in
                 if let response = response as? HTTPURLResponse, 200...209 ~= response.statusCode  {
                     if let data = data {
                         handler(data, .success)
-                    }else {
+                    } else {
                         handler(Data(), .success)
                     }
                 } else {
@@ -47,15 +48,13 @@ final public class APIClient {
                         debugPrint(error.localizedDescription)
                         if error.localizedDescription == "The Internet connection appears to be offline." {
                             handler(nil, .notConnection)
-                        }else {
+                        } else {
                             handler(nil, .failure)
                         }
                     }
                 }
             }
             dataTask?.resume()
-        }else {
-            debugPrint(NSLocalizedString("errorURL", comment: "URL corrupt"))
         }
     }
     
@@ -67,12 +66,12 @@ final public class APIClient {
      - url: A url that contains the data
      - handler: A closure that need be defined by the caller to manipulate the data
      */
-    public func getData(url: URL, handler: @escaping (Data?, Status) -> Void) {
+    func getDataImage(url: URL, handler: @escaping (Data?, Status) -> Void) {
         dataTask = defaultSession.dataTask(with: url) { data, response, error in
             if let response = response as? HTTPURLResponse, 200...209 ~= response.statusCode  {
                 if let data = data {
                     handler(data, .success)
-                }else {
+                } else {
                     handler(Data(), .success)
                 }
             } else {
@@ -80,14 +79,16 @@ final public class APIClient {
                     debugPrint(error.localizedDescription)
                     if error.localizedDescription == "The Internet connection appears to be offline." {
                         handler(nil, .notConnection)
-                    }else {
+                    } else {
                         handler(nil, .failure)
                     }
                 }
             }
         }
+        
         dataTask?.resume()
     }
+    
     
     //MARK: Parse JSON to Model method
     /**
@@ -100,13 +101,12 @@ final public class APIClient {
      - data: A date that was got by the API
      - model: A struct that implents Codable protocol
      */
-    public func parseJSON<Model: Codable>(data: Data, model: Model) -> Model? {
+    func parseJSON<Model: Codable>(data: Data, model: Model) -> Model? {
         let jsonDecoder = JSONDecoder()
         do {
             let json = try jsonDecoder.decode(Model.self, from: data)
             return json
         } catch {
-            debugPrint(error)
             return nil
         }
     }

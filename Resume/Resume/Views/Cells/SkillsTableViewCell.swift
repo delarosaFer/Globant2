@@ -8,14 +8,6 @@ final class SkillsTableViewCell: UITableViewCell {
     /// A StackView containing images representing the level of the skill
     @IBOutlet weak var imageContainer: UIStackView?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     /// Removes all the images before using it again.
     override func prepareForReuse() {
         super.prepareForReuse()

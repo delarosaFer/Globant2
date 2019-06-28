@@ -10,3 +10,8 @@ enum StoryBoardNameIdentifier: String {
 enum StoryBoardIdentifier: String {
     case mainView = "MainView"
 }
+
+enum StoryBoardSegue: String {
+    case errorSegue = "ErrorSegue"
+    case successfulSegue = "StartSegue"
+}

@@ -132,23 +132,6 @@ class ResumeTests: XCTestCase {
     }
     
     //MARK: APIClient testing
-    func testRequestWhitValidURL() {
-        let client = APIClient()
-        
-        let expectation = XCTestExpectation(description: "Request Service")
-        
-        client.getData { (data, status) in
-            if status == .success {
-                expectation.fulfill()
-            }else {
-                XCTFail("Invalid request, \(status)")
-                expectation.fulfill()
-            }
-            expectation.fulfill()
-        }
-        wait(for: [expectation], timeout: 5)
-    }
-    
     func testRequestWhitInvalidURL() {
         let client = APIClient()
         guard let fakeURL = URL(string: "https://fakeGitHub.com") else {
@@ -157,10 +140,10 @@ class ResumeTests: XCTestCase {
         }
         let expectation = XCTestExpectation(description: "Request Service")
         
-        client.getData(url: fakeURL) { (data, status) in
+        client.getDataImage(url: fakeURL) { (data, status) in
             if status == .failure {
                 expectation.fulfill()
-            }else {
+            } else {
                 XCTFail("Status request: \(status)")
                 expectation.fulfill()
             }
@@ -176,7 +159,27 @@ class ResumeTests: XCTestCase {
             if status == .notConnection {
                 XCTFail("You have not internet connection")
                 expectation.fulfill()
-            }else {
+            } else {
+                expectation.fulfill()
+            }
+        }
+        wait(for: [expectation], timeout: 5)
+    }
+    
+    func testMainNetworkingFetchesSectionsCorrectly() {
+        let client: APIClient
+        let session = MockURLSession()
+        session.data = loadFromJSONFile(name: "info")
+        session.response = HTTPURLResponse(url: URL(fileURLWithPath: "info.json"), statusCode: 200, httpVersion: nil, headerFields: nil)
+        let expectation = XCTestExpectation(description: "Loading sections correctly")
+        
+        client = APIClient()
+        
+        client.getData(session: session) { (data, status) in
+            if status == .notConnection {
+                XCTFail("You have not internet connection")
+                expectation.fulfill()
+            } else {
                 expectation.fulfill()
             }
         }

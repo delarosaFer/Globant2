@@ -3,10 +3,10 @@ import UIKit
 
 extension MainViewController: MainViewType {
     func showErrorView() {
-        self.performSegue(withIdentifier: "ErrorSegue", sender: nil)
+        self.performSegue(withIdentifier: StoryBoardSegue.errorSegue.rawValue, sender: nil)
     }
     
     func showSuccessView() {
-        self.performSegue(withIdentifier: "StartSegue", sender: nil)
+        self.performSegue(withIdentifier: StoryBoardSegue.successfulSegue.rawValue, sender: nil)
     }
 }
