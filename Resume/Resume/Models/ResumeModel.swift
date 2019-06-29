@@ -13,7 +13,7 @@ final class ResumeModel: ResumeModelType {
     var sections = [String]()
     var educationSection = String()
     var experienceSection = String()
-    var rowsPerSection = [0, 0]
+    var rowsPerSection = [Int]()
 
     init(withResume resume: Resume) {
         self.resume = resume

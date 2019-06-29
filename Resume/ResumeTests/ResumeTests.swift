@@ -1,19 +1,22 @@
 import XCTest
 @testable import Resume
 
-class ResumeTests: XCTestCase {
+class ResumeTests: XCTestCase, JSONTest {
     // MARK: Model Testing
     func testDataSimpleInformation() {
-        let information = createFakeResume()
-        XCTAssertEqual(information.name, "Heisenberg")
-        XCTAssertEqual(information.age, 45)
-        XCTAssertEqual(information.summary, "A chemistry honors graduate of the California Institute of Technology")
-        XCTAssertEqual(information.employment, "Profesor")
+        let model = createFakeResume()
+        let test = ModelTest(model: model)
+        
+        XCTAssertEqual(test.information.name, "Heisenberg")
+        XCTAssertEqual(test.information.age, 45)
+        XCTAssertEqual(test.information.summary, "A chemistry honors graduate of the California Institute of Technology")
+        XCTAssertEqual(test.information.employment, "Profesor")
     }
 
     func testDataContactInformation() {
-        let information = createFakeResume()
-        let contact = information.contact
+        let model = createFakeResume()
+        let test = ModelTest(model: model)
+        let contact = test.information.contact
 
         XCTAssertEqual(contact.phone, "12345678")
         XCTAssertEqual(contact.celphone, "5511335566")
@@ -22,8 +25,9 @@ class ResumeTests: XCTestCase {
     }
 
     func testDataAddresInformation() {
-        let information = createFakeResume()
-        let address = information.address
+        let model = createFakeResume()
+        let test = ModelTest(model: model)
+        let address = test.information.address
 
         XCTAssertEqual(address.zipCode, 12345)
         XCTAssertEqual(address.street, "New Mexico")
@@ -32,8 +36,9 @@ class ResumeTests: XCTestCase {
     }
 
     func testDataEducationInformation() {
-        let information = createFakeResume()
-        let education = information.education
+        let model = createFakeResume()
+        let test = ModelTest(model: model)
+        let education = test.information.education
 
         XCTAssertEqual(education.universityName, "California Institute of Technology")
         XCTAssertEqual(education.degree, "Chemistry")
@@ -44,8 +49,9 @@ class ResumeTests: XCTestCase {
     }
 
     func testDataExperienceInformation() {
-        let information = createFakeResume()
-        guard let experience = information.experience.first, information.experience.count == 1 else {
+        let model = createFakeResume()
+        let test = ModelTest(model: model)
+        guard let experience = test.information.experience.first, test.information.experience.count == 1 else {
             XCTFail("A valid Resume should contain at least 1 experience element")
             return
         }
@@ -60,8 +66,9 @@ class ResumeTests: XCTestCase {
     }
 
     func testDataSkillInformation() {
-        let information = createFakeResume()
-        guard let skill = information.skills.first, information.skills.count >= 1 else {
+        let model = createFakeResume()
+        let test = ModelTest(model: model)
+        guard let skill = test.information.skills.first, test.information.skills.count >= 1 else {
             XCTFail("A valid Resume should contain at least 1 skill element")
             return
         }
@@ -71,8 +78,9 @@ class ResumeTests: XCTestCase {
     }
 
     func testDataAccomplishmentInformation() {
-        let information = createFakeResume()
-        guard let accomplishment = information.accomplishments.first, information.accomplishments.count >= 1 else {
+        let model = createFakeResume()
+        let test = ModelTest(model: model)
+        guard let accomplishment = test.information.accomplishments.first, test.information.accomplishments.count >= 1 else {
             XCTFail("A valid Resume should contain at least 1 accomplishment element")
             return
         }
@@ -82,8 +90,9 @@ class ResumeTests: XCTestCase {
     }
 
     func testDataReferenceInformation() {
-        let information = createFakeResume()
-        guard let references = information.references.first, information.references.count >= 1 else {
+        let model = createFakeResume()
+        let test = ModelTest(model: model)
+        guard let references = test.information.references.first, test.information.references.count >= 1 else {
             XCTFail("A valid Resume should contain at least 1 reference element")
             return
         }
@@ -96,113 +105,8 @@ class ResumeTests: XCTestCase {
         XCTAssertEqual(referenceContact.email, "saulgoodman@gmail.com")
     }
 
-    // MARK: Parse method testing
-    func testParseDataFromValidJSON() {
-        let client = APIClient()
-        var parseData: Resume?
-
-        let data = loadFromJSONFile(name: "info")
-
-        parseData = client.parseJSON(data: data, model: parseData) ?? parseData
-
-        XCTAssertNotNil(parseData)
-    }
-
-    func testParseDataFromInvalidJSON() {
-        let client = APIClient()
-        var parseData: Resume?
-
-        let data = loadFromJSONFile(name: "failInfo")
-
-        parseData = client.parseJSON(data: data, model: parseData) ?? parseData
-
-        XCTAssertNil(parseData)
-    }
-
-    func testParseNilData() {
-        let client = APIClient()
-        var parseData: Resume?
-
-        let data = Data()
-
-        parseData = client.parseJSON(data: data, model: parseData) ?? parseData
-
-        XCTAssertNil(parseData)
-    }
-
-    // MARK: APIClient testing
-    func testRequestWhitInvalidURL() {
-        let client = APIClient()
-        let fakeURL = ConstantURL.fakeURL.rawValue
-        let expectation = XCTestExpectation(description: "Request Service")
-
-        client.getData(from: fakeURL) { (status) in
-            switch status {
-            case .failure( _):
-                expectation.fulfill()
-            case .success( _):
-                XCTFail("Status request: \(status)")
-                expectation.fulfill()
-            }
-        }
-        wait(for: [expectation], timeout: 5)
-    }
-
-    func testRequestWhitNOInternetConnection() {
-        let client = APIClient()
-        let expectation = XCTestExpectation(description: "Request Service")
-
-        client.getData() { (status) in
-            switch status {
-            case .failure(let error):
-                if error.localizedDescription == NSLocalizedString("notConnectionMessage", comment: "Not internet connection") {
-                    XCTFail("Status request: \(status), \(error)")
-                    expectation.fulfill()
-                } else {
-                    XCTFail("Status request: \(status), \(error)")
-                    expectation.fulfill()
-                }
-            case .success( _):
-                expectation.fulfill()
-            }
-        }
-        wait(for: [expectation], timeout: 5)
-    }
-    
-    func testNetworkingSectionSuccess() {
-        let client: APIClient
-        let session = MockURLSession()
-        session.data = loadFromJSONFile(name: "info")
-        session.response = HTTPURLResponse(url: URL(fileURLWithPath: "info.json"), statusCode: 200, httpVersion: nil, headerFields: nil)
-        let expectation = XCTestExpectation(description: "Loading sections correctly")
-
-        client = APIClient(session: session)
-        
-        client.getData { (status) in
-            switch status {
-            case .success( _):
-                expectation.fulfill()
-            case .failure( _):
-                XCTFail(NSLocalizedString("notConnectionMessage", comment: "Not connnection"))
-                expectation.fulfill()
-            }
-        }
-        wait(for: [expectation], timeout: 5)
-    }
-
-    // MARK: Common methods
+    // MARK: Common method
     func createFakeResume() -> Resume {
         return Resume(name: "Heisenberg", age: 45, profilePhoto: "", summary: "A chemistry honors graduate of the California Institute of Technology", employment: "Profesor", contact: Contact(phone: "12345678", celphone: "5511335566", email: "heisenberg@gmail.com"), address: Address(zipCode: 12345, street: "New Mexico", city: "Alabama", country: "USA"), education: Education(universityName: "California Institute of Technology", degree: "Chemistry", city: "California", state: "L.A.", startDate: "1990", endDate: "1995"), experience: [Experience(workplace: "AL Car wash", position: "worker", city: "Albuquerque", state: "N.M.", startDate: "2008", endDate: nil, description: "A regular job at a local car wash to supplement his income")], skills: [Skill(skill: "Sells", rating: 3), Skill(skill: "Chemistry", rating: 5)], accomplishments: [Accomplishment(title: "DD", description: "Drug Dealer")], references: [Reference(name: "Saul Goodman", workplace: "Goodman layers", contact: Contact(phone: "567891234", celphone: nil, email: "saulgoodman@gmail.com"))])
-    }
-
-    func loadFromJSONFile(name: String = "info") -> Data {
-        guard let url = Bundle(for: type(of: self)).url(forResource: name, withExtension: "json") else {
-            fatalError(NSLocalizedString("fatalErrorJson", comment: "\(name).json could not be loaded"))
-        }
-        guard let data  = try? Data(contentsOf: url) else {
-            fatalError(NSLocalizedString("fatalErrorData", comment: "Data could not be loaded"))
-        }
-
-        return data
     }
 }
