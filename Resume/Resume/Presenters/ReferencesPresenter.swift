@@ -12,6 +12,6 @@ final class ReferencesPresenter {
 
     /// Gets a reference given an index path
     func getReference(for indexPath: IndexPath) -> Reference? {
-        return model.references.getItem(at: indexPath.row)
+        return model.references[indexPath.row]
     }
 }

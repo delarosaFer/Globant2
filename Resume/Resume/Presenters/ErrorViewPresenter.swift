@@ -2,6 +2,7 @@ import Foundation
 
 final class ErrorViewPresenter {
     private let model: ErrorModelType
+    
     var errorMessage: String {
         return model.errorMessage
     }

@@ -12,11 +12,6 @@ class SkillsPresenterTestable: XCTestCase {
         XCTAssertEqual(presenter.getSkill(for: IndexPath(row: 0, section: 0))?.rating, 3)
     }
 
-    func testGetFailedSkill() {
-        let presenter = SkillsPresenter.init(withModel: MockSkillModel())
-        XCTAssertNil(presenter.getSkill(for: IndexPath(row: 1, section: 0)))
-    }
-
     func testSkillModelCreation() {
         let model = MockSkillModel()
         XCTAssertEqual("skill", model.skills.first?.skill)
