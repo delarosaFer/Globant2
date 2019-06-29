@@ -37,7 +37,7 @@ extension ResumeViewController: UITableViewDataSource, UITableViewDelegate {
         case presenter?.educationTitle:
             guard let cell = infoTableView?.dequeueReusableCell(withIdentifier: CellIdentifier.education.rawValue)
                 as? EducationCell,
-                let education = presenter?.education else {
+                let education = presenter?.getEducation() else {
                 return UITableViewCell()
             }
 

@@ -9,11 +9,9 @@ protocol ResumeViewType: class {
 final class ResumePresenter {
     private var model: ResumeModelType
     private var client = APIClient()
-
-    var education: Education {
-        return model.resume.education
-
-    }
+    
+    weak var delegate: ResumeViewType?
+    
     var experienceCount: Int {
         return model.resume.experience.count
     }
@@ -27,18 +25,20 @@ final class ResumePresenter {
         return self.model.experienceSection
     }
 
-    weak var delegate: ResumeViewType?
-
-    deinit {
-        delegate = nil
-    }
-
     required init (withModel model: ResumeModelType) {
         self.model = model
     }
 
+    deinit {
+        delegate = nil
+    }
+    
+    func getEducation() -> Education? {
+        return model.resume.education
+    }
+    
     func getJob(at index: Int) -> Experience? {
-        return self.model.resume.experience.getItem(at: index)
+        return self.model.resume.experience[index]
     }
 
     func makeContactPresenter() -> ContactPresenter {
@@ -50,7 +50,7 @@ final class ResumePresenter {
     }
 
     func getSectionTitle(at section: Int) -> String {
-        return model.sections.getItem(at: section) ?? ""
+        return model.sections[section]
     }
 
     func getRowsPerSection(at index: Int) -> Int {

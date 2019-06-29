@@ -11,6 +11,6 @@ final class SkillsPresenter {
     }
 
     func getSkill(for indexPath: IndexPath) -> Skill? {
-        return model.skills.getItem(at: indexPath.row)
+        return model.skills[indexPath.row]
     }
 }

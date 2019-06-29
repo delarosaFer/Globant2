@@ -51,7 +51,6 @@
 		DB242F1D22C5328E005E596C /* ReferencesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F1C22C5328E005E596C /* ReferencesPresenter.swift */; };
 		DB242F2622C541DC005E596C /* SkillsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F2522C541DC005E596C /* SkillsPresenter.swift */; };
 		DB242F2922C54220005E596C /* SkillsViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F2822C54220005E596C /* SkillsViewController+UITableView.swift */; };
-		DB242F2B22C54341005E596C /* Array+GetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F2A22C54341005E596C /* Array+GetItem.swift */; };
 		DB242F2D22C545FF005E596C /* ResumePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F2C22C545FF005E596C /* ResumePresenter.swift */; };
 		DB242F3022C5472F005E596C /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F2F22C5472F005E596C /* MainViewPresenter.swift */; };
 		DB242F3222C54B5E005E596C /* ErrorViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB242F3122C54B5E005E596C /* ErrorViewPresenter.swift */; };
@@ -147,7 +146,6 @@
 		DB242F1C22C5328E005E596C /* ReferencesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencesPresenter.swift; sourceTree = "<group>"; };
 		DB242F2522C541DC005E596C /* SkillsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsPresenter.swift; sourceTree = "<group>"; };
 		DB242F2822C54220005E596C /* SkillsViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SkillsViewController+UITableView.swift"; sourceTree = "<group>"; };
-		DB242F2A22C54341005E596C /* Array+GetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+GetItem.swift"; sourceTree = "<group>"; };
 		DB242F2C22C545FF005E596C /* ResumePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumePresenter.swift; sourceTree = "<group>"; };
 		DB242F2F22C5472F005E596C /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
 		DB242F3122C54B5E005E596C /* ErrorViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewPresenter.swift; sourceTree = "<group>"; };
@@ -338,7 +336,6 @@
 				DB03AF7722C422DF002F99F1 /* UIImageView+Utils.swift */,
 				DB03AF7422C41C57002F99F1 /* UIColors+appColors.swift */,
 				DB03AF8A22C50620002F99F1 /* UIStackView+RemoveViews.swift */,
-				DB242F2A22C54341005E596C /* Array+GetItem.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -619,7 +616,6 @@
 				DB242F3B22C56003005E596C /* ContactPresenter.swift in Sources */,
 				36EB78D022C447A6006AE8A8 /* ResumeViewController+TableView.swift in Sources */,
 				DB03AF8422C43DBD002F99F1 /* ReferencesTableViewCell.swift in Sources */,
-				DB242F2B22C54341005E596C /* Array+GetItem.swift in Sources */,
 				368E713A22C5DD22004A5B98 /* NetworkingProtocols.swift in Sources */,
 				DB03AF8D22C50B0E002F99F1 /* TabBarViewController.swift in Sources */,
 				DB242F5822C5C1F2005E596C /* MainModel.swift in Sources */,

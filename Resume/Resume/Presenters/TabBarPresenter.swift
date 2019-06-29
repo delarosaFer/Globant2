@@ -2,6 +2,7 @@ import Foundation
 
 final class TabBarPresenter {
     private let model: TabBarModelType
+    
     init(withModel model: TabBarModelType) {
         self.model = model
     }
