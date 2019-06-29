@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3611409122C7B69B004E4372 /* APIClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611409022C7B69B004E4372 /* APIClientTest.swift */; };
+		3611409322C7B88D004E4372 /* TestingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611409222C7B88D004E4372 /* TestingProtocols.swift */; };
+		3611409522C7BD2F004E4372 /* ModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611409422C7BD2F004E4372 /* ModelTest.swift */; };
 		368E711E22C51E99004A5B98 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 368E711C22C51E98004A5B98 /* Localizable.strings */; };
 		368E712022C5250E004A5B98 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E711F22C5250E004A5B98 /* MainViewController.swift */; };
 		368E712222C5407E004A5B98 /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E712122C5407E004A5B98 /* ResumeViewController.swift */; };
@@ -93,6 +96,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3611409022C7B69B004E4372 /* APIClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTest.swift; sourceTree = "<group>"; };
+		3611409222C7B88D004E4372 /* TestingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingProtocols.swift; sourceTree = "<group>"; };
+		3611409422C7BD2F004E4372 /* ModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTest.swift; sourceTree = "<group>"; };
 		368E711D22C51E98004A5B98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		368E711F22C5250E004A5B98 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		368E712122C5407E004A5B98 /* ResumeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResumeViewController.swift; path = Resume/Controllers/ResumeViewControllers/ResumeViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -193,6 +199,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3611409622C7BDF3004E4372 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				3611409222C7B88D004E4372 /* TestingProtocols.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		3611409722C7BE7C004E4372 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				36980ED422C6D6AC009AC15B /* MockURL.swift */,
+				368E713622C5DAFF004A5B98 /* MockSession.swift */,
+				368E713B22C5DDF7004A5B98 /* DataTaskMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		368E713222C5C1EF004A5B98 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,7 +281,11 @@
 		36EB789A22C3F90F006AE8A8 /* ResumeTests */ = {
 			isa = PBXGroup;
 			children = (
+				3611409722C7BE7C004E4372 /* Mocks */,
+				3611409622C7BDF3004E4372 /* Protocol */,
 				DB242F4E22C5BA24005E596C /* ReferencesPresenterTest.swift */,
+				3611409422C7BD2F004E4372 /* ModelTest.swift */,
+				3611409022C7B69B004E4372 /* APIClientTest.swift */,
 				36EB789B22C3F90F006AE8A8 /* ResumeTests.swift */,
 				DB242F4C22C5B6FD005E596C /* SkillsPresenter.swift */,
 				DB242F4A22C5AE8B005E596C /* MainViewPresenter.swift */,
@@ -267,9 +295,6 @@
 				368E712E22C5981F004A5B98 /* failInfo.json */,
 				368E712F22C5981F004A5B98 /* info.json */,
 				36EB789D22C3F90F006AE8A8 /* Info.plist */,
-				368E713622C5DAFF004A5B98 /* MockSession.swift */,
-				368E713B22C5DDF7004A5B98 /* DataTaskMock.swift */,
-				36980ED422C6D6AC009AC15B /* MockURL.swift */,
 			);
 			path = ResumeTests;
 			sourceTree = "<group>";
@@ -614,6 +639,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3611409522C7BD2F004E4372 /* ModelTest.swift in Sources */,
+				3611409122C7B69B004E4372 /* APIClientTest.swift in Sources */,
 				368E713C22C5DDF7004A5B98 /* DataTaskMock.swift in Sources */,
 				DB242F4922C5A7C3005E596C /* TabBarPresenterTests.swift in Sources */,
 				DB242F4722C5A2B6005E596C /* ContactPresenterTests.swift in Sources */,
@@ -621,6 +648,7 @@
 				DB242F4B22C5AE8B005E596C /* MainViewPresenter.swift in Sources */,
 				36980ED522C6D6AC009AC15B /* MockURL.swift in Sources */,
 				DB242F4522C59B6B005E596C /* ErrorViewPresenterTests.swift in Sources */,
+				3611409322C7B88D004E4372 /* TestingProtocols.swift in Sources */,
 				DB242F4F22C5BA24005E596C /* ReferencesPresenterTest.swift in Sources */,
 				DB242F4D22C5B6FD005E596C /* SkillsPresenter.swift in Sources */,
 				36EB789C22C3F90F006AE8A8 /* ResumeTests.swift in Sources */,
