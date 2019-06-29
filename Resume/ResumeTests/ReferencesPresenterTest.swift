@@ -16,11 +16,6 @@ class ReferencesPresenterTest: XCTestCase {
         let presenter = ReferencesPresenter(withModel: ReferenceModel())
         XCTAssertEqual(presenter.getReference(for: IndexPath.init(row: 0, section: 0))?.name, "name")
     }
-
-    func testFailurePresenterReference() {
-        let presenter = ReferencesPresenter(withModel: ReferenceModel())
-        XCTAssertNil(presenter.getReference(for: IndexPath(row: 10, section: 10)))
-    }
 }
 
 struct ReferenceModel: ReferencesModelType {
