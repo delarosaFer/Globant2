@@ -105,7 +105,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gfE-LY-VVq"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Resume" image="resume" selectedImage="resume" id="VO7-hw-fU9"/>
+                    <tabBarItem key="tabBarItem" title="Resume" image="resume" selectedImage="resume" id="VO7-hw-fU9">
+                        <inset key="imageInsets" minX="0.0" minY="26" maxX="0.0" maxY="26"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="contactButton" destination="K4b-77-5w8" id="iD2-fs-vNa"/>
                         <outlet property="employment" destination="eFc-1B-Gsm" id="ppk-yM-NZt"/>
@@ -337,7 +339,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ije-eH-W6i"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Skills" image="skills" id="x4n-Iv-5C3"/>
+                    <tabBarItem key="tabBarItem" title="Skills" image="skills" id="x4n-Iv-5C3">
+                        <inset key="imageInsets" minX="0.0" minY="28" maxX="0.0" maxY="28"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="skillsTableView" destination="HQN-Eo-k86" id="1mA-PJ-ApP"/>
                     </connections>
@@ -484,7 +488,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a5E-3w-Xa7"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="References" image="references" id="rgP-90-STG"/>
+                    <tabBarItem key="tabBarItem" title="References" image="references" id="rgP-90-STG">
+                        <inset key="imageInsets" minX="0.0" minY="25" maxX="0.0" maxY="25"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="referencesTableView" destination="EY9-xX-6Ul" id="fXk-ZE-Hg2"/>
                     </connections>
