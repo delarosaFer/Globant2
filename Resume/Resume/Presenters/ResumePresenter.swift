@@ -80,7 +80,7 @@ final class ResumePresenter {
             switch status {
             case .success(let data):
                 completition(data)
-            default:
+            case .failure( _):
                 return
             }
         }

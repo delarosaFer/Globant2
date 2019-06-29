@@ -140,7 +140,7 @@ class ResumeTests: XCTestCase {
             switch status {
             case .failure( _):
                 expectation.fulfill()
-            default:
+            case .success( _):
                 XCTFail("Status request: \(status)")
                 expectation.fulfill()
             }
@@ -162,27 +162,28 @@ class ResumeTests: XCTestCase {
                     XCTFail("Status request: \(status), \(error)")
                     expectation.fulfill()
                 }
-            default:
+            case .success( _):
                 expectation.fulfill()
             }
         }
         wait(for: [expectation], timeout: 5)
     }
-
-    func testNetworkingSection() {
+    
+    func testNetworkingSectionSuccess() {
         let client: APIClient
         let session = MockURLSession()
         session.data = loadFromJSONFile(name: "info")
         session.response = HTTPURLResponse(url: URL(fileURLWithPath: "info.json"), statusCode: 200, httpVersion: nil, headerFields: nil)
         let expectation = XCTestExpectation(description: "Loading sections correctly")
 
-        client = APIClient()
-
-        client.getData(session: session) { (data, status) in
-            if status == .notConnection {
-                XCTFail("You have not internet connection")
+        client = APIClient(session: session)
+        
+        client.getData { (status) in
+            switch status {
+            case .success( _):
                 expectation.fulfill()
-            } else {
+            case .failure( _):
+                XCTFail(NSLocalizedString("notConnectionMessage", comment: "Not connnection"))
                 expectation.fulfill()
             }
         }
