@@ -133,16 +133,14 @@ class ResumeTests: XCTestCase {
     // MARK: APIClient testing
     func testRequestWhitInvalidURL() {
         let client = APIClient()
-        guard let fakeURL = URL(string: "https://fakeGitHub.com") else {
-            XCTFail("Invalid URL as string")
-            return
-        }
+        let fakeURL = ConstantURL.fakeURL.rawValue
         let expectation = XCTestExpectation(description: "Request Service")
 
-        client.getDataImage(url: fakeURL) { (_, status) in
-            if status == .failure {
+        client.getData(from: fakeURL) { (status) in
+            switch status {
+            case .failure( _):
                 expectation.fulfill()
-            } else {
+            case .success( _):
                 XCTFail("Status request: \(status)")
                 expectation.fulfill()
             }
@@ -154,31 +152,38 @@ class ResumeTests: XCTestCase {
         let client = APIClient()
         let expectation = XCTestExpectation(description: "Request Service")
 
-        client.getData { (_, status) in
-            if status == .notConnection {
-                XCTFail("You have not internet connection")
-                expectation.fulfill()
-            } else {
+        client.getData() { (status) in
+            switch status {
+            case .failure(let error):
+                if error.localizedDescription == NSLocalizedString("notConnectionMessage", comment: "Not internet connection") {
+                    XCTFail("Status request: \(status), \(error)")
+                    expectation.fulfill()
+                } else {
+                    XCTFail("Status request: \(status), \(error)")
+                    expectation.fulfill()
+                }
+            case .success( _):
                 expectation.fulfill()
             }
         }
         wait(for: [expectation], timeout: 5)
     }
-
-    func testMainNetworkingFetchesSectionsCorrectly() {
+    
+    func testNetworkingSectionSuccess() {
         let client: APIClient
         let session = MockURLSession()
         session.data = loadFromJSONFile(name: "info")
         session.response = HTTPURLResponse(url: URL(fileURLWithPath: "info.json"), statusCode: 200, httpVersion: nil, headerFields: nil)
         let expectation = XCTestExpectation(description: "Loading sections correctly")
 
-        client = APIClient()
-
-        client.getData(session: session) { (_, status) in
-            if status == .notConnection {
-                XCTFail("You have not internet connection")
+        client = APIClient(session: session)
+        
+        client.getData { (status) in
+            switch status {
+            case .success( _):
                 expectation.fulfill()
-            } else {
+            case .failure( _):
+                XCTFail(NSLocalizedString("notConnectionMessage", comment: "Not connnection"))
                 expectation.fulfill()
             }
         }

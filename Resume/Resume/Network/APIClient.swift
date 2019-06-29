@@ -6,16 +6,13 @@ protocol NetworkProtocol {
 }
 
 final class APIClient: NetworkProtocol {
-    // MARK: URL Session
-    private let defaultSession: URLSession
+    //MARK: URL Session
+    private let defaultSession: URLSessionProtocol
     internal var dataTask: URLSessionDataTask?
-
-    // MARK: Init Service()
-    init() {
-        let configuration = URLSessionConfiguration.default
-        configuration.requestCachePolicy = .reloadIgnoringCacheData
-        configuration.urlCache = nil
-        defaultSession = URLSession(configuration: configuration)
+    
+    //MARK: Init Service()
+    init(session: URLSessionProtocol = URLSession.shared) {
+        self.defaultSession = session
     }
 
     // MARK: Get data method from url

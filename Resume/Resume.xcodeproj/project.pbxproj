@@ -18,6 +18,7 @@
 		368E713A22C5DD22004A5B98 /* NetworkingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E713922C5DD22004A5B98 /* NetworkingProtocols.swift */; };
 		368E713C22C5DDF7004A5B98 /* DataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E713B22C5DDF7004A5B98 /* DataTaskMock.swift */; };
 		36980ED322C6B7CB009AC15B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 36980ED222C6B7CB009AC15B /* README.md */; };
+		36980ED522C6D6AC009AC15B /* MockURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36980ED422C6D6AC009AC15B /* MockURL.swift */; };
 		36EB788722C3F90E006AE8A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB788622C3F90E006AE8A8 /* AppDelegate.swift */; };
 		36EB788C22C3F90E006AE8A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36EB788A22C3F90E006AE8A8 /* Main.storyboard */; };
 		36EB788E22C3F90F006AE8A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36EB788D22C3F90F006AE8A8 /* Assets.xcassets */; };
@@ -104,6 +105,7 @@
 		368E713922C5DD22004A5B98 /* NetworkingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocols.swift; sourceTree = "<group>"; };
 		368E713B22C5DDF7004A5B98 /* DataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskMock.swift; sourceTree = "<group>"; };
 		36980ED222C6B7CB009AC15B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		36980ED422C6D6AC009AC15B /* MockURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURL.swift; sourceTree = "<group>"; };
 		36EB788322C3F90E006AE8A8 /* Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resume.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36EB788622C3F90E006AE8A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36EB788B22C3F90E006AE8A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				36EB789D22C3F90F006AE8A8 /* Info.plist */,
 				368E713622C5DAFF004A5B98 /* MockSession.swift */,
 				368E713B22C5DDF7004A5B98 /* DataTaskMock.swift */,
+				36980ED422C6D6AC009AC15B /* MockURL.swift */,
 			);
 			path = ResumeTests;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				DB242F4722C5A2B6005E596C /* ContactPresenterTests.swift in Sources */,
 				368E713722C5DAFF004A5B98 /* MockSession.swift in Sources */,
 				DB242F4B22C5AE8B005E596C /* MainViewPresenter.swift in Sources */,
+				36980ED522C6D6AC009AC15B /* MockURL.swift in Sources */,
 				DB242F4522C59B6B005E596C /* ErrorViewPresenterTests.swift in Sources */,
 				DB242F4F22C5BA24005E596C /* ReferencesPresenterTest.swift in Sources */,
 				DB242F4D22C5B6FD005E596C /* SkillsPresenter.swift in Sources */,

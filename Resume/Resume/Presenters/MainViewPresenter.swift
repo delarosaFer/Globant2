@@ -34,14 +34,18 @@ import Foundation
 
     func request(completition: @escaping ((Resume?) -> Void)) {
         var response: Resume?
-        let client = APIClient()
-
-        self.model?.client.getData(handler: { (status) in
+        let configuration = URLSessionConfiguration.default
+        configuration.requestCachePolicy = .reloadIgnoringCacheData
+        configuration.urlCache = nil
+        let session = URLSession(configuration: configuration)
+        let client = APIClient(session: session)
+        
+        client.getData(handler: { (status) in
             switch status {
             case .success(let data):
                 response = client.parseJSON(data: data, model: response) ?? response
                 completition(response)
-            default:
+            case .failure( _):
                 DispatchQueue.main.async { [weak self] in
                     self?.model?.errorMessage = NSLocalizedString("errorRequest", comment: "Parsing was wrong")
                     self?.delegate?.showErrorView()
