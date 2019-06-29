@@ -315,16 +315,32 @@
                                 <color key="textColor" name="dark-color"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HQN-Eo-k86">
+                                <rect key="frame" x="8" y="88" width="304" height="423"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="K6n-V7-yJe">
+                                    <rect key="frame" x="0.0" y="0.0" width="304" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ije-eH-W6i" firstAttribute="bottom" secondItem="HQN-Eo-k86" secondAttribute="bottom" constant="8" id="2MS-zs-vJn"/>
                             <constraint firstItem="Rd5-wD-MEf" firstAttribute="leading" secondItem="ije-eH-W6i" secondAttribute="leading" id="33T-OP-rLq"/>
+                            <constraint firstItem="ije-eH-W6i" firstAttribute="trailing" secondItem="HQN-Eo-k86" secondAttribute="trailing" constant="8" id="BDM-58-4KC"/>
+                            <constraint firstItem="HQN-Eo-k86" firstAttribute="top" secondItem="Rd5-wD-MEf" secondAttribute="bottom" constant="16" id="UkY-WR-Iam"/>
+                            <constraint firstItem="HQN-Eo-k86" firstAttribute="leading" secondItem="ije-eH-W6i" secondAttribute="leading" constant="8" id="YNM-0m-QzX"/>
                             <constraint firstItem="ije-eH-W6i" firstAttribute="trailing" secondItem="Rd5-wD-MEf" secondAttribute="trailing" id="pb0-sj-RRU"/>
                             <constraint firstItem="Rd5-wD-MEf" firstAttribute="top" secondItem="ije-eH-W6i" secondAttribute="top" constant="16" id="tPg-Ed-xws"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ije-eH-W6i"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Skills" image="skills" id="x4n-Iv-5C3"/>
+                    <connections>
+                        <outlet property="skillsTableView" destination="HQN-Eo-k86" id="1mA-PJ-ApP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vU-fF-WRP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
