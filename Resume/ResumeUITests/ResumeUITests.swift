@@ -37,7 +37,6 @@ class ResumeUITests: XCTestCase {
         let cell = app.tables.children(matching: .cell).element(boundBy: 0)
         let universityNameLabel = cell.staticTexts["universityLabel"]
         let degreeLabel = cell.staticTexts["degreeLabel"]
-        let cityLabel = cell.staticTexts["cityLabel"]
         let stateLabel = cell.staticTexts["stateLabel"]
         let startDate = cell.staticTexts["startDateLabel"]
         let endDate = cell.staticTexts["endDateLabel"]
@@ -45,7 +44,6 @@ class ResumeUITests: XCTestCase {
         XCTAssert(educationSection.exists)
         XCTAssert(universityNameLabel.exists)
         XCTAssert(degreeLabel.exists)
-        XCTAssert(cityLabel.exists)
         XCTAssert(stateLabel.exists)
         XCTAssert(startDate.exists)
         XCTAssert(endDate.exists)
@@ -54,7 +52,6 @@ class ResumeUITests: XCTestCase {
     func testExperienceSectionElements() {
         let app = XCUIApplication()
 
-        let experienceSection = app.staticTexts["Experience"]
         let cell = app.tables.children(matching: .cell).element(boundBy: 1)
         let workplaceLabel = cell.staticTexts["workplaceLabel"]
         let positionLabel = cell.staticTexts["positionLabel"]
@@ -64,7 +61,6 @@ class ResumeUITests: XCTestCase {
         let startDate = cell.staticTexts["startDateLabel"]
         let endDate = cell.staticTexts["endDateLabel"]
 
-        XCTAssert(experienceSection.exists)
         XCTAssert(workplaceLabel.exists)
         XCTAssert(positionLabel.exists)
         XCTAssert(descriptionLabel.exists)

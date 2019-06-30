@@ -24,13 +24,14 @@ final class SkillsTableViewCell: UITableViewCell {
 
         skillName.text = skill.skill
 
-        for level in 1...5 {
+        for level in SkillLevel.min.rawValue...SkillLevel.max.rawValue {
             let image: UIImageView = level > skill.rating ?
                 UIImageView(image: UIImage(named: "empty")) :
-                UIImageView(image: UIImage(named: "science"))
+                UIImageView(image: UIImage(named: "star"))
 
             image.clipsToBounds = true
             image.contentMode = .scaleAspectFit
+            image.rasterizeWith(color: .primaryColor)
 
             imageContainer.addArrangedSubview(image)
         }

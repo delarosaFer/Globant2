@@ -4,7 +4,7 @@ final class ContactPresenter {
     private let model: ContactModelType
 
     var phone: String {
-        return model.contact.phone
+        return model.contact.phone ?? NSLocalizedString("nilPhone", comment: "Not cell phone")
     }
     var cellPhone: String {
         return model.contact.celphone ?? NSLocalizedString("nilPhone", comment: "Not cell phone")

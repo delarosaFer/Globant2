@@ -23,11 +23,11 @@ final class APIClient: NetworkProtocol {
      - url: A url that contains the data
      - handler: A closure that need be defined by the caller to manipulate the data
      */
-    func getData(from urlString: String = Configuration.string(forKey: "INFO_URL") ?? "", handler: @escaping (Status) -> Void) {
+    func getData(from urlString: String = Configuration.string(forKey: ConfigurationKeys.infoUrl.rawValue) ?? "", handler: @escaping (Status) -> Void) {
         guard let url = URL(string: urlString) else { return }
 
         dataTask = defaultSession.dataTask(with: url, completionHandler: { (data, response, error) in
-            if let response = response as? HTTPURLResponse, 200...209 ~= response.statusCode, let data = data {
+            if let response = response as? HTTPURLResponse, AcceptableResponseCode.min.rawValue...AcceptableResponseCode.max.rawValue ~= response.statusCode, let data = data {
                 handler(.success(data))
             } else {
                 if let error = error {
@@ -55,6 +55,7 @@ final class APIClient: NetworkProtocol {
             let json = try jsonDecoder.decode(Model.self, from: data)
             return json
         } catch {
+            print(error)
             return nil
         }
     }
