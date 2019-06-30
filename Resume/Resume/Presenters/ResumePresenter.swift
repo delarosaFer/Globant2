@@ -9,9 +9,9 @@ protocol ResumeViewType: class {
 final class ResumePresenter {
     private var model: ResumeModelType
     private var client = APIClient()
-    
+
     weak var delegate: ResumeViewType?
-    
+
     var experienceCount: Int {
         return model.resume.experience.count
     }
@@ -32,11 +32,11 @@ final class ResumePresenter {
     deinit {
         delegate = nil
     }
-    
+
     func getEducation() -> Education? {
         return model.resume.education
     }
-    
+
     func getJob(at index: Int) -> Experience? {
         return self.model.resume.experience[index]
     }
@@ -80,7 +80,7 @@ final class ResumePresenter {
             switch status {
             case .success(let data):
                 completition(data)
-            case .failure( _):
+            case .failure:
                 return
             }
         }

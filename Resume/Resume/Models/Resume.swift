@@ -8,31 +8,15 @@ struct Resume: Codable {
     let summary: String
     let employment: String
     let contact: Contact
-    let address: Address
     let education: Education
     let experience: [Experience]
     let skills: [Skill]
-    let accomplishments: [Accomplishment]
     let references: [Reference]
-}
-
-// MARK: Accomplishment
-struct Accomplishment: Codable {
-    let title: String
-    let description: String
-}
-
-// MARK: Address
-struct Address: Codable {
-    let zipCode: Int
-    let street: String
-    let city: String
-    let country: String
 }
 
 // MARK: Contact
 struct Contact: Codable {
-    let phone: String
+    let phone: String?
     let celphone: String?
     let email: String
 }
