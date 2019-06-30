@@ -6,11 +6,11 @@ protocol NetworkProtocol {
 }
 
 final class APIClient: NetworkProtocol {
-    //MARK: URL Session
+    // MARK: URL Session
     private let defaultSession: URLSessionProtocol
     internal var dataTask: URLSessionDataTask?
-    
-    //MARK: Init Service()
+
+    // MARK: Init Service()
     init(session: URLSessionProtocol = URLSession.shared) {
         self.defaultSession = session
     }

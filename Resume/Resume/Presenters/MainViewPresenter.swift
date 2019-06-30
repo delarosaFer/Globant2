@@ -39,13 +39,13 @@ import Foundation
         configuration.urlCache = nil
         let session = URLSession(configuration: configuration)
         let client = APIClient(session: session)
-        
+
         client.getData(handler: { (status) in
             switch status {
             case .success(let data):
                 response = client.parseJSON(data: data, model: response) ?? response
                 completition(response)
-            case .failure( _):
+            case .failure:
                 DispatchQueue.main.async { [weak self] in
                     self?.model?.errorMessage = NSLocalizedString("errorRequest", comment: "Parsing was wrong")
                     self?.delegate?.showErrorView()

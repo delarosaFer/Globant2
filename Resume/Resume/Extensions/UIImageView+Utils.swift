@@ -11,7 +11,7 @@ extension UIImageView {
         self.clipsToBounds =  true
         layer.cornerRadius = max(bounds.height, bounds.width) / 2.0
     }
-    
+
     /**
      Changes image's rendering mode and tint color.
      
@@ -23,7 +23,7 @@ extension UIImageView {
         guard let templateImage = self.image?.withRenderingMode(.alwaysTemplate) else {
             return
         }
-        
+
         self.image = templateImage
         self.tintColor = color
     }
