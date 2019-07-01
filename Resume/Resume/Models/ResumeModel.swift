@@ -18,8 +18,11 @@ final class ResumeModel: ResumeModelType {
     init(withResume resume: Resume) {
         self.resume = resume
 
-        educationSection = NSLocalizedString("educationTitle", comment: "Education title")
-        experienceSection = NSLocalizedString("experienceTitle", comment: "Experience title")
+        educationSection = NSLocalizedString(LocalizedStringIdentifier.education.rawValue,
+                                             comment: LocalizedStringIdentifier.education.rawValue)
+        experienceSection = NSLocalizedString(LocalizedStringIdentifier.experience.rawValue,
+                                              comment: LocalizedStringIdentifier.experience.rawValue)
+        
         sections = [educationSection, experienceSection]
     }
 }

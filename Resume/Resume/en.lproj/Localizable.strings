@@ -1,17 +1,12 @@
 // MARK: String titles
-"resumeTitle" = "Resume";
 "referencesTitle" = "References";
-"skillsTitle" = "Skills";
 "educationTitle" = "Education";
 "experienceTitle" = "Experience";
-
 
 //MARK: String buttons
 "contactButton" = "Contact Information";
 
 //MARK: Error messages
-"errorConnection" = "Please, check your internet connnection and try it again";
-"errorURL" = "Error!, URL not found, please try again later";
 "errorRequest" = "Something was wrong, please try again later";
 "errorParse" = "There was a problem parsing the data, please try again later";
 
@@ -25,7 +20,6 @@
 "emailLabel" = "Email:";
 
 //MARK: Fatal errors
-"fatalErrorInvvalidKey" = "Invalid or missing Info.plist";
 "fatalErrorData" = "Data could not be loaded";
 "fatalErrorJson" = "Json file could not be loaded";
 
