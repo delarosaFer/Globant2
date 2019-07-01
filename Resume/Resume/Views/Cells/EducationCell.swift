@@ -31,6 +31,7 @@ final class EducationCell: UITableViewCell {
         state.text = education.state
         city.text = education.city
         startDate.text = education.startDate
-        endDate.text = education.endDate ?? NSLocalizedString("currentDate", comment: "Unfinished education")
+        endDate.text = education.endDate ?? NSLocalizedString(LocalizedStringIdentifier.currentDate.rawValue,
+                                                              comment: LocalizedStringIdentifier.currentDate.rawValue)
     }
 }

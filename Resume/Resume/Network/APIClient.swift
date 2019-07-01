@@ -32,6 +32,8 @@ final class APIClient: NetworkProtocol {
             } else {
                 if let error = error {
                     handler(.failure(error))
+                } else {
+                    handler(.failure(ApiError.UnknownError))
                 }
             }
         })

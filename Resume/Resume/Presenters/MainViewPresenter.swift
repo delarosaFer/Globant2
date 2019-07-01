@@ -45,9 +45,9 @@ import Foundation
             case .success(let data):
                 response = client.parseJSON(data: data, model: response) ?? response
                 completition(response)
-            case .failure:
+            case .failure(let error):
                 DispatchQueue.main.async { [weak self] in
-                    self?.model?.errorMessage = NSLocalizedString("errorRequest", comment: "Parsing was wrong")
+                    self?.model?.errorMessage = error.localizedDescription
                     self?.delegate?.showErrorView()
                 }
             }
@@ -68,7 +68,9 @@ import Foundation
 
             } else {
                 DispatchQueue.main.async { [weak self] in
-                    self?.model?.errorMessage = NSLocalizedString("errorParse", comment: "Parsing was wrong")
+                    self?.model?.errorMessage =
+                        NSLocalizedString(LocalizedStringIdentifier.parseError.rawValue,
+                                          comment: LocalizedStringIdentifier.parseError.rawValue)
                 }
             }
         }

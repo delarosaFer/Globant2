@@ -36,6 +36,7 @@ class ExperienceCell: UITableViewCell {
         state.text = experience.state
         city.text = experience.city
         startDate.text = experience.startDate
-        endDate.text = experience.endDate ?? NSLocalizedString("currentDate", comment: "Current job")
+        endDate.text = experience.endDate ?? NSLocalizedString(LocalizedStringIdentifier.currentDate.rawValue,
+                                                               comment: LocalizedStringIdentifier.currentDate.rawValue)
     }
 }
