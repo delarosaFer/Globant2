@@ -4,11 +4,16 @@ import XCTest
 class APIClientTest: XCTestCase, JSONTest {
     // MARK: APIClient testing
     func testRequestWhitInvalidURL() {
-        let client = APIClient()
-        let fakeURL = ConstantURL.fakeURL.rawValue
+        let client: APIClient
+        let fakeString = ConstantURL.fakeURL.rawValue
+        let session = MockURLSession()
+        guard let fakeURL = URL(string: fakeString) else { return }
+        session.response = HTTPURLResponse(url: fakeURL, statusCode: 404, httpVersion: nil, headerFields: nil)
         let expectation = XCTestExpectation(description: "Request Service")
         
-        client.getData(from: fakeURL) { (status) in
+        client = APIClient(session: session)
+        
+        client.getData(from: fakeString) { (status) in
             switch status {
             case .failure( _):
                 expectation.fulfill()
@@ -21,27 +26,26 @@ class APIClientTest: XCTestCase, JSONTest {
     }
     
     func testRequestWhitNOInternetConnection() {
-        let client = APIClient()
+        let client: APIClient
+        let session = MockURLSession()
+        session.response = HTTPURLResponse(url: URL(fileURLWithPath: "info.json"), statusCode: 0, httpVersion: nil, headerFields: nil)
         let expectation = XCTestExpectation(description: "Request Service")
+        
+        client = APIClient(session: session)
         
         client.getData() { (status) in
             switch status {
-            case .failure(let error):
-                if error.localizedDescription == NSLocalizedString("notConnectionMessage", comment: "Not internet connection") {
-                    XCTFail("Status request: \(status), \(error)")
-                    expectation.fulfill()
-                } else {
-                    XCTFail("Status request: \(status), \(error)")
-                    expectation.fulfill()
-                }
+            case .failure( _):
+                expectation.fulfill()
             case .success( _):
+                XCTFail("Status request: \(status)")
                 expectation.fulfill()
             }
         }
         wait(for: [expectation], timeout: 5)
     }
     
-    func testNetworkingSectionSuccess() {
+    func testNetworkingSessionSuccess() {
         let client: APIClient
         let session = MockURLSession()
         session.data = loadFromJSONFile(name: "info")
